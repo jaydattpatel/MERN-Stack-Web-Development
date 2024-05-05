@@ -1,0 +1,38 @@
+p {
+    color: blue;
+}
+
+.color-red {
+    color: red;
+}
+
+#para-id {
+    color: purple;
+}
+
+/* again redefining class */
+.color-red {
+    color: brown;
+}
+
+/* now make properties to select all span to all h4 which have this class  */
+h4.nest3 {
+    color: blue;
+}
+
+/* button[submit]  or button[type="submit"]*/
+button[type="submit"]{
+    background-color: rgb(26,26,26);
+    color: rgb(255,255,255);
+}
+
+img[src$=".png"]{
+    height: 5%;
+    width: 5%;
+    background-color: crimson;
+}
+
+/* this method used to target apecific direct child only*/
+.child > div{
+    background-color:black;
+}
