@@ -1,0 +1,29 @@
+
+/*set padding space arround elements with inner elements
+
+Note: padding negative px value not allowed 
+
+padding: (for all side) px
+padding: (top-bottom, left-right) px
+padding: (top, right, bottom, left) px
+
+padding-top, padding-bottom, padding-left, padding-right
+padding-inline, padding-block
+padding-inline-start,padding-inline-end
+padding-block-start, padding-block-end
+
+*/
+.parent_px{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(255, 0, 8);
+    padding: 30px 20px;
+
+}
+
+/* creating relative unit size depends on other */
+.child_percent{
+    height: 50%;
+    width: 50%;
+    background-color: rgb(180, 226, 43);
+}

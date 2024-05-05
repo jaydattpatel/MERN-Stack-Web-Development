@@ -1,0 +1,79 @@
+/*
+position: static,relative,absolute,fixed,sticky
+
+set properties:
+top, bottom, left, right.
+
+static: Not affects to normal current position 
+relative: set position relative to normal current position and also occupy old space.
+absolute: set position according to main viewport 
+fixed: set fixed position not affected during scrolling
+sticky: set position based on the user's scroll position. A sticky element toggles between relative and fixed.
+
+
+*/
+p{
+    font-size: 40px;
+    max-width: 1000px;
+}
+#main{
+    position: relative;
+    height: 1000px;
+    width: 1000px ;
+    border: 2px black solid;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#main div, #div6, #div7 {
+    height: 100px; width: 100px;
+    border: 2px black solid;
+    word-wrap: break-word;
+}
+
+#div1{
+    background-color:red;
+    position: static;
+}
+
+#div2{
+    background-color:yellow;
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+
+#div3{
+    background-color:orangered;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#div4{
+    background-color:cyan;
+    position:fixed;
+    top: 20%;
+    left: 90%; 
+}
+#div5{
+    background-color:blueviolet;
+    position: sticky;
+    top: 50%;
+    left: 50%;
+}
+
+#div6{
+    background-color:cyan;
+    position:fixed;
+    top: 50%;
+    left: 90%;
+}
+
+#div7{
+    background-color:orangered;
+    position: absolute;
+    top: 15%;
+    left: 80%;
+}
