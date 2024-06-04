@@ -1,0 +1,54 @@
+
+/*
+display : inline, block, flex, grid,flexbox
+
+*/
+p{
+    font: larger bold;
+    text-decoration: underline;
+}
+Span{
+    font-size: medium;
+    background-color: chartreuse;
+    border: 2px red solid
+}
+div{
+    height: 50px;
+    width: 50px;
+    font-size: larger;
+    align-items: center;
+    border: 2px blue solid;
+}
+
+.d1_col{
+    background-color: red;
+}
+
+.d2_col{
+    background-color: yellow;
+}
+
+.s_block{
+    display: block;
+}
+
+.d_in{
+    display:inline;
+}
+
+.gap{
+    margin: 4px 0px;
+}
+
+.remgap{
+    margin-left: -4px;
+}
+
+.none{
+    display: none;
+}
+
+.hide{
+    visibility: hidden;
+}
+

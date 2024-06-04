@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add author in file -->
+    <meta name="author" content="Jaydatt-Patel">
+    <title>Box-Model (Box-sizing)</title>
+    <link rel="stylesheet" type="text/css" href="023-Box-Model(Box-sizing).css">
+
+</head>
+<body>
+    <div id="image">
+        <img src="Images/box-model.png" width="100%">
+    </div>
+    <div id = "doc">
+        <p>
+            * content-box: This property is by default and not allow to include padding, border and margin in height and width of content. So, :<br>
+            [Total Box height = height + top padding + bottom padding + top border + bottom border]<br>
+            [Total Box width = width + left padding + right padding + left border + right border]<br>
+            [content height = height]<br>
+            [content width = width]
+        </p>
+        <div id="div1">Div-1</div>
+        <hr>
+        <p>
+            * border-box: This property is allow to include padding, border and margin in height and width of content. So, :<br>
+            [Total Box height = height]<br>
+            [Total Box width = width]<br>
+            [content height = Total Box height - top padding - bottom padding - top border - bottom border]<br>
+            [content width = Total Box width - left padding - right padding - left border - right border]
+        </p>
+        <div id="div2">Div-2</div>
+    </div>
+
+</body>
+</html>
