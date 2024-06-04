@@ -1,0 +1,49 @@
+/* Syntax for class CSS
+
+    .class_name{
+        properties...
+    }
+
+*/
+
+
+body{
+    background-color: rgb(226, 248, 170);
+}
+
+/* creating class */
+.header{
+    color: rgb(255, 0, 25);
+    font-size: 20px;
+    text-align: center;
+    font-family: cursive;
+}
+
+.upper{
+    text-transform: uppercase;
+}
+
+.paragraph{ 
+    color: rgb(98, 0, 128); 
+    font-size: 15px;
+}
+
+.cap{
+    text-transform:capitalize;
+}
+
+h3{
+    color: brown;
+}
+
+article{
+    width:700px
+}
+
+ol h3{
+    color: rgb(135, 0, 103);
+}
+
+li{
+    color: rgb(13, 0, 255);
+}
