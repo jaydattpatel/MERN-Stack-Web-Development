@@ -1,0 +1,1 @@
+let total = 30;
