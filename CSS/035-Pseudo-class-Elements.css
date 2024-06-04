@@ -1,0 +1,49 @@
+/* 
+first-child : for first block
+first-letter : for first character
+first-line: for first line
+before: used to add element before content
+after: used to add element after content
+
+Note: In before and after, you must have to define content or keep content empty.
+*/
+
+#tx1:first-child{
+    background-color: aqua;
+}
+
+#tx1::first-letter{
+    font-size: 2.5rem;
+}
+
+#tx1::first-line{
+    color: brown;
+}
+
+#tx2::before, #tx2::after{
+    height: 5rem;
+    width: 5rem;
+    background-color: cadetblue;
+    font-size: 2rem;
+    border: 0.2rem solid red;
+    box-sizing: border-box;
+}
+#tx2::before{
+    content: "Sample Before"; /*add content before*/
+}
+#tx2::after{
+    content: "Sample After"; /*add content after*/
+}
+
+#ver1 li::before, #ver1 li::after{
+    content: " \" ";
+}
+
+#ver2 li::before, #ver2 li::after{
+    content: "";
+    display: inline-block;
+    height: 0.8rem;
+    width: 0.8rem;
+    background-color: red;
+    margin: auto 0.2rem;
+}
