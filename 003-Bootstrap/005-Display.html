@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="jaydattpatel">
+    <title>Display Responsive Design</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+  </head>
+  <body>
+    
+    <div class="container" style="border: 1px dashed black;">
+        <!-- 
+            Change the value of the display property with our responsive display utility classes. We purposely support only a subset of all possible values for display. Classes can be combined for various effects as you need.
+
+            Display utility classes that apply to all breakpoints, from xs to xxl, have no breakpoint abbreviation in them. This is because those classes are applied from min-width: 0; and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+
+            As such, the classes are named using the format:
+                .d-{value} for xs
+                .d-{breakpoint}-{value} for sm, md, lg, xl, and xxl.
+                Where value is one of: none, inline, inline-block, block, grid, inline-grid, table, table-cell, table-row, flex, inline-flex 
+
+            The display values can be altered by changing the display values defined in $utilities and recompiling the SCSS.
+
+            The media queries affect screen widths with the given breakpoint or larger. For example, .d-lg-none sets display: none; on lg, xl, and xxl screens.
+
+            .d-none : Hidden on all	   
+            .d-none .d-sm-block : Hidden only on xs
+            .d-sm-none .d-md-block : Hidden only on sm
+            .d-md-none .d-lg-block : Hidden only on md
+            .d-lg-none .d-xl-block : Hidden only on lg
+            .d-xl-none .d-xxl-block : Hidden only on xl
+            .d-xxl-none : Hidden only on xxl
+            .d-block : Visible on all	   
+            .d-block .d-sm-none : Visible only on xs
+            .d-none .d-sm-block .d-md-none : Visible only on sm
+            .d-none .d-md-block .d-lg-none : Visible only on md
+            .d-none .d-lg-block .d-xl-none : Visible only on lg
+            .d-none .d-xl-block .d-xxl-none : Visible only on xl
+            .d-none .d-xxl-block : Visible only on xxl
+         -->
+        <div class="row d-block" style="border: 1px solid black;">
+          <div class="col" style="height: 60px; background-color: red;"></div>
+          <div class="col" style="height: 60px; background-color: green;"></div>
+          <div class="col" style="height: 60px; background-color: blue;"></div>
+          <div class="col" style="height: 60px; background-color: yellow;"></div>
+        </div><br>
+
+        <div class="row d-inline" style="border: 1px solid black;">
+            <div class="col" style="height: 60px; background-color: red;"></div>
+            <div class="col" style="height: 60px; background-color: green;"></div>
+            <div class="col" style="height: 60px; background-color: blue;"></div>
+            <div class="col" style="height: 60px; background-color: yellow;"></div>
+        </div><br>
+
+        <div class="row d-flex" style="border: 1px solid black;">
+            <div class="col" style="height: 60px; background-color: red;"></div>
+            <div class="col" style="height: 60px; background-color: green;"></div>
+            <div class="col" style="height: 60px; background-color: blue;"></div>
+            <div class="col" style="height: 60px; background-color: yellow;"></div>
+        </div><br>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  </body>
+</html>
