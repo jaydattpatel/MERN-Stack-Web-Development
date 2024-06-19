@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add author in file -->
+    <meta name="author" content="Jaydatt-Patel">
+    <title>Specificity of Selector</title>
+
+    <!-- include css file using link -->
+    <link rel="stylesheet" type="text/css" href="005-Selector.css">
+</head>
+
+<body>
+    <!-- Execution priorities:
+    [High to]     
+    Inline style -> ID based CSS style -> class based CSS style -> tag based CSS style
+    [Low]
+    -->
+
+    <p> Paragraph - Type </p>
+    <p class="color-red"> Paragraph - Class </p>
+    <p id="para-id" class="color-red"> Paragraph - ID </p>
+    <p id="para-id" class="color-red" style="color: cyan;"> Paragraph - ID </p>
+
+    <!-- Example-1 -->
+    <style>
+        #p-style {
+            color: rgb(225, 255, 0);
+            background-color: red;
+        }
+        #p-style{
+            background-color: rgb(0, 174, 255);
+        }
+    </style>
+
+    <p id="p-style">Paragraph-1</p>
+
+
+    <!-- Example-2 -->
+    <style>
+        .p-class-style {
+            font-size: 14px;
+            background-color: red;
+        }
+        #p-id-style{
+            background-color: lightgrey;
+            text-transform: uppercase;
+        }
+        .p-class-style {
+            font-size: 10px;
+        }
+    </style>
+
+    <p class="p-class-style" id="p-id-style"> Paragraph-2</p>
+
+    <div class = "nest3">
+        <h4>
+            <span>Text-1</span>
+            <span>Text-2</span>
+            <span>Text-3</span>
+        </h4>
+    </div>
+
+    <button type="submit" value="subscribe">Submit</button>
+
+    <img src="Images/Google.png">
+
+    <div class = "child">
+        <div>
+            <p>Para-1</p>
+            <p>Para-2</p>
+            <p>Para-3</p>
+        <div>
+    </div>
+
+</body>
+</html>

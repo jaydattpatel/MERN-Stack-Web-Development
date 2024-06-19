@@ -1,0 +1,41 @@
+/*  '*' to select all tags.*/
+*{
+    background-color: rgb(238, 255, 80);
+}
+
+
+body{
+    background-color: rgb(226, 248, 170);
+}
+
+h2{
+    color: rgb(255, 0, 25);
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p{ 
+    color: green; 
+    font-size: 15px;
+}
+
+
+h3{
+    color: brown;
+}
+
+article{
+    width:700px
+}
+
+ol h3{
+    color: rgb(135, 0, 103);
+}
+
+li{
+    color: rgb(13, 0, 255);
+}
+
+
+

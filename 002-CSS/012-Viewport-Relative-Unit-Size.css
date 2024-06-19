@@ -1,0 +1,17 @@
+
+/* creating viewpoint size unit means size of unit varies according to window size.
+vh (viewport height) :  select relative to height of window
+vw (viewport width): select relative to width of window
+*/
+.parent_vx{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 0, 8);
+}
+
+/* creating relative unit size depends on other */
+.child_percent{
+    height: 50%;
+    width: 50%;
+    background-color: rgb(180, 226, 43);
+}
