@@ -1,0 +1,5 @@
+1. Install multer
+2. Change in view for form
+3. Create middleware to handle files.
+4. Apply middleware.
+5. Update controller to update URLs of Images. 
