@@ -1,0 +1,33 @@
+<h1 class="mt-5 mb-4">Products</h1>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% products.forEach(product=> { %>
+            <tr>
+                <th scope="row">
+                    <%= product.id %>
+                </th>
+                <td>
+                    <%= product.name %>
+                </td>
+                <td>
+                    <%= product.desc %>
+                </td>
+                <td><%= product.price %>
+                </td>
+                <td>
+                    <img src="<%= product.imageUrl %>" alt="<%= product.name %>" style="max-width: 100px;">
+                </td>
+            </tr>
+            <% }) %>
+    </tbody>
+</table>
+</div>
