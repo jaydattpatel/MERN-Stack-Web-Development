@@ -1,0 +1,9 @@
+
+ Sun Jul 07 2024 11:48:19 GMT+0530 (India Standard Time) - / - {}
+ Sun Jul 07 2024 11:48:21 GMT+0530 (India Standard Time) - /favicon.ico - {}
+ Sun Jul 07 2024 11:48:51 GMT+0530 (India Standard Time) - /api-docs/ - {}
+ Sun Jul 07 2024 11:48:51 GMT+0530 (India Standard Time) - /api-docs/swagger-ui.css - {}
+ Sun Jul 07 2024 11:48:51 GMT+0530 (India Standard Time) - /api-docs/swagger-ui-bundle.js - {}
+ Sun Jul 07 2024 11:48:51 GMT+0530 (India Standard Time) - /api-docs/swagger-ui-standalone-preset.js - {}
+ Sun Jul 07 2024 11:48:51 GMT+0530 (India Standard Time) - /api-docs/swagger-ui-init.js - {}
+ Sun Jul 07 2024 11:50:36 GMT+0530 (India Standard Time) - /api/products - {}
