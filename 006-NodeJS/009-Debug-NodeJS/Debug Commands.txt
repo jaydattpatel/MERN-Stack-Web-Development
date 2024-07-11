@@ -1,0 +1,10 @@
+node inspect [filename]: To start debugger for perticular file.
+
+setBreakpoint('Filename', [LineNumber]) : To set break point at perticular line to pause execution.
+
+watch('VariableName') : To check Variable value during debug.
+
+cont : To continue execution till breakpoint or end.
+
+.exit : To exit Debug process. or Press Ctr + c
+
