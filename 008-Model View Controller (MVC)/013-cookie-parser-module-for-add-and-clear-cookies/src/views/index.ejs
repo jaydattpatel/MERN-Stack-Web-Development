@@ -1,0 +1,42 @@
+
+<%if(locals.lastVisit){ %>
+    <div class="alert alert-secondary" role="alert">
+        Your Last Visit on : <%= locals.lastVisit %>
+    </div>
+<%}%>
+
+<h1 class="mt-5 mb-4">Products</h1>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% products.forEach(product=> { %>
+            <tr>
+                <th scope="row"><%= product.id %></th>
+                <td><%= product.name %></td>
+                <td><%= product.desc %></td>
+                <td><%= product.price %></td>
+                <td>
+                    <img src="<%= product.imageUrl %>" alt="<%= product.name %>" style="max-width: 100px;">
+                </td>
+                <td>
+                    <a href="/update-product/<%= product.id %>" class="btn btn-warning">Update</a>
+                    <!-- adding button to call conformation function to delete -->
+                    <button class="btn btn-danger" onclick="deleteProduct('<%= product.id %>')">Delete</button>
+                    <!-- adding JS script for frontend -->
+                    <script src="delete-product.js"></script>
+                    <!-- <a href="/delete-product/<%= product.id %>" class="btn btn-danger">Delete</a> -->
+                </td>
+            </tr>
+            <% }) %>
+    </tbody>
+</table>
+</div>
