@@ -1,0 +1,15 @@
+{
+  "name": "rest-project",
+  "version": "1.0.0",
+  "description": "rest-api-project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jaydattpatel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
