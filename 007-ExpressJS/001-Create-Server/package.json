@@ -1,0 +1,14 @@
+{
+  "name": "createserver",
+  "version": "1.0.0",
+  "main": "001-Create-Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jaydatt",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
