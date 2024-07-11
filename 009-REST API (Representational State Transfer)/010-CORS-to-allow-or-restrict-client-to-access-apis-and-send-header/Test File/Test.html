@@ -1,0 +1,70 @@
+<!-- TO get the desired error, ensure that your server is 
+    running at the specified port -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+      <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+      </head>
+    
+      <body>
+    
+        <h2>Products</h2>
+        <table class = "table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Desc</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody id = "productTableBody">
+    
+            </tbody>
+        </table>
+    
+        <script>
+            const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsImVtYWlsIjoiY3VzdG9tZXJAZWNvbS5jb20iLCJpYXQiOjE3MjAyNTI5NDIsImV4cCI6MTcyMDI4ODk0Mn0.q0jtpNXaHjw63AQL7pb7logeviGB8LUxJg2XDvEqaqU'
+         
+            fetch('http://localhost:3000/api/products', {
+                headers: {
+                    'Authorization': token
+                }
+            })
+              .then(response =>response.json())
+              .then(data => {
+                const tableBody = document.getElementById('productTableBody');
+                data.forEach((item) => {
+                    const row = document.createElement('tr');
+    
+                    const idCell = document.createElement('td');
+                    idCell.textContent = item.id;
+                    row.appendChild(idCell);
+    
+                    const nameCell = document.createElement('td');
+                    nameCell.textContent = item.name;
+                    row.appendChild(nameCell);
+    
+                    const descCell = document.createElement('td');
+                    descCell.textContent = item.desc;
+                    row.appendChild(descCell);
+    
+                    const priceCell = document.createElement('td');
+                    priceCell.textContent = item.price;
+                    row.appendChild(priceCell);
+    
+                    tableBody.appendChild(row);
+                });
+              }) 
+              .catch(error => console.log('Error:', error));
+         </script>
+      </body>
+    
+    </html>
