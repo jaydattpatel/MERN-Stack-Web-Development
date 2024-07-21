@@ -1,0 +1,38 @@
+
+body {
+  background-color: #f7f7f7;
+  text-align: center;
+  font-family: 'Arvo', serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #333;
+  font-size: 3rem;
+  margin-top: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.set {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.drum {
+  border: none;
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 2rem;
+  font-size: 2rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.drum:hover {
+  background-color: #ff4136;
+  transform: scale(1.05);
+}

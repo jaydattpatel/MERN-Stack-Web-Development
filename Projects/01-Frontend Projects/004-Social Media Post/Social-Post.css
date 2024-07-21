@@ -1,0 +1,121 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  color: white;
+  background-color: #272727;
+}
+body{
+  
+  background-color: #121212;
+}
+.posts-container {
+  flex: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar{
+  background-color: #fef8f8;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f8f1f1;
+  font-style: oblique;
+}
+
+#posts {
+  margin-top: 20px;
+}
+
+.post {
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 20px;
+  background-color: #121212;
+  color: white;
+  border-radius: 5%/5%;
+}
+
+.post h3 {
+  font-size: 18px;
+   color: white;
+   text-align: center;
+}
+
+.post p {
+  margin-left: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+.post img {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: auto;
+  margin-bottom: 10px;
+  width: 500px;
+  border-radius: 2%/2%;
+}
+.post button{
+  margin-left: 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 15px;
+}
+.post button:hover{
+  background-color:#a7a7a7;
+  
+}
+
+
+.post-footer {
+  margin-left: 20px;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #888;
+}
+
+.comments-container {
+  margin-top: 10px;
+  color: #666;
+}
+
+.comments-container p {
+  margin-left: 20px;
+}
+
+.sidebar {
+  /* flex: 1; */
+  padding-left: 20px;
+  margin-top: 85px;
+  margin-left: 20px;
+  height: 250px;
+  width: 400px;
+  font-size: 25px;
+  background-color: #121212;
+}
+
+.sidebar input[type="text"],
+.sidebar input[type="file"] {
+  width: 90%;
+  height:30px;
+  margin-bottom: 10px;
+}
+
+.sidebar button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar button[type="submit"]:hover {
+  background-color: #0056b3;
+}
