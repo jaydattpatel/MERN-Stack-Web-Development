@@ -1,0 +1,114 @@
+body{
+    background-color:midnightblue;
+}
+
+:root{
+    --b-r: 1px solid red;
+    --b-l: 1px solid black;
+    --b-o: 1px solid orange;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem 1rem;
+    /* border: var(--b-l); */
+
+}
+
+#graphInfo{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: var(--b-l); */
+
+}
+
+#graphDiv{
+    width: 100%;
+    /* border: var(--b-l); */
+    margin: 1rem 0;
+
+}
+
+#periods{
+    width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border: var(--b-l); */
+
+}
+
+.period{
+    height: 2rem;
+    width: 5rem;
+    background-color: blue;
+    color: white;
+    border-radius: 1rem/1rem;
+}
+
+#stocks{
+    width: 25%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    /* border: var(--b-l); */
+}
+
+#stocks div{
+    width: 100%;
+    text-align: center;
+    /* border: var(--b-l); */
+}
+
+#stocks div span{
+    width: 5rem;
+    font-weight: bold;
+    margin: 0 0.3rem;
+    /* border: var(--b-l); */
+}
+
+.stock{
+    height: 2rem;
+    width: 8rem;
+    cursor: pointer;
+    text-align: center;
+    align-content: center;
+    font-weight: bold;
+    background-color: yellow;
+    border-radius: 1rem/1rem;
+    box-shadow: -2px -2px 10px 2px gray;
+    margin: 0.3rem 0;
+    /* border: var(--b-r); */
+} 
+
+.stock:hover{
+    background-color: red;
+    color: white;
+}
+
+#name, #profit, #bookValue{
+    margin: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+#name, #bookValue{
+    color: white;
+}
+
+#summary{
+    color: white;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin: 1rem;
+}

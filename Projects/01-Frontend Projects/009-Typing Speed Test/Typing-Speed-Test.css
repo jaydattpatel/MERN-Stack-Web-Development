@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+  }
+  .container{
+
+      display: flex;
+      flex-flow: column;
+      text-align: center;
+      position: relative;
+      left: 25%;
+      top: 30px;
+      width: 50%;
+      background-color: aqua;
+      border-radius: 15px;
+      box-shadow: 10px 6px 8px 2px rgba(0, 0, 0, 0.2);
+  }
+  input{
+      width: 80%;
+      height: 100px;
+  }
+  button{
+      text-decoration: none;
+      border-style: none;
+      border: 1px solid rgb(1, 208, 208);
+      background-color: aqua;
+      box-shadow: 10px 6px 8px 2px rgba(0, 0, 0, 0.2);
+      font-size: 16px;
+  }
+  #typing-area {
+    margin-bottom: 20px;
+  }
+  
+  #result {
+    display: none;
+    margin-top: 20px;
+  }
