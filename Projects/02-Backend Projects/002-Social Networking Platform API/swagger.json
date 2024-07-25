@@ -1,0 +1,560 @@
+{
+    "openapi": "3.0.0",
+    "info":{
+        "version":"1.0.0",
+        "description":"API for Social Network application",
+        "title":"Social Network API"
+    },
+    "servers":[
+        {
+            "url":"http://localhost:3000"
+        }
+    ],
+
+    "components":
+    {
+        "securitySchemes":
+        {
+            "JWT":
+            {
+                "in":"header",
+                "name":"Authorization",
+                "type": "apiKey"
+            }
+        }
+    },
+
+    "paths":
+    {
+        "/api/signup": 
+        {
+            "post":
+            {
+                "tags": ["Users"],
+                "summary":"SignUp",
+                "description":"User Registration",
+                "requestBody":
+                {
+                    "required": true,
+                    "content":
+                    {
+                        "application/json":{
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type" : "string"
+                                    },
+                                    "email":{
+                                        "type": "string",
+                                        "format" : "email"
+                                    },
+                                    "password":{
+                                        "type": "string",
+                                        "format":"password"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "201": {
+                        "description":"User Created."
+                    },
+                    "400": {
+                        "description": "Inputs not found...!"
+                    }
+                }
+            }
+        },
+
+        "/api/signin": 
+        {
+            "post":
+            {
+                "tags": ["Users"],
+                "summary":"SignIn",
+                "description":"User login to get token",
+                "requestBody":
+                {
+                    "required": true,
+                    "content":
+                    {
+                        "application/json":{
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "email":{
+                                        "type": "string",
+                                        "format":"email"
+                                    },
+                                    "password":{
+                                        "type": "string",
+                                        "format":"password"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200": {
+                        "description":"Ok"
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    }
+                }
+            }
+        },
+
+        "/api/posts/all": 
+        {
+            "get":
+            {
+                "tags": ["Posts"],
+                "summary":"Get All posts",
+                "description":"User will get all posts",
+                "security":[{"JWT": {} }],
+                "responses":
+                {
+                    "200": {
+                        "description":"OK"
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    }
+                }
+            }
+        },
+
+        "/api/posts": 
+        {
+            "get":
+            {
+                "tags": ["Posts"],
+                "summary":"Get all posts of Users",
+                "description":"User will get his all posts",
+                "security":[{"JWT": {} }],
+                "responses":
+                {
+                    "200": {
+                        "description":"OK"
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    }
+                }
+            },
+
+            "post":
+            {
+                "tags": ["Posts"],
+                "summary":"Create New Post",
+                "description":"User can create new post",
+                "security":[{"JWT": {} }],
+                "requestBody":
+                {
+                    "required": true,
+                    "content":
+                    {
+                        "multipart/form-data":{
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "caption": {
+                                        "type" : "string"
+                                    },
+                                    "imageUrl": {
+                                        "type": "string",
+                                        "format": "binary"
+                                    }  
+                                },
+                                "required": ["caption", "imageUrl"]
+                            }
+                        }
+                    }
+                },
+                "responses":
+                {
+                    "201": {
+                        "description":"Created."
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    },
+                    "400": {
+                        "description": "No input found...!"
+                    }
+                }
+            }
+        },
+
+        "/api/posts/{id}": 
+        {
+            "get":
+            {
+                "tags": ["Posts"],
+                "summary":"Get Specific posts",
+                "description":"User will get specific post using post id.",
+                "security":[{"JWT": {} }],
+                "parameters":
+                [
+                   {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "description": "Post ID to retrieve Specific Post"
+                    }
+                ],
+                "responses":
+                {
+                    "200": {
+                        "description":"OK"
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    },
+                    "404": {
+                        "description": "Post not found...!"
+                    }
+                }
+            },
+            "delete":
+            {
+                "tags": ["Posts"],
+                "summary":"Delete Post",
+                "description":"User can delete specific post using post id.",
+                "security":[{"JWT": {} }],
+                "parameters":
+                [
+                   {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "description": "Post ID to delete Specific Post"
+                    }
+                ],
+                "responses":
+                {
+                    "200": {
+                        "description":"OK"
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    },
+                    "404": {
+                        "description": "Post not found...!"
+                    }
+                }
+            },
+            "put":
+            {
+                "tags": ["Posts"],
+                "summary":"Modify posts",
+                "description":"User can modify specific post using post id.",
+                "security":[{"JWT": {} }],
+                "parameters":
+                [
+                   {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "description": "Post ID to modify Specific Post"
+                    }
+                ],
+                "requestBody":
+                {
+                    "required": true,
+                    "content":
+                    {
+                        "multipart/form-data":{
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "caption": {
+                                        "type" : "string"
+                                    },
+                                    "imageUrl": {
+                                        "type": "string",
+                                        "format": "binary"
+                                    }  
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":
+                {
+                    "202": {
+                        "description":"Accepted."
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    },
+                    "400": {
+                        "description": "No input found...!"
+                    },
+                    "404": {
+                        "description": "Post not found...!"
+                    }
+                }
+            }
+        },
+
+        "/api/likes/{postId}": 
+        {
+            "get":
+            {
+                "tags": ["Likes"],
+                "summary":"Get Likes of Post",
+                "description":"User can get likes of specific post using post id.",
+                "security":[{"JWT": {} }],
+                "parameters":
+                [
+                   {
+                    "name": "postId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "description": "Post ID to get likes."
+                    }
+                ],
+                "responses":
+                {
+                    "200": {
+                        "description":"Ok"
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    }
+                }
+            }
+        },
+
+        "/api/likes/toggle/{postId}": 
+        {
+            "get":
+            {
+                "tags": ["Likes"],
+                "summary":"Toggle Likes of Post",
+                "description":"User can toggle like of specific post using post id.",
+                "security":[{"JWT": {} }],
+                "parameters":
+                [
+                   {
+                    "name": "postId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "description": "Post ID to toggle like for specific Post"
+                    }
+                ],
+                "responses":
+                {
+                    "200": {
+                        "description":"Ok"
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    }
+                }
+            }
+        },
+
+        "/api/comments/{postId}":
+        {
+            "get":
+            {
+                "tags": ["Comments"],
+                "summary":"Get Comments of Specific posts",
+                "description":"User can get all comments of specific post using post id.",
+                "security":[{"JWT": {} }],
+                "parameters":
+                [
+                   {
+                    "name": "postId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "description": "Post ID to retrieve comments."
+                    }
+                ],
+                "responses":
+                {
+                    "200": {
+                        "description":"OK"
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    }
+                }
+            },
+            "post":
+            {
+                "tags": ["Comments"],
+                "summary":"Create Comment of Specific posts",
+                "description":"User can post comment on specific post using post id.",
+                "security":[{"JWT": {} }],
+                "parameters":
+                [
+                   {
+                    "name": "postId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "description": "Post ID to post comment."
+                    }
+                ],
+                "requestBody":
+                {
+                    "required": true,
+                    "content":
+                    {
+                        "application/json":{
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "content": {
+                                        "type" : "string"
+                                    } 
+                                },
+                                "required": ["content"]
+                            }
+                        }
+                    }
+                },
+                "responses":
+                {
+                    "201": {
+                        "description":"Created."
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    },
+                    "400": {
+                        "description": "No input found...!"
+                    }
+                }
+            }
+        },
+
+        "/api/comments/{commentId}":
+        {
+            "delete":
+            {
+                "tags": ["Comments"],
+                "summary":"Delete Specific Comment",
+                "description":"User can delete specific comment using comment id.",
+                "security":[{"JWT": {} }],
+                "parameters":
+                [
+                   {
+                    "name": "commentId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "description": "Comment ID to delete comment."
+                    }
+                ],
+                "responses":
+                {
+                    "200": {
+                        "description":"OK"
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    },
+                    "404": {
+                        "description": "No comment found...!"
+                    }
+                }
+            },
+
+            "put":
+            {
+                "tags": ["Comments"],
+                "summary":"Modify specific comment",
+                "description":"User can modify specific comment using comment id.",
+                "security":[{"JWT": {} }],
+                "parameters":
+                [
+                   {
+                    "name": "commentId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "description": "Comment Id to modify comment."
+                    }
+                ],
+                "requestBody":
+                {
+                    "required": true,
+                    "content":
+                    {
+                        "application/json":{
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "content": {
+                                        "type" : "string"
+                                    } 
+                                },
+                                "required": ["content"]
+                            }
+                        }
+                    }
+                },
+                "responses":
+                {
+                    "202": {
+                        "description":"Accepted."
+                    },
+                    "401": {
+                        "description": "Incorrect Credentials...!"
+                    },
+                    "400": {
+                        "description": "No input found...!"
+                    },
+                    "404": {
+                        "description": "No comment found...!"
+                    }
+                }
+            
+            }
+
+        }
+
+    }
+}

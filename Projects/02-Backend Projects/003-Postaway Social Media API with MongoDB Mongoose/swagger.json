@@ -1,0 +1,694 @@
+{
+    "openapi":"3.0.0",
+    "info":{
+        "version":"1.0.0",
+        "description":"API for Social Media application",
+        "title":"Social-Media API"
+    },
+    "servers":[
+        {
+            "url":"http://localhost:4200"
+        }
+     ],
+     "components":{
+        "securitySchemes":{
+            "JWT":{
+               "in":"header",
+               "name":"Authorization",
+               "type":"apiKey"
+            }
+     }
+    },
+     "paths":{
+        "/api/users/signup":{
+            "post":{
+                "tags":["Users"],
+                "summary":"Signup",
+                "description":"User signup to signin",
+                "requestBody":{
+                    "content":
+                    {
+                        "multipart/form-data":{
+                            "schema":{
+                                "type":"object",
+                                "properties":{
+                                    "name":{
+                                        "type":"string" 
+                                    },
+                                    "email":{
+                                        "type":"string"
+                                    },
+                                    "password":{
+                                        "type":"string"
+                                    },
+                                    "gender":{
+                                        "type":"string"
+                                    },
+                                    "avatar":{
+                                        "type":"string",
+                                        "format": "binary"
+                                    }
+                                }
+                            }
+                        }
+                       
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description":"OK"
+                    }
+                }
+            }
+            
+        },
+        "/api/users/signin":{
+            "post":{
+                "tags":["Users"],
+                "summary":"Login",
+                "description":"User login to get token",
+                "requestBody":{
+                    "content":
+                    {
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "properties":{
+                                    "email":{
+                                        "type":"string"
+                                    },
+                                    "password":{
+                                        "type":"string"
+                                    }
+                                }
+                            }
+                        }
+                       
+                    }
+                },
+                "responses":{
+                    "200":{
+                        "description":"OK"
+                    },
+                    "400":{
+                        "description":"Incorrect Credentials"
+                    }
+                }
+            }
+            
+        },
+        "/api/users/signout":{
+            "post":{
+                "tags":["Users"],
+                "summary":"Logout",
+                "description":"User logout",
+                "security":[{"JWT": {}}],
+                "responses":{
+                    "201":{
+                        "description":"signed Out Successfully"
+                    },
+                    "400":{
+                        "description":"Authorization failed"
+                    }
+                }
+            }
+            
+        },
+        "/api/users/signout-from-all":{
+            "post":{
+                "tags":["Users"],
+                "summary":"Logout from all devices",
+                "description":"User logout",
+                "security":[{"JWT": {}}],
+                "responses":{
+                    "201":{
+                        "description":"signed Out Successfully"
+                    },
+                    "404":{
+                        "description":"Authorization failed"
+                    }
+                }
+            }
+            
+        },
+        "/api/users/get-details/{userID}":{
+            "get":{
+                "tags":["Users"],
+                "summary":"get details",
+                "description":"User ID",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"userID",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "responses":{
+                    "201":{
+                        "description":"User found"
+                    },
+                    "404":{
+                        "description":"User not found"
+                    }
+                }
+            }
+            
+        },
+        "/api/users/get-all-details":{
+            "get":{
+                "tags":["Users"],
+                "summary":"get details",
+                "description":"Users",
+                "security":[{"JWT": {}}],
+                "responses":{
+                    "201":{
+                        "description":"Users found"
+                    },
+                    "404":{
+                        "description":"Users not found"
+                    }
+                }
+            }
+            
+        },
+        "/api/users/update-details":{
+            "put":{
+                "tags":["Users"],
+                "summary":"update details",
+                "description":"User ID",
+                "security":[{"JWT": {}}],
+                "requestBody":{
+                    "required":true,
+                    "content":
+                    {
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "properties":{
+                                    "name":{
+                                        "type":"string"
+                                    },
+                                    "gender":{
+                                        "type":"string"
+                                    }
+                                }
+                            }
+                        }
+                       
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description":"updated successfully"
+                    }
+                }
+            }
+            
+        },
+        "/api/posts":{
+            "post":{
+                "tags":["Posts"],
+                "summary":"post details upload",
+                "description":"upload post",
+                "security":[{"JWT": {}}],
+                "requestBody":{
+                    "required":true,
+                    "content":
+                    {
+                        "multipart/form-data": {
+                            "schema": {
+                              "type": "object",
+                              "properties": {
+                                "caption":{
+                                    "type":"string"
+                                },
+                                "imageUrl":{
+                                   
+                                        "type": "string",
+                                        "format": "binary"
+                                     
+                                }
+                              }
+                            }
+                          }
+
+                       
+                       
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description":"success"
+                    }
+                }
+            },
+            "get":{
+                "tags":["Posts"],
+                "summary":"get posts",
+                "description":"get post details",
+                "security":[{"JWT": {}}],
+                "responses":{
+                    "201":{
+                        "description":"posts found"
+                    },
+                    "404":{
+                        "description":"posts not found" 
+                    }
+                }
+            }
+        },
+        "/api/posts/all":{
+            "get":{
+                "tags":["Posts"],
+                "summary":"get posts",
+                "description":"get post details",
+                "security":[{"JWT": {}}],
+                "responses":{
+                    "201":{
+                        "description":"posts found"
+                    },
+                    "404":{
+                        "description":"posts not found" 
+                    }
+                }
+            }
+        },
+        "/api/posts/{postID}":{
+            "get":{
+                "tags":["Posts"],
+                "summary":"get posts",
+                "description":"get post details",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"postID",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "responses":{
+                    "201":{
+                        "description":"posts found"
+                    },
+                    "404":{
+                        "description":"posts not found" 
+                    }
+                }
+            },
+            "put":{
+                "tags":["Posts"],
+                "summary":"get posts",
+                "description":"get post details",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"postID",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "requestBody":{
+                    "required":true,
+                    "content":
+                    {
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "properties":{
+                                   
+                                    "caption":{
+                                        "type":"string"
+                                    }
+                                }
+                            }
+                        },
+                        "image/*":{
+                            "schema":{
+                                "type":"string" 
+                            }
+                        }
+                       
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description":"posts found"
+                    },
+                    "404":{
+                        "description":"post not found" 
+                    }
+                }
+            },
+            "delete":{
+                "tags":["Posts"],
+                "summary":"delete post by ID",
+                "description":"delete post details",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"postID",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "responses":{
+                    "201":{
+                        "description":"post deleted"
+                    }
+                }
+            }
+        },
+        "/api/comments/{postID}":{
+            "post":{
+                "tags":["Comments"],
+                "summary":"add comment on post",
+                "description":"post add comment",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"postID",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "requestBody":{
+                    "required":true,
+                    "content":
+                    {
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "properties":{
+                                    "comment":{
+                                        "type":"string"
+                                    }
+                                }
+                            }
+                        }
+                       
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description":"comment added"
+                    }
+                }
+            },
+            "get":{
+                "tags":["Comments"],
+                "summary":"get comments by postID",
+                "description":"get comments  details",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"postID",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "responses":{
+                    "201":{
+                        "description":"comments"
+                    }
+                }
+            }
+            
+        },
+        "/api/comments/{id}":{
+            "put":{
+                "tags":["Comments"],
+                "summary":"update comment by ID",
+                "description":"update comment details",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"id",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "requestBody":{
+                    "required":true,
+                    "content":
+                    {
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "properties":{
+                                    "comment":{
+                                        "type":"string"
+                                    }
+                                }
+                            }
+                        }
+                       
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description":"post deleted"
+                    }
+                }
+            },
+            "delete":{
+                "tags":["Comments"],
+                "summary":"delete comment by ID",
+                "description":"delete comment details",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"id",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "responses":{
+                    "201":{
+                        "description":"post deleted"
+                    }
+                }
+            }
+        },
+        "/api/likes/toggle/{id}":{
+            "post":{
+                "tags":["Likes"],
+                "summary":"Toggle Like on post",
+                "description":"post Toggle Like",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"id",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "responses":{
+                    "201":{
+                        "description":"liked successfully"
+                    },
+                    "404":{
+                        "description":"like failed"
+                    }
+                }
+            }
+        },
+        "/api/likes/{id}":{
+            "get":{
+                "tags":["Likes"],
+                "summary":"get Like on post or comment",
+                "description":"get Like on post or comment",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"id",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "responses":{
+                    "201":{
+                        "description":"get liked post or comment"
+                    },
+                    "404":{
+                        "description":"post or comment not found"
+                    }
+                }
+            }
+        },
+        "/api/friends/toggle-friendship/{friendID}":{
+            "post":{
+                "tags":["FriendShip"],
+                "summary":"send friend request",
+                "description":"toggle friend request",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"friendID",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "responses":{
+                    "201":{
+                        "description":"friend request sent"
+                    }
+                }
+            }
+        },
+        "/api/friends/get-pending-requests":{
+            "get":{
+                "tags":["FriendShip"],
+                "summary":"get friend request of user",
+                "description":"get friend request",
+                "security":[{"JWT": {}}],
+                "responses":{
+                    "201":{
+                        "description":"pending request got"
+                    },
+                    "404":{
+                        "description":"no pending requests"
+                    }
+
+                }
+            }
+        },
+        "/api/friends/response-to-request/{friendID}":{
+            "post":{
+                "tags":["FriendShip"],
+                "summary":"response to request, accept or reject",
+                "description":"response to friend request",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"friendID",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "responses":{
+                    "201":{
+                        "description":"updated successfully"
+                    }
+
+                }
+            }
+        },
+        "/api/friends/get-friends/{userID}":{
+            "get":{
+                "tags":["FriendShip"],
+                "summary":"get users friends",
+                "description":"user friends",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"userID",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "responses":{
+                    "201":{
+                        "description":"user's friends found"
+                    },
+                    "404":{
+                        "description":"No friends of this user"
+                    }
+
+                }
+            }
+        },
+        "/api/otp/send":{
+            "post":{
+                "tags":["OTP"],
+                "summary":"sending OTP to user' email",
+                "description":"send OTP",
+                "security":[{"JWT": {}}],
+                "responses":{
+                    "201":{
+                        "description":"OTP is sent"
+                    }
+
+                }
+            }
+        },
+        "/api/otp/verify/{otp}":{
+            "get":{
+                "tags":["OTP"],
+                "summary":"varifing email by sending OTP",
+                "description":"Varify OTP",
+                "security":[{"JWT": {}}],
+                "parameters":[{
+                    "in":"path",
+                    "name":"otp",
+                    "required":true,
+                    "schema":{
+                        "type":"string"
+                    }
+                }],
+                "responses":{
+                    "201":{
+                        "description":"OTP is varified"
+                    },
+                    "404":{
+                        "description":"OTP is not matched"
+                    }
+
+                }
+            }
+        },
+        "/api/otp/reset-password":{
+            "post":{
+                "tags":["OTP"],
+                "summary":"reset password for user",
+                "description":"reset password",
+                "security":[{"JWT": {}}],
+                "requestBody":{
+                    "required":true,
+                    "content":
+                    {
+                        "application/json":{
+                            "schema":{
+                                "type":"object",
+                                "properties":{
+                                    "newPassword":{
+                                        "type":"string"
+                                    }
+                                }
+                            }
+                        }
+                       
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description":"Password is updated"
+                    },
+                    "404":{
+                        "description":"sent new OTP please"
+                    }
+
+                }
+            }
+        }
+           
+        
+
+       
+        
+    }
+    
+    }

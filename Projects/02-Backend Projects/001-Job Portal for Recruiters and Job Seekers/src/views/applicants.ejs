@@ -1,0 +1,28 @@
+<div>
+    <div class="container">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Contact</th>
+          <th scope="col">Resume</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%applicants.forEach( (app) =>{ %>
+        <tr>
+          <th scope="row"><%= app.id %></th>
+          <td><%= app.name %></td>
+          <td><%= app.email %></td>
+          <td><%= app.contact %></td>
+          <td>
+            <a class="btn btn-sm btn-primary" href="http://localhost:3000/<%= app.resumePath%>" target="_blank">View</a>
+          </td>
+        </tr>
+        <%})%>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<div><div class="container p-3 mx-auto w-50 form-box my-5 rounded-md">
+    <h2 style="color: #181642" class="text-center mb-3">Update a Job</h2>
+    
+    <form action="/job/<%=job.id%>/update" method="post">
+      <div class="input-group mb-3">
+        <select required="" name="job_category" class="form-select" aria-label="Default select example">
+          <option selected="" disabled="">select job category</option>
+          <option <% if(job.category == "Tech"){%> selected <%}%>value="Tech">Tech</option>
+          <option <% if(job.category == "Non-Tech"){%> selected <%}%>value="Non-Tech">Non Tech</option>
+        </select>
+      </div>
+  
+      <div class="input-group mb-3">
+        <select required="" name="job_designation" class="form-select" aria-label="Default select example" value="<%=job.designation%>">
+          <option selected="" disabled="">select job designation</option>
+          <option <% if(job.designation == "HR"){%> selected <%}%>value="HR">HR</option>
+          <option <% if(job.designation == "SDE"){%> selected <%}%>value="SDE">SDE</option>
+          <option <% if(job.designation == "DevOps"){%> selected <%}%>value="DevOps">DevOps</option>
+          <option <% if(job.designation == "MERN Developer"){%> selected <%}%>value="MERN Developer">MERN Developer</option>
+          <option <% if(job.designation == "MEAN Developer"){%> selected <%}%>value="MEAN Developer">MEAN Developer</option>
+          <option <% if(job.designation == "JAVA Developer"){%> selected <%}%>value="JAVA Developer">JAVA Developer</option>
+          <option <% if(job.designation == "Front-End Developer"){%> selected <%}%>value="Front-End Developer">Front-End Developer</option>
+          <option <% if(job.designation == "Back-End Developer"){%> selected <%}%>value="Back-End Developer">Back-End Developer</option>
+          <option <% if(job.designation == "Full-Stack Developer"){%> selected <%}%>value="Full-Stack Developer">Full-Stack Developer</option>
+        </select>
+      </div>
+  
+      <div class="mb-3">
+        <label for="basic-url" class="form-label">Enter job location</label>
+        <div class="input-group">
+          <input required="" name="job_location" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" value="<%=job.location%>">
+        </div>
+      </div>
+  
+      <div class="input-group mb-3">
+        <span class="input-group-text">Company Name</span>
+        <input required="" name="company_name" type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+        value="<%=job.company%>">
+      </div>
+  
+      <div class="input-group mb-3">
+        <input required="" name="salary" type="text" class="form-control" placeholder="enter salary" aria-label="Username" value="<%=job.salary%>">
+        <span class="input-group-text">Total Positions</span>
+        <input required="" name="number_of_openings" type="number" class="form-control" placeholder="total no of openings" aria-label="Server" value="<%=job.numberOfOpening%>">
+      </div>
+      <div class="input-group mb-3">
+        <select required="" multiple="true" name="skills_required" class="form-select" aria-label="Default select example">
+          <option selected="" disabled="">select skills required for this job</option>
+          <% if(job.skills.includes('React')){%>selected<%}%>
+          <option <% if(job.skills.includes("React")){%> selected <%}%>value="React">React</option>
+          <option <% if(job.skills.includes("NodeJs")){%> selected <%}%>value="NodeJs">NodeJs</option>
+          <option <% if(job.skills.includes("Angular")){%> selected <%}%>value="Angular">Angular</option>
+          <option <% if(job.skills.includes("MongoDB")){%> selected <%}%>value="MongoDB">MongoDB</option>
+          <option <% if(job.skills.includes("SQL")){%> selected <%}%>value="SQL">SQL</option>
+          <option <% if(job.skills.includes("Express")){%> selected <%}%>value="Express">Express</option>
+          <option <% if(job.skills.includes("Java")){%> selected <%}%>value="Java">Java</option>
+          <option <% if(job.skills.includes("SpringBoot")){%> selected <%}%>value="SpringBoot">SpringBoot</option>
+          <option <% if(job.skills.includes("C++")){%> selected <%}%>value="C++">C++</option>
+          <option <% if(job.skills.includes("Data Structures & Algo")){%> selected <%}%>value="Data Structures &amp; Algo">Data Structures &amp; Algo</option>
+        </select>
+
+        <span class="input-group-text">Apply By</span>
+        <input name="apply_by" type="date" class="form-control" placeholder="total no of openings" aria-label="Server" value="<%=job.applyby%>">
+      </div>
+      <button class="w-100 mb-3 mt-2 btn btn-md btn-success" type="submit">
+        Submit
+      </button>
+    </form>
+  </div>
+  </div>

@@ -1,0 +1,68 @@
+<div><div class="container p-3 mx-auto w-50 form-box my-5 rounded-md">
+    <h2 style="color: #181642" class="text-center mb-3">Post a new Job</h2>
+    
+    <form action="/job" method="post">
+      <div class="input-group mb-3">
+        <select required="" name="job_category" class="form-select" aria-label="Default select example">
+          <option selected="" disabled="">select job category</option>
+          <option value="Tech">Tech</option>
+          <option value="Non-Tech">Non Tech</option>
+        </select>
+      </div>
+  
+      <div class="input-group mb-3">
+        <select required="" name="job_designation" class="form-select" aria-label="Default select example">
+          <option selected="" disabled="">select job designation</option>
+          <option value="HR">HR</option>
+          <option value="SDE">SDE</option>
+          <option value="DevOps">DevOps</option>
+          <option value="MERN Developer">MERN Developer</option>
+          <option value="MEAN Developer">MEAN Developer</option>
+          <option value="JAVA Developer">JAVA Developer</option>
+          <option value="Front-End Developer">Front-End Developer</option>
+          <option value="Back-End Developer">Back-End Developer</option>
+          <option value="Full-Stack Developer">Full-Stack Developer</option>
+        </select>
+      </div>
+  
+      <div class="mb-3">
+        <label for="basic-url" class="form-label">Enter job location</label>
+        <div class="input-group">
+          <input required="" name="job_location" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+        </div>
+      </div>
+  
+      <div class="input-group mb-3">
+        <span class="input-group-text">Company Name</span>
+        <input required="" name="company_name" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      </div>
+  
+      <div class="input-group mb-3">
+        <input required="" name="salary" type="text" class="form-control" placeholder="enter salary" aria-label="Username">
+        <span class="input-group-text">Total Positions</span>
+        <input required="" name="number_of_openings" type="number" class="form-control" placeholder="total no of openings" aria-label="Server">
+      </div>
+      <div class="input-group mb-3">
+        <select required="" multiple="true" name="skills_required" class="form-select" aria-label="Default select example">
+          <option selected="" disabled="">select skills required for this job</option>
+          <option value="React">React</option>
+          <option value="NodeJs">NodeJs</option>
+          <option value="Angular">Angular</option>
+          <option value="MongoDB">MongoDB</option>
+          <option value="SQL">SQL</option>
+          <option value="Express">Express</option>
+          <option value="Java">Java</option>
+          <option value="SpringBoot">SpringBoot</option>
+          <option value="C++">C++</option>
+          <option value="Data Structures &amp; Algo">Data Structures &amp; Algo</option>
+        </select>
+
+        <span class="input-group-text">Apply By</span>
+        <input name="apply_by" type="date" class="form-control" placeholder="total no of openings" aria-label="Server">
+      </div>
+      <button class="w-100 mb-3 mt-2 btn btn-md btn-success" type="submit">
+        Submit
+      </button>
+    </form>
+  </div>
+  </div>

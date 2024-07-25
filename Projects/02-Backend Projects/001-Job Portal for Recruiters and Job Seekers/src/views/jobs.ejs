@@ -1,0 +1,46 @@
+<div class="min-vh-100 bg-theme" style="padding: 0.5rem;">
+  <%if(locals.lastVisit && userEmail){ %>
+    <div class="alert alert-primary text-center" style="width: 50%;margin: 0.1rem auto;" role="alert">
+        Your Last Visit on : <%= locals.lastVisit %>
+    </div>
+  <%}%>
+    <div class="container mx-auto p-2 d-flex align-items-centre justify-content-around flex-wrap">
+      <% if(!jobs.length){ %>
+          <h2>No jobs found.....</h2>
+      <% }else { jobs.forEach((job)=>{%>
+      <div class="card border-white m-3 bg-theme" style="max-width: 18rem">
+        <div class="card-header d-flex flex-column align-items-centre justify-content-start p-2">
+          <span style="width: 160px" class="bg-primary bg-opacity-25 text-white border border-success border border-success p-1 border-opacity-50 rounded">
+            Actively hiring<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow text-success mx-2" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"></path></svg></span>
+          <h5 class="my-1 fw-bold text-warning"><%= job.company%></h5>
+          <div>
+            <span><%= job.category%></span>
+            <span class="text-info"><%= job.designation%></span>
+          </div>
+        </div>
+        <div class="card-body d-flex align-items-centre justify-content-center flex-column">
+          <p class="fw-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+            </svg>
+            <%= job.location%>
+          </p>
+          <p class="fw-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+              <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"></path></svg><%= job.salary%>
+          </p>
+          <div class="skills p-1">
+            <%job.skills.forEach((skill)=>{%>
+            <button class="btn btn-sm btn-outline-info"><%=skill%></button>
+            <%})%>
+          </div>
+          <a href="/job/<%=job.id%>" class="btn btn-sm btn-outline-success my-2">
+            View details
+          </a>
+        </div>
+      </div>
+      <%})}%>
+      
+    </div>
+  </div>
