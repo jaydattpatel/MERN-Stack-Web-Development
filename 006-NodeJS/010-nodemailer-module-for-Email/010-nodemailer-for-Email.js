@@ -17,13 +17,13 @@ async function sendMail(){
         const transport = nodemailer.createTransport({
             service : 'gmail',
             auth : {
-            user : "codingninjas2k16@gmail.com",  //sender's email id
-            pass:"slwvvlczduktvhdj"   // AppgeneratedPassword
+            user : "sender@gmail.com",  //sender's email id
+            pass:"123456"   // AppgeneratedPassword
             }
         });
         
         const mailOptions = {
-            from : "codingninjas2k16@gmail.com",
+            from : "receiver@gmail.com",
             to : receiver,  // receiver's email id
             subject : "NodeJs",
             text : "Welcome to NodeJS!"
