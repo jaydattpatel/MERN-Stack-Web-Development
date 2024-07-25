@@ -1,0 +1,9 @@
+npm install express
+npm install multer
+npm install cookie-parser
+npm install jsonwebtoken
+npm install swagger-ui-express
+npm install winston
+npm install mongodb
+npm install bcrypt
+npm install dotenv

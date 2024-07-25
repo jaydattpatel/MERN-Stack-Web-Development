@@ -1,0 +1,87 @@
+import ProductModel from "./productModel.js";
+import { ApplicationError } from "../../middlewares/errorHandler.js";
+import ProductRepository from "./product.repository.js";
+
+const productRepo = new ProductRepository();
+
+export default class ProductController {
+  async getAllProducts(req, res, next) {
+    try {
+      const products = await productRepo.getAll();
+      res.status(200).send(products);
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async addProduct(req, res, next) {
+    try {
+      const { name, desc, price, stock, category, sizes } = req.body;
+      const parameters = {
+        name: name,
+        desc: desc,
+        price: parseFloat(price),
+        stock: parseInt(stock),
+        imageUrl: req.file.filename,
+        category: category,
+        sizes: sizes.split(","),
+      };
+      const newProduct = new ProductModel(...Object.values(parameters));
+      await productRepo.add(newProduct);
+      res.status(201).send(newProduct);
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async getOneProduct(req, res, next) {
+    try {
+      const id = req.params.id;
+      const product = await productRepo.get(id);
+      if (!product) {
+        throw new ApplicationError(404, "Product not found....!");
+      }
+      res.status(200).send(product);
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async filterProducts(req, res, next) {
+    try {
+      // console.log(req.query);
+      const { minPrice, maxPrice, category } = req.query;
+      const result = await productRepo.filter(minPrice, maxPrice, category);
+      res.status(200).json(result);
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  async rateProduct(req, res, next) {
+    try {
+      const { userId, productId, rate } = req.body;
+      if (
+        !userId ||
+        !productId ||
+        userId.length != 24 ||
+        productId.length != 24 ||
+        rate < 0 ||
+        rate > 5
+      ) {
+        throw new ApplicationError(
+          400,
+          "userId and productId must be 24 hex characters, Also rate in range 1 to 5 !"
+        );
+      }
+      const error = await productRepo.rateProduct(userId, productId, rate);
+      // console.log(error);
+      if (error) {
+        throw new ApplicationError(400, error);
+      }
+      return res.status(200).send("Rating has been added");
+    } catch (err) {
+      next(err);
+    }
+  }
+}

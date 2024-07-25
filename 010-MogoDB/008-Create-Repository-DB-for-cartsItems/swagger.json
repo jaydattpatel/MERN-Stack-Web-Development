@@ -1,0 +1,86 @@
+{
+    "openapi": "3.0.0",
+    "info":{
+        "version":"1.0.0",
+        "description":"API for E-Commerce application",
+        "title":"E-commerce API"
+    },
+    "servers":[
+        {
+            "url":"http://localhost:3000"
+        }
+    ],
+
+    "components":
+    {
+        "securitySchemes":
+        {
+            "JWT":
+            {
+                "in":"header",
+                "name":"Authorization",
+                "type": "apiKey"
+            }
+        }
+    },
+
+    "paths":
+    {
+        "/api/users/signin": 
+        {
+            "post":
+            {
+                "tags": ["Users"],
+                "summary":"Login",
+                "description":"User login to get token",
+                "requestBody":
+                {
+                    "content":
+                    {
+                        "application/json":{
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "email":{
+                                        "type": "string"
+                                    },
+                                    "password":{
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200": {
+                        "description":"OK"
+                    },
+                    "400": {
+                        "description": "Incorrect Credentials"
+                    }
+                }
+            }
+        },
+
+        "/api/products": {
+            "get":
+            {
+                "tags": ["Products"],
+                "summary":"Get Products",
+                "description":"User will get all products",
+                "security":[{"JWT": {} }],
+                "responses":
+                {
+                    "200": {
+                        "description":"OK"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        }
+
+    }
+}
