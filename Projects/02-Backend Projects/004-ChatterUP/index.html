@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ChatterUp App</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Include the SocketIOFile library -->
+
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+  </head>
+
+  <body>
+    <div class="chatterup-heading">ChatterUp</div>
+    <!-- Display the form here for entry in app by name -->
+    <div id="promt">
+      <form id="my-prompt">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your name..."
+          />
+        </div>
+        <button type="submit">Enter</button>
+      </form>
+    </div>
+    <div id="container" class="container">
+      <div class="left-container">
+        <!-- welcome message -->
+        <div id="welcome" style="text-align: left"></div>
+        <div id="message-list">
+          <!-- Tasks will be displayed here -->
+        </div>
+        <!-- Added new messages in the left container -->
+        <div id="message-form-div">
+          <form id="message-form">
+            <div id="new-message" style="width: 100%">
+              <!-- <img src="public/1.jpg" alt="profile"> -->
+              <input
+                type="text"
+                id="text-message"
+                placeholder="Enter new messages"
+                required
+              />
+              <button id="send-message-button" type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Online Users display in right container -->
+      <div class="right-container">
+        <!-- <p id="welcome"></p> -->
+        <h2 id="count">Online</h2>
+        <div id="online-user">
+          <!-- Users display here -->
+        </div>
+      </div>
+    </div>
+    <footer>
+      <script src="script.js"></script>
+    </footer>
+  </body>
+</html>

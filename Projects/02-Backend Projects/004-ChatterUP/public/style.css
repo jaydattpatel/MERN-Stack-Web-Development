@@ -1,0 +1,254 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #dfd7d7, #9cc1f1, #dfd7d7, #9cc1f1);
+  background-image: url("images/mainBG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* user promtp  for taking name at starting*/
+
+#my-prompt {
+  position: absolute;
+  display: none;
+  top: 35%;
+  left: 25%;
+  width: 50%;
+  height: 20%;
+  background-color: #005a13;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group label {
+  color: white;
+  font-size: 1.5rem;
+}
+/* CSS for input in form-group */
+.form-group input {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#my-prompt button {
+  padding: 10px;
+  width: 15vh;
+  margin: 10px 10px 40%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+/* main .container CSS */
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* CSS for main heading */
+.chatterup-heading {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ff0000;
+  text-align: center;
+  margin: 0.8rem 0;
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* CSS for right container start */
+.right-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 20%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid black;
+}
+
+.user p {
+  margin: 0;
+  font-weight: bold;
+}
+.typing {
+  padding-left: 10%;
+  color: green;
+}
+.online-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  margin-left: auto;
+}
+#count {
+  font-size: large;
+  color: #4caf50;
+}
+
+#welcome {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: rgb(56, 153, 51);
+}
+
+#message-list {
+  width: 50vw;
+  height: 65vh;
+  overflow: auto;
+}
+
+/* CSS for left container start */
+.left-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  border: 10px solid whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Add new message in left container  */
+#message-form-div {
+  width: 100%;
+}
+#new-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#message-form {
+  display: flex;
+  align-items: center;
+  margin: 10px 5px 10px 5px;
+}
+
+#message-form input[type="text"] {
+  flex: 3;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+button:hover {
+  background-color: #1f1f64;
+}
+
+/* display message block */
+.message-block {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  margin: 1rem;
+}
+
+.message-block-user {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.message-block img {
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message-block-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message-content {
+  float: right;
+  max-width: 90%;
+  min-width: 30%;
+  padding: 15px;
+  background-color: lightblue;
+  border-radius: 15px;
+  position: relative;
+}
+
+.message-content .message {
+  font-size: 14px;
+  font-weight: 600;
+  font-weight: normal;
+  margin: 0;
+}
+
+.message-content .timestamp {
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 21px;
+  right: 7px;
+}
+
+.message-content .name {
+  font-size: 12px;
+  color: #181313;
+  font-weight: bold;
+  position: absolute;
+  bottom: 16px;
+}
