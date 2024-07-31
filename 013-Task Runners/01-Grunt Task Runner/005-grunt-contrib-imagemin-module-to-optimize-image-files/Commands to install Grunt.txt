@@ -1,0 +1,14 @@
+https://gruntjs.com/getting-started
+https://www.npmjs.com/package/grunt-cli
+https://www.npmjs.com/package/grunt
+https://gruntjs.com/plugins
+
+
+1. Install The Grunt command line interface grunt-cli globally :
+	npm install -g grunt-cli
+
+2. Install The JavaScript Task Runner grunt as dev dependency:
+	npm install grunt --save-dev
+
+3. Install required the grunt plugin as dev dependency:
+ 	npm i [plugin_Name] --save-dev

@@ -1,0 +1,17 @@
+{
+  "name": "taskrunner",
+  "version": "1.0.0",
+  "description": "grunt-taskrunner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "jaydattpatel",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.6.1"
+  }
+}
