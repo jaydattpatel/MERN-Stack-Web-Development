@@ -1,0 +1,18 @@
+{
+  "name": "taskrunner",
+  "version": "1.0.0",
+  "description": "gulp-taskrunner",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "jaydattpatel",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
