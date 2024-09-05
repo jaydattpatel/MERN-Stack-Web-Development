@@ -1,5 +1,0 @@
-npm i gulp --save-dev
-npm install gulp-concat --save-dev
-npm install gulp-uglify --save-dev
-npm install gulp-clean-css --save-dev
-npm install gulp-htmlmin --save-dev 

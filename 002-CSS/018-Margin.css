@@ -1,4 +1,3 @@
-
 /*set margin space arround elements with outer elements
 
 Note: 
@@ -16,22 +15,21 @@ margin-inline, margin-block
 margin-inline-start,margin-inline-end
 margin-block-start, margin-block-end
 */
-div{
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    color: yellow;
-    font: large bold;
+div {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  color: yellow;
+  font: large bold;
 }
-.b1{
-    margin-bottom: 50px;
-}
-
-
-.b2{
-    margin-left: 20px;
+.b1 {
+  margin-bottom: 50px;
 }
 
-.b3{
-    margin: auto;
+.b2 {
+  margin-left: 20px;
+}
+
+.b3 {
+  margin: auto;
 }

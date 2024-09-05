@@ -8,47 +8,50 @@ nth-child(odd/even) or nth-child(An+B):  to select specific children is using nt
 
 */
 
-div{
-    font-size: 1.5rem;
+div {
+  font-size: 1.5rem;
 }
-#a1:visited{
-    color: rgb(226, 43, 214);
-}
-
-#a2:active{
-    color: orange;
+#a1:visited {
+  color: rgb(226, 43, 214);
 }
 
-#a3:active{
-    color: white;
-    background-color: rgb(255, 0, 200);
+#a2:active {
+  color: orange;
 }
 
-#tx1:target, #tx2:target, #tx3:target{
-    background-color: burlywood;
-    font-size: 2rem;
+#a3:active {
+  color: white;
+  background-color: rgb(255, 0, 200);
 }
 
-#tx2:target{
-    color:blue
+#tx1:target,
+#tx2:target,
+#tx3:target {
+  background-color: burlywood;
+  font-size: 2rem;
 }
 
-#ver1 li:nth-child(even){
-    color: aqua;
+#tx2:target {
+  color: blue;
 }
 
-#ver2 li:nth-child(2n+1){
-    color: red;
+#ver1 li:nth-child(even) {
+  color: aqua;
 }
 
-div a:hover{
-    box-shadow: 0 0 3px 4px cyan;
+#ver2 li:nth-child(2n + 1) {
+  color: red;
 }
 
-div p:hover, div ol:hover{
-    box-shadow: 0 0 3px 4px red;
+div a:hover {
+  box-shadow: 0 0 3px 4px cyan;
 }
 
-div ol:hover{
-    background-color: yellow;
+div p:hover,
+div ol:hover {
+  box-shadow: 0 0 3px 4px red;
+}
+
+div ol:hover {
+  background-color: yellow;
 }

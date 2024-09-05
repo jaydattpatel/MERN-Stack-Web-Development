@@ -1,2 +1,0 @@
-npm i gulp --save-dev
-npm i [plugin_Name] --save-dev

@@ -1,0 +1,5 @@
+npm install express
+npm install ejs
+npm install express-ejs-layouts
+npm install express-validator
+npm install multer

@@ -15,146 +15,141 @@ The transition-timing-function property specifies the speed curve of the transit
 
 */
 
-
-#social{
-    width: 25%;
-    display: flex;
-    justify-content: space-around;
+#social {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
 }
 
-#social a{
-    height: 40px;
-    width: 40px;
-    border-radius: 20%;
-    display: flex;
-    justify-content: center;
-    transition: box-shadow 0.5s 0.1s ease, 
-                border 0.1s 0.1s ease;
+#social a {
+  height: 40px;
+  width: 40px;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  transition: box-shadow 0.5s 0.1s ease, border 0.1s 0.1s ease;
 }
 
-#social a img{
-    max-height: 70%;
-    max-width: 70%;
-    justify-self: center;
-    align-self: center;
-    /* border: 1px blue solid; */
+#social a img {
+  max-height: 70%;
+  max-width: 70%;
+  justify-self: center;
+  align-self: center;
+  /* border: 1px blue solid; */
 }
-#facebook{
-    background-color: #3b5998;
+#facebook {
+  background-color: #3b5998;
 }
-#linkedin{
-    background-color: #0077b5; 
+#linkedin {
+  background-color: #0077b5;
 }
-#twitter{
-    background-color: #83c3f3; 
+#twitter {
+  background-color: #83c3f3;
 }
-#gmail{
-    background-color: #dd4b39; 
+#gmail {
+  background-color: #dd4b39;
 }
-#whatsapp{
-    background-color: #6ba92f;  
+#whatsapp {
+  background-color: #6ba92f;
 }
-#mail{
-    background-color: #ed4926;
-}
-
-#facebook:hover{
-    box-shadow: 0px 0px 5px 5px rgb(0, 37, 116);
-    border: 1px black solid ;
-}
-#linkedin:hover{
-    box-shadow: 0px 0px 5px 5px rgb(0, 105, 161); 
-    border: 1px black solid ;
-}
-#twitter:hover{
-    box-shadow: 0px 0px 5px 5px #55acee;   
-    border: 1px black solid ;
-}
-#gmail:hover{
-    box-shadow: 0px 0px 5px 5px #c23321; 
-    border: 1px black solid ;
-}
-#whatsapp:hover{
-    box-shadow: 0px 0px 5px 5px #528124;  
-    border: 1px black solid ;
-}
-#mail:hover{
-    box-shadow: 0px 0px 5px 5px #cf3311;
-    border: 1px black solid ;
+#mail {
+  background-color: #ed4926;
 }
 
-.ball-box{
-    width: 60%;
-    /* border : 1px black solid; */
-    margin : 2rem auto;
-
+#facebook:hover {
+  box-shadow: 0px 0px 5px 5px rgb(0, 37, 116);
+  border: 1px black solid;
+}
+#linkedin:hover {
+  box-shadow: 0px 0px 5px 5px rgb(0, 105, 161);
+  border: 1px black solid;
+}
+#twitter:hover {
+  box-shadow: 0px 0px 5px 5px #55acee;
+  border: 1px black solid;
+}
+#gmail:hover {
+  box-shadow: 0px 0px 5px 5px #c23321;
+  border: 1px black solid;
+}
+#whatsapp:hover {
+  box-shadow: 0px 0px 5px 5px #528124;
+  border: 1px black solid;
+}
+#mail:hover {
+  box-shadow: 0px 0px 5px 5px #cf3311;
+  border: 1px black solid;
 }
 
-.ball-box>div{
-    position: relative;
-    height: auto;
-    width: 60%;
-    border : 1px black solid;
-    background-color: darkgreen;
-    padding: 0.2rem;
-    margin: 0.2rem auto;
-
-}
-@keyframes move{
-    0%{
-       transform: translateX(0%); 
-    }
-    50%{
-       transform: translateX(1000%);  
-    }
-    100%{
-       transform: translateX(0%);  
-    }
+.ball-box {
+  width: 60%;
+  /* border : 1px black solid; */
+  margin: 2rem auto;
 }
 
-.ball{
-    height: 3rem;
-    width: 3rem;
-    background-color: rebeccapurple;
-    border : 1px black solid;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 0.8rem;
-    align-content: center;
-    color: white;
+.ball-box > div {
+  position: relative;
+  height: auto;
+  width: 60%;
+  border: 1px black solid;
+  background-color: darkgreen;
+  padding: 0.2rem;
+  margin: 0.2rem auto;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(1000%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 
-    animation-name: move; 
-    animation-duration: 5s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    
+.ball {
+  height: 3rem;
+  width: 3rem;
+  background-color: rebeccapurple;
+  border: 1px black solid;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0.8rem;
+  align-content: center;
+  color: white;
+
+  animation-name: move;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .b1 {
-    /* transition: transform ease; */
-    animation-timing-function: linear;
+  /* transition: transform ease; */
+  animation-timing-function: linear;
 }
 
 .b2 {
-    animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 
 .b3 {
-    animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
 }
 
 .b4 {
-    animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
 }
 
 .b5 {
-    animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 
 .b6 {
-    animation-timing-function: steps(10);
+  animation-timing-function: steps(10);
 }
 .b7 {
-    animation-timing-function: cubic-bezier(1,0,0,1);
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
 }

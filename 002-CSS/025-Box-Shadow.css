@@ -7,156 +7,154 @@ inset is optional to set shadow inner side of element.
 horizontal and vertical offset are required.
 
 */
-#main-screen{
-    margin:5px 0px;
-    display:flex; 
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+#main-screen {
+  margin: 5px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
 }
 
-.main{
-    height: 100%;
-    width: 700px;
-    display:flex; 
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    overflow: auto;
-    border: 1px blue solid;
+.main {
+  height: 100%;
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  overflow: auto;
+  border: 1px blue solid;
 }
 
-.main div{
-    margin: 14px;
-    height: 100px;
-    width: 100px;
-    background-color:lightcoral;
-    box-sizing: border-box;
+.main div {
+  margin: 14px;
+  height: 100px;
+  width: 100px;
+  background-color: lightcoral;
+  box-sizing: border-box;
 }
 
-.rad1 div{
-    border-radius: 10%;
+.rad1 div {
+  border-radius: 10%;
 }
 
-.rad2 div{
-    border-radius: 10% 20% ;
+.rad2 div {
+  border-radius: 10% 20%;
 }
 
-.rad3 div{
-    border-radius: 20% 10% ;
+.rad3 div {
+  border-radius: 20% 10%;
 }
-.rad4 div{
-    border-radius: 50% 0% 50% 0% ;
+.rad4 div {
+  border-radius: 50% 0% 50% 0%;
 }
-.rad5 div{
-    border-radius: 0% 50% 0% 50% ;
+.rad5 div {
+  border-radius: 0% 50% 0% 50%;
 }
-.rad6 div{
-    border-radius: 50% 0% 0% 50% ;
+.rad6 div {
+  border-radius: 50% 0% 0% 50%;
 }
-.rad7 div{
-    border-radius: 0% 50% 50% 0% ;
+.rad7 div {
+  border-radius: 0% 50% 50% 0%;
 }
-.rad8 div{
-    border-radius: 50% 50% 0% 0% ;
+.rad8 div {
+  border-radius: 50% 50% 0% 0%;
 }
-.rad9 div{
-    border-radius: 0% 0% 50% 50% ;
+.rad9 div {
+  border-radius: 0% 0% 50% 50%;
 }
-.rad10 div{
-    border-radius: 50% 50% ;
-}
-
-
-.b1{
-    box-shadow: 0px 0px 0px 3px gray;
-}
-.b2{
-    box-shadow: 2px 2px 0px 3px gray;
-}
-.b3{
-    box-shadow: -2px 2px 0px 3px gray;
-}
-.b4{
-    box-shadow: 2px -2px 0px 3px gray;
-}
-.b5{
-    box-shadow: -2px -2px 0px 3px gray;
-}
-.b6{
-    box-shadow: 0px 0px 5px 3px gray;
-}
-.b7{
-    box-shadow: 2px 2px 5px 3px gray;
-}
-.b8{
-    box-shadow: -2px 2px 5px 3px gray;
-}
-.b9{
-    box-shadow: 2px -2px 5px 3px gray;
-}
-.b10{
-    box-shadow: -2px -2px 5px 3px gray;
-}
-.b11{
-    box-shadow: 0px 0px 5px 8px gray;
-}
-.b12{
-    box-shadow: 2px 2px 5px 8px gray;
-}
-.b13{
-    box-shadow: -2px 2px 5px 8px gray;
-}
-.b14{
-    box-shadow: 2px -2px 5px 8px gray;
-}
-.b15{
-    box-shadow: -2px -2px 5px 8px gray;
+.rad10 div {
+  border-radius: 50% 50%;
 }
 
+.b1 {
+  box-shadow: 0px 0px 0px 3px gray;
+}
+.b2 {
+  box-shadow: 2px 2px 0px 3px gray;
+}
+.b3 {
+  box-shadow: -2px 2px 0px 3px gray;
+}
+.b4 {
+  box-shadow: 2px -2px 0px 3px gray;
+}
+.b5 {
+  box-shadow: -2px -2px 0px 3px gray;
+}
+.b6 {
+  box-shadow: 0px 0px 5px 3px gray;
+}
+.b7 {
+  box-shadow: 2px 2px 5px 3px gray;
+}
+.b8 {
+  box-shadow: -2px 2px 5px 3px gray;
+}
+.b9 {
+  box-shadow: 2px -2px 5px 3px gray;
+}
+.b10 {
+  box-shadow: -2px -2px 5px 3px gray;
+}
+.b11 {
+  box-shadow: 0px 0px 5px 8px gray;
+}
+.b12 {
+  box-shadow: 2px 2px 5px 8px gray;
+}
+.b13 {
+  box-shadow: -2px 2px 5px 8px gray;
+}
+.b14 {
+  box-shadow: 2px -2px 5px 8px gray;
+}
+.b15 {
+  box-shadow: -2px -2px 5px 8px gray;
+}
 
-.b1-inset{
-    box-shadow: 0px 0px 0px 3px gray inset;
+.b1-inset {
+  box-shadow: 0px 0px 0px 3px gray inset;
 }
-.b2-inset{
-    box-shadow: 2px 2px 0px 3px gray inset;
+.b2-inset {
+  box-shadow: 2px 2px 0px 3px gray inset;
 }
-.b3-inset{
-    box-shadow: -2px 2px 0px 3px gray inset;
+.b3-inset {
+  box-shadow: -2px 2px 0px 3px gray inset;
 }
-.b4-inset{
-    box-shadow: 2px -2px 0px 3px gray inset;
+.b4-inset {
+  box-shadow: 2px -2px 0px 3px gray inset;
 }
-.b5-inset{
-    box-shadow: -2px -2px 0px 3px gray inset;
+.b5-inset {
+  box-shadow: -2px -2px 0px 3px gray inset;
 }
-.b6-inset{
-    box-shadow: 0px 0px 5px 3px gray inset;
+.b6-inset {
+  box-shadow: 0px 0px 5px 3px gray inset;
 }
-.b7-inset{
-    box-shadow: 2px 2px 5px 3px gray inset;
+.b7-inset {
+  box-shadow: 2px 2px 5px 3px gray inset;
 }
-.b8-inset{
-    box-shadow: -2px 2px 5px 3px gray inset;
+.b8-inset {
+  box-shadow: -2px 2px 5px 3px gray inset;
 }
-.b9-inset{
-    box-shadow: 2px -2px 5px 3px gray inset;
+.b9-inset {
+  box-shadow: 2px -2px 5px 3px gray inset;
 }
-.b10-inset{
-    box-shadow: -2px -2px 5px 3px gray inset;
+.b10-inset {
+  box-shadow: -2px -2px 5px 3px gray inset;
 }
-.b11-inset{
-    box-shadow: 0px 0px 5px 8px gray inset;
+.b11-inset {
+  box-shadow: 0px 0px 5px 8px gray inset;
 }
-.b12-inset{
-    box-shadow: 2px 2px 5px 8px gray inset;
+.b12-inset {
+  box-shadow: 2px 2px 5px 8px gray inset;
 }
-.b13-inset{
-    box-shadow: -2px 2px 5px 8px gray inset;
+.b13-inset {
+  box-shadow: -2px 2px 5px 8px gray inset;
 }
-.b14-inset{
-    box-shadow: 2px -2px 5px 8px gray inset;
+.b14-inset {
+  box-shadow: 2px -2px 5px 8px gray inset;
 }
-.b15-inset{
-    box-shadow: -2px -2px 5px 8px gray inset;
+.b15-inset {
+  box-shadow: -2px -2px 5px 8px gray inset;
 }

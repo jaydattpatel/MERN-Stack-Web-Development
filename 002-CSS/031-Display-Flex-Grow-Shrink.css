@@ -6,101 +6,100 @@ flex-grow: If container have extra space available then it will increase the ele
 flex-shrink: If container does not have suficiant space for inner elements then it will decrease the element size according to shrink value by dividing among element's shrink values.
 
 */
-#main-screen{
-    height: fit-content;
-    width: 80vw;
-    margin: auto;
-    display:flex; 
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-around;
+#main-screen {
+  height: fit-content;
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
 }
 
-#main-box{
-    height: fit-content;
-    width: 600px;
-    border: 2px solid rebeccapurple;
-    text-align: center;
-    margin: auto 3px;
+#main-box {
+  height: fit-content;
+  width: 600px;
+  border: 2px solid rebeccapurple;
+  text-align: center;
+  margin: auto 3px;
 }
 
-.growbox{
-    height: fit-content;
-    width: 500px;
-    background-color: lightpink;
-    border: 1px black solid;
-    margin:auto;
-    display: flex;
+.growbox {
+  height: fit-content;
+  width: 500px;
+  background-color: lightpink;
+  border: 1px black solid;
+  margin: auto;
+  display: flex;
 }
 
-.growbox div{
-    height: 50px;
-    width: 50px;
+.growbox div {
+  height: 50px;
+  width: 50px;
 }
 
-#div1{
-    background-color:brown;
+#div1 {
+  background-color: brown;
 }
-#div2{
-    background-color:blueviolet;
+#div2 {
+  background-color: blueviolet;
 }
-#div3{
-    background-color:blue;
+#div3 {
+  background-color: blue;
 }
-#div4{
-    background-color:crimson;
+#div4 {
+  background-color: crimson;
 }
-#div5{
-    background-color:chocolate;
-}
-
-.growbox #div1{
-    flex-grow: 2;
-}
-.growbox #div2{
-    flex-grow: 1;
-}
-.growbox #div3{
-    flex-grow: 2;
-}
-.growbox #div4{
-    flex-grow: 3;
-}
-.growbox #div5{
-    flex-grow: 0;
+#div5 {
+  background-color: chocolate;
 }
 
-
-.shrinkbox{
-    height: fit-content;
-    width: 500px;
-    background-color: lightpink;
-    border: 1px black solid;
-    margin:auto;
-    display: flex;
+.growbox #div1 {
+  flex-grow: 2;
+}
+.growbox #div2 {
+  flex-grow: 1;
+}
+.growbox #div3 {
+  flex-grow: 2;
+}
+.growbox #div4 {
+  flex-grow: 3;
+}
+.growbox #div5 {
+  flex-grow: 0;
 }
 
-.shrinkbox div{
-    height: 150px;
-    width: 150px;
+.shrinkbox {
+  height: fit-content;
+  width: 500px;
+  background-color: lightpink;
+  border: 1px black solid;
+  margin: auto;
+  display: flex;
 }
 
-.shrinkbox #div1{
-    flex-shrink: 2;
-}
-.shrinkbox #div2{
-    flex-shrink: 1;
-}
-.shrinkbox #div3{
-    flex-shrink: 2;
-}
-.shrinkbox #div4{
-    flex-shrink: 3;
-}
-.shrinkbox #div5{
-    flex-shrink: 0;
+.shrinkbox div {
+  height: 150px;
+  width: 150px;
 }
 
-.wrap{
-    flex-wrap: wrap;
+.shrinkbox #div1 {
+  flex-shrink: 2;
+}
+.shrinkbox #div2 {
+  flex-shrink: 1;
+}
+.shrinkbox #div3 {
+  flex-shrink: 2;
+}
+.shrinkbox #div4 {
+  flex-shrink: 3;
+}
+.shrinkbox #div5 {
+  flex-shrink: 0;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }

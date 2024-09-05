@@ -12,140 +12,167 @@ degree : 0deg, 33deg, 180deg, 360deg,.......
  
 color keyword : rgb, rgba, transparent....
 */
-#bg{
-    height: 100%;
-    width: 100%;
-    background-image: url("Images/Galaxy.jpg");
-    background-size: auto;
-    background-repeat: no-repeat;
-    margin: -2%;
+#bg {
+  height: 100%;
+  width: 100%;
+  background-image: url("Images/Galaxy.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin: -2%;
 }
 
-#main-screen{
-    width: 1200px;
-    margin: auto;
-    display:flex; 
-    flex-wrap: wrap;
-    justify-content: space-around;
-    justify-content: space-around;
+#main-screen {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-content: space-around;
 }
 
-#main-screen div{
-    height: 150px;
-    width: 150px;
-    border: 1px black solid;
-    text-align: center;
-    margin: 1% auto;
-    background-size: cover;
-    text-wrap: wrap;
-    word-wrap: break-word;
+#main-screen div {
+  height: 150px;
+  width: 150px;
+  border: 1px black solid;
+  text-align: center;
+  margin: 1% auto;
+  background-size: cover;
+  text-wrap: wrap;
+  word-wrap: break-word;
 }
 
-.g1{
-    background : linear-gradient(red,green);
+.g1 {
+  background: linear-gradient(red, green);
 }
-.g2{
-    background : linear-gradient(red,green, blue);
+.g2 {
+  background: linear-gradient(red, green, blue);
 }
-.g3{
-    background: linear-gradient(red 50%, green 50%);
+.g3 {
+  background: linear-gradient(red 50%, green 50%);
 }
-.g4{
-    background: linear-gradient(red 70%, green 30%);
+.g4 {
+  background: linear-gradient(red 70%, green 30%);
 }
-.g5{
-    background: linear-gradient(red 30%, green 70%);
+.g5 {
+  background: linear-gradient(red 30%, green 70%);
 }
-.g6{
-    background: linear-gradient(red 0% 25%, green 25% 50%,blue 50% 75%,yellow 75% 100%);
+.g6 {
+  background: linear-gradient(
+    red 0% 25%,
+    green 25% 50%,
+    blue 50% 75%,
+    yellow 75% 100%
+  );
 }
-.g7{
-    background: linear-gradient(red 25%, green 50%,blue 75%,yellow 100%);
+.g7 {
+  background: linear-gradient(red 25%, green 50%, blue 75%, yellow 100%);
 }
-.g8{
-    background : linear-gradient(to top,red,green, blue);
+.g8 {
+  background: linear-gradient(to top, red, green, blue);
 }
-.g9{
-    background : linear-gradient(to bottom,red,green, blue);
+.g9 {
+  background: linear-gradient(to bottom, red, green, blue);
 }
-.g10{
-    background : linear-gradient(to left,red,green, blue);
+.g10 {
+  background: linear-gradient(to left, red, green, blue);
 }
-.g11{
-    background : linear-gradient(to right,red,green, blue);
+.g11 {
+  background: linear-gradient(to right, red, green, blue);
 }
-.g12{
-    background : linear-gradient(to top left,red,green, blue);
+.g12 {
+  background: linear-gradient(to top left, red, green, blue);
 }
-.g13{
-    background : linear-gradient(to top right,red,green, blue);
+.g13 {
+  background: linear-gradient(to top right, red, green, blue);
 }
-.g14{
-    background : linear-gradient(to bottom left,red,green, blue);
+.g14 {
+  background: linear-gradient(to bottom left, red, green, blue);
 }
-.g15{
-    background : linear-gradient(to bottom right,red,green, blue);
+.g15 {
+  background: linear-gradient(to bottom right, red, green, blue);
 }
-.g16{
-    background : linear-gradient(0deg,red,green, blue);
+.g16 {
+  background: linear-gradient(0deg, red, green, blue);
 }
-.g17{
-    background : linear-gradient(45deg,red,green, blue);
+.g17 {
+  background: linear-gradient(45deg, red, green, blue);
 }
-.g18{
-    background : linear-gradient(90deg,red,green, blue);
+.g18 {
+  background: linear-gradient(90deg, red, green, blue);
 }
-.g19{
-    background : linear-gradient(135deg,red,green, blue);
+.g19 {
+  background: linear-gradient(135deg, red, green, blue);
 }
-.g20{
-    background : linear-gradient(180deg,red,green, blue);
+.g20 {
+  background: linear-gradient(180deg, red, green, blue);
 }
-.g21{
-    background : linear-gradient(225deg,red,green, blue);
+.g21 {
+  background: linear-gradient(225deg, red, green, blue);
 }
-.g22{
-    background : linear-gradient(270deg,red,green, blue);
+.g22 {
+  background: linear-gradient(270deg, red, green, blue);
 }
-.g23{
-    background : linear-gradient(315deg,red,green, blue);
+.g23 {
+  background: linear-gradient(315deg, red, green, blue);
 }
-.g24{
-    background : linear-gradient(360deg,red,green, blue);
+.g24 {
+  background: linear-gradient(360deg, red, green, blue);
 }
-.g25{
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("Images/food.jpg");
+.g25 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("Images/food.jpg");
 }
-.g26{
-    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url("Images/food.jpg");
+.g26 {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("Images/food.jpg");
 }
-.g27{
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(255,255,255,0.5)), url("Images/food.jpg");
+.g27 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5)),
+    url("Images/food.jpg");
 }
-.g28{
-    background: linear-gradient(rgba(255,255,255,0.5),rgba(0,0,0,0.5)), url("Images/food.jpg");
-}
-
-.g29{
-    background: linear-gradient(rgba(255,255,255,0.5),rgba(0,0,0,0)), url("Images/food.jpg");
-}
-
-.g30{
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), url("Images/food.jpg");
-}
-.g31{
-    background: linear-gradient(rgba(255, 238, 0, 0.5),rgba(0,0,0,0)), url("Images/food.jpg");
-}
-.g32{
-    background: linear-gradient(rgba(255, 0, 0, 0.5) 50%,rgba(0,0,0,0)), url("Images/food.jpg");
-}
-.g33{
-    background: linear-gradient(rgba(0,0,0,1) 50%,rgba(0,0,0,0)50%), url("Images/food.jpg");
-}
-.g34{
-    background: linear-gradient(135deg,rgba(0,0,0,0.5)50%,rgba(0,0,0,0)50%), url("Images/food.jpg");
+.g28 {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)),
+    url("Images/food.jpg");
 }
 
-.g35{
-    background: linear-gradient(135deg,rgba(255, 238, 1, 0.5)50%,transparent 50%), url("Images/food.jpg");
+.g29 {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0)),
+    url("Images/food.jpg");
+}
+
+.g30 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+    url("Images/food.jpg");
+}
+.g31 {
+  background: linear-gradient(rgba(255, 238, 0, 0.5), rgba(0, 0, 0, 0)),
+    url("Images/food.jpg");
+}
+.g32 {
+  background: linear-gradient(rgba(255, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0)),
+    url("Images/food.jpg");
+}
+.g33 {
+  background: linear-gradient(rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 50%),
+    url("Images/food.jpg");
+}
+.g34 {
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    url("Images/food.jpg");
+}
+
+.g35 {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 238, 1, 0.5) 50%,
+      transparent 50%
+    ),
+    url("Images/food.jpg");
 }

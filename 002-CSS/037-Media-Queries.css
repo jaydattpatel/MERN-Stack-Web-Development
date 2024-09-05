@@ -24,71 +24,63 @@ Desktop First View
 @media screen and (max-aspect-ratio: 1280/720)
  */
 
-
 /*---------Desktop First View----------*/
-#div1{
-    width: 60%;
-    font-size: 1.25rem;
-    border: 1px solid black;
+#div1 {
+  width: 60%;
+  font-size: 1.25rem;
+  border: 1px solid black;
 }
 
 /*this will apply only when screen width is 900px and less than */
-@media screen and (max-width:900px)
-{
-    #div1{
-        width: 90%;
-        color:blue;
-    }
+@media screen and (max-width: 900px) {
+  #div1 {
+    width: 90%;
+    color: blue;
+  }
 }
 
 /*this will apply only when screen width is 600px and less than */
-@media screen and (max-width:600px)
-{
-    #div1{
-        width: 100%;
-        color:red;
-    }
+@media screen and (max-width: 600px) {
+  #div1 {
+    width: 100%;
+    color: red;
+  }
 }
 /*this will apply only when print width is less than 900px*/
-@media print and (max-width:900px)
-{
-    #div1{
-        width: 80%;
-        color: green;
-    }
+@media print and (max-width: 900px) {
+  #div1 {
+    width: 80%;
+    color: green;
+  }
 }
 
-
 /*---------Mobile First View----------*/
-#div2{
-    width: 100%;
-    font-size: 1.25rem;
-    border: 1px solid black;
+#div2 {
+  width: 100%;
+  font-size: 1.25rem;
+  border: 1px solid black;
 }
 
 /*this will apply only when screen width is greater than 572px*/
-@media screen and (min-width:572px)
-{
-    #div2{
-        width: 80%;
-        color:blue;
-    }
+@media screen and (min-width: 572px) {
+  #div2 {
+    width: 80%;
+    color: blue;
+  }
 }
 
 /*this will apply only when screen width is greater than 952px*/
-@media screen and (min-width:952px)
-{
-    #div2{
-        width: 60%;
-        color:red;
-    }
+@media screen and (min-width: 952px) {
+  #div2 {
+    width: 60%;
+    color: red;
+  }
 }
 
 /*this will apply only when print width is greater than 952px*/
-@media print and (min-width:952px)
-{
-    #div2{
-        width: 100%;
-        color: purple;
-    }
+@media print and (min-width: 952px) {
+  #div2 {
+    width: 100%;
+    color: purple;
+  }
 }

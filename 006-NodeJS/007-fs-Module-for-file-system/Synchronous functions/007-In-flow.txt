@@ -1,3 +1,0 @@
-Welcome to NodeJS
-Name : Jaydatt Patel
-File to Read

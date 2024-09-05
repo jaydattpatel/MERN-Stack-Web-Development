@@ -1,6 +1,0 @@
-npm install express
-npm install multer
-npm install cookie-parser
-npm install jsonwebtoken
-npm install swagger-ui-express
-npm install winston

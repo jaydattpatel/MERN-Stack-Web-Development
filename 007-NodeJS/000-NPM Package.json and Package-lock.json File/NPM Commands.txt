@@ -1,0 +1,16 @@
+https://docs.npmjs.com/cli/v6/commands
+
+npm init  :  to initialize package.json npm
+npm list : to list all local npm packages
+npm list -g : to list all global npm packages
+npm version : to check npm version
+npm [scriptTag]  or  npm run [scriptTag] : to run package.json scripts like 'start' or 'stop' 
+npm install [package name] or npm i [package name] : to install packages locally
+npm install -g [package name] or npm i -g [package name]  : to install package globally
+npm uninstall [package name] : to uninstall packages locally
+npm uninstall -g [package name] : to uninstall packages globally
+npm update [package name] :  to update local npm package to its latest version.
+npm update -g [package name] :  to update global npm package to its latest version.
+npm install npm@latest -g : To update npm to its latest version globally.
+npm publish : to publish an npm package to the npm registry.
+npm i -D 'depended_PackegeName'  :  to make dependencies package to devDependencies package.

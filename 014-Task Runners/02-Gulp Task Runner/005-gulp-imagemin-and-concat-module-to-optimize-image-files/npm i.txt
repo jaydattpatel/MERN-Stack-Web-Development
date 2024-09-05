@@ -1,0 +1,3 @@
+npm i gulp --save-dev
+npm install gulp-imagemin --save-dev
+

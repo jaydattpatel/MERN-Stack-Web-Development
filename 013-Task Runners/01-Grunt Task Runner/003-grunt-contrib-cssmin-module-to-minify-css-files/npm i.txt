@@ -1,3 +1,0 @@
-npm i grunt --save-dev
-npm install grunt-contrib-uglify --save-dev
-npm install grunt-contrib-cssmin --save-dev

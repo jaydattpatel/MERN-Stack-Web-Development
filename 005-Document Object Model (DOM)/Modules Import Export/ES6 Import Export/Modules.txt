@@ -1,0 +1,69 @@
+Modules in JS:
+
+Modules are a fundamental concept in modern JavaScript development, allowing developers to organize code into separate files or modules. Each module encapsulates its variables, functions, and classes, avoiding naming conflicts and polluting the global scope. This modularity promotes code reusability, maintainability, and scalability in large-scale projects.
+
+Benefits of Using Modules:
+
+● Encapsulation: 
+Modules enable encapsulation by providing a private scope for variables and functions. This prevents accidental variable overwriting and conflicts with other parts of the application.
+● Code Reusability: 
+Modules can be easily imported and used in different parts of the application, promoting code reusability and reducing duplication.
+● Dependency Management: 
+By explicitly defining dependencies between modules, developers can easily manage the order of execution and ensure the correct loading of files.
+● Readability and Maintainability: 
+Separating code into modules enhances readability and makes it easier to maintain and debug the application.
+
+
+The problem in adding more than one JS file in HTML:
+
+● Global Scope Pollution: 
+All variables and functions declared in the files become part of the global scope, leading to potential naming
+conflicts and accidental overwriting of variables.
+● Order Dependencies: 
+If the files depend on each other, the order of inclusion becomes crucial, and it can be challenging to manage the
+correct sequence.
+● Script Loading and Performance: 
+Having many separate script tags can slow down the page loading process as each file requires a separate HTTP request.
+
+
+
+.mjs versus .js : 
+
+Throughout this article, we've used .js extensions for our module files, but in other resources you may see the .mjs extension used instead. The reasons given are:
+    ● It is good for clarity, i.e. it makes it clear which files are modules, and which are regular JavaScript.
+    ● It ensures that your module files are parsed as a module by runtimes such as Node.js, and build tools such as Babel.
+
+-----------------EXPORT from File-----------------------
+
+Named inline Export Syntax:
+            export const add = (a,b) => {}
+
+Multiple Named Export:
+            export {sub,mul};
+
+Default Single Export:
+            export default info;
+
+-----------------IMPORT from File-----------------------
+
+
+single import : 
+        import {add} from './Operations.mjs';  
+
+multiple import : 
+        import {add,sub} from './Operations.js'; 
+
+multiple import with alise name : 
+        import {add as addition, sub as subtraction} from './Operations.js'; 
+
+import default only without {} : 
+        import info from './Operations.js';
+
+import default only with alise name and without {} : 
+        import infomation from './Operations.js';
+
+default and multiple import : 
+        import info, {add,sub} from './Operations.js'; 
+
+default and multiple import with alise name : 
+        import infomation, {add as additon, sub as subtraction} from './Operations.js'; 

@@ -1,3 +1,0 @@
-npm i gulp --save-dev
-npm install gulp-replace --save-dev
-

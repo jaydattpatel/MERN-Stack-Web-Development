@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- add author in file -->
-    <meta name="author" content="Jaydatt-Patel">
+    <meta name="author" content="Jaydatt-Patel" />
     <title>Specificity of Selector Example</title>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- Execution priorities:
     [High to]     
     Inline style -> ID based CSS style -> class based CSS style -> tag based CSS style
@@ -18,32 +17,32 @@
 
     <!-- Example-1 -->
     <style>
-        p {
-            padding: 5px;
-            width: 200px;
-        }
-        .p-class-style {
-            background-color: red;
-        }
-        #p-id-style{
-            background-color: grey;
-            text-transform: uppercase;
-        }
-        .p-class-style {
-            color: yellow;
-            padding: 20px;
-        }
-        p{
-            background-color: red;
-        }
+      p {
+        padding: 5px;
+        width: 200px;
+      }
+      .p-class-style {
+        background-color: red;
+      }
+      #p-id-style {
+        background-color: grey;
+        text-transform: uppercase;
+      }
+      .p-class-style {
+        color: yellow;
+        padding: 20px;
+      }
+      p {
+        background-color: red;
+      }
     </style>
 
-    <p class="p-class-style" 
-        id="p-id-style" 
-        style="background-color: red; 
-            text-transform: capitalize; 
-            display:inline;">This is a paragraph</p>
-
-
-</body>
+    <p
+      class="p-class-style"
+      id="p-id-style"
+      style="background-color: red; text-transform: capitalize; display: inline"
+    >
+      This is a paragraph
+    </p>
+  </body>
 </html>

@@ -1,1 +1,0 @@
-{"level":"info","message":"Date: Sun Jul 07 2024 14:02:00 GMT+0530 (India Standard Time), URL: /api/products, Data: {}","service":"request-log"}

@@ -1,2 +1,0 @@
-npm i grunt --save-dev
-npm i [plugin_Name] --save-dev

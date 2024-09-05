@@ -68,81 +68,81 @@ transform: unset
 
 */
 
-.main{
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.main {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.main>div{
-    height: 10rem;
-    width: 10rem;
-    border: 1px solid purple;
-    margin: 2rem;
+.main > div {
+  height: 10rem;
+  width: 10rem;
+  border: 1px solid purple;
+  margin: 2rem;
 }
 
-.main div div{
-    height: 5rem;
-    width: 5rem;
-    background-color: yellow;
-    border: 1px solid black;
-    margin: 1rem;
+.main div div {
+  height: 5rem;
+  width: 5rem;
+  background-color: yellow;
+  border: 1px solid black;
+  margin: 1rem;
 }
 
-.div1{
-    transform: rotate(90deg);
+.div1 {
+  transform: rotate(90deg);
 }
-.div2{
-    transform: rotateX(90deg);
+.div2 {
+  transform: rotateX(90deg);
 }
-.div3{
-    transform: rotateY(90deg);
+.div3 {
+  transform: rotateY(90deg);
 }
-.div4{
-    transform: rotateZ(90deg);
+.div4 {
+  transform: rotateZ(90deg);
 }
-.div5{
-    transform: rotate3d(90deg,90deg,90deg);
+.div5 {
+  transform: rotate3d(90deg, 90deg, 90deg);
 }
-.div6{
-    transform: skew(30deg,20deg);
+.div6 {
+  transform: skew(30deg, 20deg);
 }
-.div7{
-    transform: skewX(30deg);
+.div7 {
+  transform: skewX(30deg);
 }
-.div8{
-    transform: skewY(20deg);
+.div8 {
+  transform: skewY(20deg);
 }
 
-.div9{
-    transform: scale(0.5,0.5);
+.div9 {
+  transform: scale(0.5, 0.5);
 }
-.div10{
-    transform: scaleX(0.5);
+.div10 {
+  transform: scaleX(0.5);
 }
-.div11{
-    transform: scaleY(0.5);
+.div11 {
+  transform: scaleY(0.5);
 }
-.div12{
-    transform: scaleZ(0.5);
+.div12 {
+  transform: scaleZ(0.5);
 }
-.div13{
-    transform: scale3d(0.5,0.5,0.5);
+.div13 {
+  transform: scale3d(0.5, 0.5, 0.5);
 }
-.div14{
-    transform: translate(60px , 60%);
+.div14 {
+  transform: translate(60px, 60%);
 }
-.div15{
-    transform: translateX(50px);
+.div15 {
+  transform: translateX(50px);
 }
-.div16{
-    transform: translateY(50px);
+.div16 {
+  transform: translateY(50px);
 }
-.div17{
-    transform: translateZ(50px);
+.div17 {
+  transform: translateZ(50px);
 }
-.div18{
-    transform: translate3d(20px,20px,20px);
+.div18 {
+  transform: translate3d(20px, 20px, 20px);
 }

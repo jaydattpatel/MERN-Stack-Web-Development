@@ -1,15 +1,15 @@
-p{
-    display: inline-block;
+p {
+  display: inline-block;
 }
 
-p[data-about='blog'] {
-    background-color: #f78a84;
-  }
-   
-p[data-info='contact'] {
-    background-color: #DF2E2E;
-  }
+p[data-about="blog"] {
+  background-color: #f78a84;
+}
 
-  p[data-info='name'] {
-    background-color: #2edf34;
-  }
+p[data-info="contact"] {
+  background-color: #df2e2e;
+}
+
+p[data-info="name"] {
+  background-color: #2edf34;
+}

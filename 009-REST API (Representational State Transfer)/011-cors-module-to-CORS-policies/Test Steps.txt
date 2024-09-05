@@ -1,6 +1,0 @@
-1. Run Server live by run index.js...
-2. Copy token by login user api using postman
-2. Paste copied token key in token variable in script section of file  "Test File/Test.html file".
-3. Run "Test File/Test.html" file with live server. Now Check port must be 5500 in ip address
-4. Now click link in browser : http://localhost:5500/
-5. Check out product list is visible or not.

@@ -20,32 +20,32 @@ box-model consists of: content, padding, borders and margins.
     [content height = Total Box height - top padding - bottom padding - top border - bottom border]
     [content width = Total Box width - left padding - right padding - left border - right border]
 */
-#image{
-    display: inline-block;
-    width: 40%;
-    vertical-align: top;
+#image {
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
 }
 
-#doc{
-    display: inline-block;
-    height: auto;
-    width: 50%;
+#doc {
+  display: inline-block;
+  height: auto;
+  width: 50%;
 }
 
-#doc div{
-    height: 100px;  
-    width: 100px;
-    margin: 2px;
-    padding: 3px;
-    border: 2px black solid;
+#doc div {
+  height: 100px;
+  width: 100px;
+  margin: 2px;
+  padding: 3px;
+  border: 2px black solid;
 }
 
-#div1{
-    background-color:cyan;
-    box-sizing: content-box;
+#div1 {
+  background-color: cyan;
+  box-sizing: content-box;
 }
 
-#div2{
-    background-color:yellow;
-    box-sizing: border-box;
+#div2 {
+  background-color: yellow;
+  box-sizing: border-box;
 }

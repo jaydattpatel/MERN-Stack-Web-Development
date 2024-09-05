@@ -1,32 +1,32 @@
-#hd{
-    font-size: 50px;/*value: Xpx,small,medium,large*/
-    font-family: Arial;
-    font-style:italic;
-    font-weight: bold; /*value : (0-1000) thin to bold*/
-    color: blue;
-    text-transform: uppercase;/*upper,lower,capitalize*/
-    text-align: center; /*val: left,right,center,justify*/
-    text-decoration:underline;/*underline,overline,line-through,wavy*/
+#hd {
+  font-size: 50px; /*value: Xpx,small,medium,large*/
+  font-family: Arial;
+  font-style: italic;
+  font-weight: bold; /*value : (0-1000) thin to bold*/
+  color: blue;
+  text-transform: uppercase; /*upper,lower,capitalize*/
+  text-align: center; /*val: left,right,center,justify*/
+  text-decoration: underline; /*underline,overline,line-through,wavy*/
 }
 
-#tx1{
-    line-height: 12px;
-    text-align: justify;
+#tx1 {
+  line-height: 12px;
+  text-align: justify;
 }
 
-#tx2{
-    word-spacing: -2px;
-    text-align: left;
+#tx2 {
+  word-spacing: -2px;
+  text-align: left;
 }
 
-#tx3{
-    word-spacing: 20px;
-    text-align: right;
+#tx3 {
+  word-spacing: 20px;
+  text-align: right;
 }
 
-#tx4{
-    width: 200px;
-    height: 200px;
-    border: 1px solid black;
-    overflow-wrap:break-word;/* val: normal, break-word*/
+#tx4 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  overflow-wrap: break-word; /* val: normal, break-word*/
 }

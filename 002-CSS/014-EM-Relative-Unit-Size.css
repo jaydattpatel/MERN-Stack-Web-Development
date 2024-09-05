@@ -1,18 +1,16 @@
-
 /* 
 em means unit size relative to font-size of element
 */
 
-
-.parent_px{
-    height: 500px;
-    width: 500px;
-    background-color: rgb(255, 0, 8);
+.parent_px {
+  height: 500px;
+  width: 500px;
+  background-color: rgb(255, 0, 8);
 }
 
 /* creating relative unit size depends on other */
-.child_em{
-    height: 10em;
-    width: 10em;
-    background-color: rgb(180, 226, 43);
+.child_em {
+  height: 10em;
+  width: 10em;
+  background-color: rgb(180, 226, 43);
 }
