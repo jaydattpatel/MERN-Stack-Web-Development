@@ -20,26 +20,23 @@ syntax:
 */
 
 class Circle {
-    constructor(radius) {
-      this.radius = radius;
-    }
-  
-    get diameter() {
-      return this.radius * 2;
-    }
-  
-    set diameter(newDiameter) {
-        this.radius = newDiameter;
-    }
-  
+  constructor(radius) {
+    this.radius = radius;
+  }
+
+  get diameter() {
+    return this.radius * 2;
+  }
+
+  set diameter(newDiameter) {
+    this.radius = newDiameter;
+  }
 }
 
 const circle = new Circle(4);
-console.log('circle.radius : ',circle.radius);
-console.log('circle.diameter : ', circle.diameter);
+console.log("circle.radius : ", circle.radius);
+console.log("circle.diameter : ", circle.diameter);
 
 circle.diameter = 20;
-console.log('circle.radius : ',circle.radius);
-console.log('circle.diameter : ', circle.diameter);
-
-  
+console.log("circle.radius : ", circle.radius);
+console.log("circle.diameter : ", circle.diameter);

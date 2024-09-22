@@ -28,18 +28,18 @@ method:
 */
 
 function hold() {
-    return new Promise((resolve) => {
-        console.log('On Hold');
-        setTimeout(() => {
-          resolve('resolved');
-        }, 2000);
-    });
+  return new Promise((resolve) => {
+    console.log("On Hold");
+    setTimeout(() => {
+      resolve("resolved");
+    }, 2000);
+  });
 }
-  
+
 async function asyncCall() {
-      console.log('calling');
-      const result = await hold();
-      console.log(result);
+  console.log("calling");
+  const result = await hold();
+  console.log(result);
 }
 
 asyncCall();

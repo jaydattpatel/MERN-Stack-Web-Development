@@ -14,7 +14,6 @@ Built-in methods: Object.keys(obj), Object.values(obj), and Object.entries(obj).
 
 */
 
-
 console.log("-----------------");
 const target = { a: 1, b: 2 };
 const source = { b: 4, c: 5 };
@@ -26,64 +25,62 @@ console.log(returnedTarget == target);
 
 console.log("-----------------");
 // copy object using  Object.assign() Method
-var obj = { k :'world'}
-var copy = Object.assign({}, obj)
+var obj = { k: "world" };
+var copy = Object.assign({}, obj);
 console.log(obj);
 console.log(copy === obj);
 console.log(copy == obj);
 
 console.log("-----------------");
-// copy object using Spread Method 
-var obj = { k :'hello'}
-var copy = { ...obj }
+// copy object using Spread Method
+var obj = { k: "hello" };
+var copy = { ...obj };
 console.log(obj);
 console.log(copy === obj);
 console.log(copy == obj);
 
 console.log("-----------------");
 const car2 = {
-    speed: 200,
-    color: "red"
-}
+  speed: 200,
+  color: "red",
+};
 console.log(Object.keys(car2));
-console.log(Object.values(car2)); 
+console.log(Object.values(car2));
 console.log(Object.entries(car2));
 
 console.log("-----------------");
 function testBracketsDynamicAccess() {
-    var dynamicKey;
-    if(Math.random() > 0.5) {
-      dynamicKey = "speed";
-    }
-    else{
-       dynamicKey = "color";
-    }
-    var drone = {
-        speed: 15,
-        color: "orange"
-    }
-  
-    console.log("drone[dynamicKey] : ",drone[dynamicKey]);
+  var dynamicKey;
+  if (Math.random() > 0.5) {
+    dynamicKey = "speed";
+  } else {
+    dynamicKey = "color";
+  }
+  var drone = {
+    speed: 15,
+    color: "orange",
+  };
+
+  console.log("drone[dynamicKey] : ", drone[dynamicKey]);
 }
 testBracketsDynamicAccess();
 
-
 //create new object from old object using prototype inheritance
 console.log("---------------------------");
-var o1 = {}
+var o1 = {};
 o1.obj1 = "Object-1";
-console.log('o1.obj1 : ',o1.obj1);
-console.log("Object.getPrototypeOf(o1) :",Object.getPrototypeOf(o1));
+console.log("o1.obj1 : ", o1.obj1);
+console.log("Object.getPrototypeOf(o1) :", Object.getPrototypeOf(o1));
 
 var o2 = Object.create(o1); //create new obj with prototypes of old objects
 o2.obj2 = "Object-2";
-console.log('o2.obj1 : ',o2.obj1);
-console.log('o2.obj2 : ',o2.obj2);
-console.log("Object.getPrototypeOf(o2) :",Object.getPrototypeOf(o2));
+console.log("o2.obj1 : ", o2.obj1);
+console.log("o2.obj2 : ", o2.obj2);
+console.log("Object.getPrototypeOf(o2) :", Object.getPrototypeOf(o2));
 
 var o3 = Object.create(o2);
 o3.obj3 = "Object-3";
-console.log('o3.obj1 : ',o3.obj1);
-console.log('o3.obj2 : ',o3.obj2);
-console.log('o3.obj3 : ',o3.obj3);
-console.log("Object.getPrototypeOf(o3) :",Object.getPrototypeOf(o3));
+console.log("o3.obj1 : ", o3.obj1);
+console.log("o3.obj2 : ", o3.obj2);
+console.log("o3.obj3 : ", o3.obj3);
+console.log("Object.getPrototypeOf(o3) :", Object.getPrototypeOf(o3));

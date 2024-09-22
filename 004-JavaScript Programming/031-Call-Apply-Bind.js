@@ -17,30 +17,31 @@ The apply() method takes arguments as an array.
 */
 
 const car = {
-    name: 'car',
-    color: 'black',
-    getDetails(brand, seats) {
-      console.log(`This is a ${this.color} ${this.name} of ${brand} company. It has ${seats} seats`);
-    },
-  };
-  
-const bus = {
-  name: 'bus',
-  color: 'blue',
+  name: "car",
+  color: "black",
+  getDetails(brand, seats) {
+    console.log(
+      `This is a ${this.color} ${this.name} of ${brand} company. It has ${seats} seats`
+    );
+  },
 };
-  
-  
-car.getDetails('Audi', 5);
-console.log('call : ');
-car.getDetails.call(bus, 'Star', 50);
-console.log('apply : ');
-car.getDetails.apply(bus, ['Gold', 30]);
+
+const bus = {
+  name: "bus",
+  color: "blue",
+};
+
+car.getDetails("Audi", 5);
+console.log("call : ");
+car.getDetails.call(bus, "Star", 50);
+console.log("apply : ");
+car.getDetails.apply(bus, ["Gold", 30]);
 
 const veh1 = car.getDetails.bind(bus);
-veh1('silver', 20);
-veh1('bronze', 45);
+veh1("silver", 20);
+veh1("bronze", 45);
 
-console.log('-------------------------------------');
+console.log("-------------------------------------");
 
 const obj = {
   animal: "Cats",
@@ -48,17 +49,15 @@ const obj = {
 };
 
 function greet() {
-    console.log(this.animal, "typically sleep between", this.sleepDuration);
-};
-  
+  console.log(this.animal, "typically sleep between", this.sleepDuration);
+}
 
 greet.call(obj);
 greet.apply(obj);
 
 let gt_fun = greet.bind(obj);
 gt_fun();
-console.log('-------------------------------------');
-
+console.log("-------------------------------------");
 
 function User(displayName) {
   this.displayName = displayName;
@@ -66,16 +65,18 @@ function User(displayName) {
 
 const systemCredentials = {
   username: "system",
-  password: "pass123"
+  password: "pass123",
 };
-User.prototype.login = function (username,password) {
-    // Implement the code here
-    if((username === systemCredentials.username) &&
-          (password === systemCredentials.password)){
-          console.log('Login successful!');
-      }else{
-          console.log('Login failed!');
-      }
+User.prototype.login = function (username, password) {
+  // Implement the code here
+  if (
+    username === systemCredentials.username &&
+    password === systemCredentials.password
+  ) {
+    console.log("Login successful!");
+  } else {
+    console.log("Login failed!");
+  }
 };
 
 // Example usage:
@@ -83,4 +84,4 @@ const user = new User("John Doe");
 // Create the reusable loginFunction here
 let loginFunction = user.login.bind(systemCredentials);
 loginFunction("system", "pass123"); // Expected output: "Login successful!"
-loginFunction("wrongUsername", "wrongPassword"); // Expected output: "Login 
+loginFunction("wrongUsername", "wrongPassword"); // Expected output: "Login

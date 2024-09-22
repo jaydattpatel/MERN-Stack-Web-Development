@@ -20,18 +20,13 @@ clearInterval():
 
 let second = 0;
 
-let timer = setInterval(()=>{
-        second++;
-        console.log(second);
+let timer = setInterval(() => {
+  second++;
+  console.log(second);
 
-        if(second >= 5){
-            clearInterval(timer);
-            second = 0;
-            console.log('Finished');
-        }
-    },1000);
-
-
-
-
-
+  if (second >= 5) {
+    clearInterval(timer);
+    second = 0;
+    console.log("Finished");
+  }
+}, 1000);

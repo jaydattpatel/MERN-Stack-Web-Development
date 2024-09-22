@@ -1,4 +1,3 @@
-
 /*
  * Author : Jaydatt Patel
 
@@ -42,25 +41,25 @@ Math.max(9,8,7) returns 9.
 random code generate
 Math.random() code generate randome values between 0.0 to 0.9999....
 */
-console.log("(0.0 to 0.9999) : " , Math.random());
+console.log("(0.0 to 0.9999) : ", Math.random());
 
-console.log("(0.0 to 10.0) : " , Math.random()*10);
+console.log("(0.0 to 10.0) : ", Math.random() * 10);
 
-var v = Math.ceil((Math.random()*100));
+var v = Math.ceil(Math.random() * 100);
 console.log("(0 to 100) : ", v);
 
-console.log("(10**2) : " + (10**2));//get the power of value
-console.log("(10**3) : " + (10**3));//get the power of value
+console.log("(10**2) : " + 10 ** 2); //get the power of value
+console.log("(10**3) : " + 10 ** 3); //get the power of value
 
 //Math.round()
-console.log('Math.round(2.60) : ',Math.round(2.60));
-console.log('Math.round(2.50) : ',Math.round(2.50));
-console.log('Math.round(2.49) : ',Math.round(2.49));
-console.log('Math.round(-2.60) : ',Math.round(-2.60));
-console.log('Math.round(-2.50) : ',Math.round(-2.50));
-console.log('Math.round(-2.49) : ',Math.round(-2.49));
+console.log("Math.round(2.60) : ", Math.round(2.6));
+console.log("Math.round(2.50) : ", Math.round(2.5));
+console.log("Math.round(2.49) : ", Math.round(2.49));
+console.log("Math.round(-2.60) : ", Math.round(-2.6));
+console.log("Math.round(-2.50) : ", Math.round(-2.5));
+console.log("Math.round(-2.49) : ", Math.round(-2.49));
 //.toFixed() to get selected decimal point
-console.log("(12.5479).toFixed(2) : ", (12.5479).toFixed(2)) 
+console.log("(12.5479).toFixed(2) : ", (12.5479).toFixed(2));
 
 //.toPrecision() to set precision
 console.log("(30.001658853).toPrecision(2) : ", (30.001658853).toPrecision(2));

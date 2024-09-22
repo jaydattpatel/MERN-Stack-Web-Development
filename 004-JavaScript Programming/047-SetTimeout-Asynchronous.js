@@ -16,44 +16,40 @@ Note : It is used with let and var variable with different way.
 
 */
 
-console.log('------------var----------------');
-for(var i =0; i < 5; i++){
-    setTimeout(()=>{
-        console.log(i);
-    },1000);
+console.log("------------var----------------");
+for (var i = 0; i < 5; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
 }
 
-console.log('------------let----------------');
-for(let i =0; i < 5; i++){
-    setTimeout(()=>{
-        console.log(i);
-    },1000);
+console.log("------------let----------------");
+for (let i = 0; i < 5; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
 }
 
-
-console.log('----------------------------');
+console.log("----------------------------");
 
 const myArray = ["zero", "one", "two"];
 
+function printArray(arr, time, obj) {
+  setTimeout(show, time, arr, time, obj);
+}
 
-function printArray(arr,time,obj){
-    setTimeout(show, time, arr, time, obj); 
-};
+function show(arr, time, obj) {
+  if (obj === undefined) {
+    obj = arr[0];
+  }
 
-function show(arr, time, obj){
+  console.log(obj);
 
-    if(obj === undefined){
-        obj = arr[0];
-    }
+  if (obj !== arr[arr.length - 1]) {
+    printArray(arr, time, arr[arr.indexOf(obj) + 1]);
+  } else {
+    console.log("Finished");
+  }
+}
 
-    console.log(obj);
-
-    if(obj !== arr[arr.length - 1]){
-        printArray(arr, time, arr[arr.indexOf(obj)+1]);
-    }else{
-        console.log('Finished');
-    }
-};
-
-printArray(myArray,1500);
-
+printArray(myArray, 1500);

@@ -14,31 +14,30 @@ A closure allows variables to be accessed outside of their scope, while a scope 
 */
 
 console.log("-------------Program-1---------------");
-let a = 'Global';
+let a = "Global";
 
 function outerPrint() {
-  let b = 'OuterPrint';
+  let b = "OuterPrint";
 
   return function innerPrint() {
-    let c = 'innerPrint';
+    let c = "innerPrint";
     return `${a} -> ${b} -> ${c}`;
   };
 }
-const show = outerPrint();
-console.log('show : ', show);
-const printInner = show();
-console.log('printInner : ', printInner);
-
+const inner = outerPrint();
+console.log("inner : ", inner);
+const value = inner();
+console.log("value : ", value);
 
 console.log("-------------Program-2---------------");
-function generateID(num){
-        let id = num;
-        //return function
-        return function createID(){
-                return `A_2023_${id++}`;
-        }
-    }
-    
+function generateID(num) {
+  let id = num;
+  //return function
+  return function createID() {
+    return `A_2023_${id++}`;
+  };
+}
+
 const func = generateID(99);
-console.log(func());//Output : A_2023_99
+console.log(func()); //Output : A_2023_99
 console.log(func()); // Output: A_2023_100

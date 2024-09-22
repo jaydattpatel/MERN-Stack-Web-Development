@@ -6,35 +6,34 @@ Note : '#id' and 'id' variable are different variable and you must use '#' where
 */
 
 class Student {
-    
-    // variable declaration
-    #id; // # for private variable
-    name;
+  // variable declaration
+  #id; // # for private variable
+  name;
 
-    //constructor 
-    constructor(id, name, age){
-        this.#setId(id);
-        this.name = name;   
-        this.age = age;   
-    }
+  //constructor
+  constructor(id, name, age) {
+    this.#setId(id);
+    this.name = name;
+    this.age = age;
+  }
 
-    show(){
-        console.log(`id: ${this.#id}, name: ${this.name}, age: ${this.age}`);
-    }
+  show() {
+    console.log(`id: ${this.#id}, name: ${this.name}, age: ${this.age}`);
+  }
 
-    // private function using '#'
-    #setId(id){
-        this.#id = id;
-    }
+  // private function using '#'
+  #setId(id) {
+    this.#id = id;
+  }
 
-    getId(){
-        return this.#id;
-    }
+  getId() {
+    return this.#id;
+  }
 }
 
-const s1 = new Student(123,'Amit',22);
+const s1 = new Student(123, "Amit", 22);
 s1.show();
-console.log('s1.getId() :', s1.getId());
+console.log("s1.getId() :", s1.getId());
 
 // s1.#id = 321;    //Error: Property '#id' is not accessible outside class 'Student' because it has a private identifier.
 

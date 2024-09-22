@@ -47,19 +47,18 @@ Null as a property is the same as in regular JavaScript; it's just a null
 */
 
 const obj = {
-    name : 'Rahul',
-    sub : ['eng','math'],
-    info : {
-        email: 'abc@xyz.com',
-        contact: '+12345'
-    }
-}
-    
+  name: "Rahul",
+  sub: ["eng", "math"],
+  info: {
+    email: "abc@xyz.com",
+    contact: "+12345",
+  },
+};
+
 // JSON.stringify(obj) to make object to JSON string format
 const Jstr = JSON.stringify(obj);
-console.log('JSON String format : ',Jstr);
+console.log("JSON String format : ", Jstr);
 
 //JSON.parse(Jstr) to conert JSON string into object.
 const obj2 = JSON.parse(Jstr);
-console.log('Object : ', obj2);
-
+console.log("Object : ", obj2);

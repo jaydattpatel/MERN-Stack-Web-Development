@@ -37,70 +37,62 @@ Three specific methods that exist on arrays:
 
 //array.forEach(function)
 console.log("-------array.forEach(function)---1------");
-const fruits = ['kiwi','mango','apple','pear'];
+const fruits = ["kiwi", "mango", "apple", "pear"];
 function appendIndex(fruit, index) {
-    console.log(`${index}. ${fruit}`)
+  console.log(`${index}. ${fruit}`);
 }
 fruits.forEach(appendIndex);
 
 console.log("-------array.forEach(function)---2------");
-const veggies = ['onion', 'garlic', 'potato'];
-veggies.forEach( 
-    function(veggie, index) {
-    console.log(`${index}. ${veggie}`);
-    }
-);
+const veggies = ["onion", "garlic", "potato"];
+veggies.forEach(function (veggie, index) {
+  console.log(`${index}. ${veggie}`);
+});
 
 console.log("-------array.forEach(function)---3------");
 const result = [];
 const drone = {
-    speed: 100,
-    color: 'yellow'
-}
+  speed: 100,
+  color: "yellow",
+};
 const droneKeys = Object.keys(drone);
-droneKeys.forEach( 
-    function(key) {
-    result.push(key, drone[key])
-    }
-)
-console.log(result)
+droneKeys.forEach(function (key) {
+  result.push(key, drone[key]);
+});
+console.log(result);
 
 //array.filter(function)
 console.log("----------array.filter(function)---1---");
-var num1 = [0,10,20,30,40,50];
-var num_filt = num1.filter( 
-    function(num) {
-    return (num > 20);
-    }
-)
+var num1 = [0, 10, 20, 30, 40, 50];
+var num_filt = num1.filter(function (num) {
+  return num > 20;
+});
 console.log(num_filt);
 
 console.log("----------array.filter(function)---2---");
-var num2 = [0,10,-20,30,-40,-50];
-var num_filt = num2.filter( (num) => {return (num > 0);} )
+var num2 = [0, 10, -20, 30, -40, -50];
+var num_filt = num2.filter((num) => {
+  return num > 0;
+});
 console.log(num_filt);
 
-
 console.log("----------array.filter(function)---3---");
-var num3 = [0,10,'hello',true,false,undefined,'',null];
+var num3 = [0, 10, "hello", true, false, undefined, "", null];
 var num_filt = num3.filter(Boolean); // to filer all values except falsy (0,false,null,undefined)
 console.log(num_filt);
 
 console.log("----------array.filter(function)---4---");
 var numbers = [1, 2, 3, 4, 5, 2, 4, 2];
 var filteredNumbers = numbers.filter((element, index, array) => {
-    return array.indexOf(element) === index;
+  return array.indexOf(element) === index;
 });
 console.log(filteredNumbers);
 
-
 //array.map(function)
 console.log("----------array.map(function)---1--");
-var num3 = [0,10,20,30,40,50].map( 
-    function(num) {
-    return (num / 10);
-    }
-)
+var num3 = [0, 10, 20, 30, 40, 50].map(function (num) {
+  return num / 10;
+});
 console.log(num3);
 
 console.log("----------array.map(function)---2---");
@@ -108,118 +100,112 @@ const ids = [1, 2, 3];
 const names = ["John", "Jane", "Alice"];
 const images = ["john.jpg", "jane.jpg", "alice.jpg"];
 function createUser(ids, names, images) {
-    
   const users = ids.map((id, index) => {
     return {
       id: id,
       name: names[index],
-      image: images[index]
+      image: images[index],
     };
   });
 
   return users;
 }
 
-console.log(createUser(ids,names,images));
-
-
+console.log(createUser(ids, names, images));
 
 console.log("----------array.map(function)---3---");
 const employees = [
-    { id: 1, name: "Alice", department: "sales", salary: 40000 },
-    { id: 2, name: "Bob", department: "engineering", salary: 50000 },
-    { id: 3, name: "Charlie", department: "marketing", salary: 45000 },
-    { id: 4, name: "David", department: "sales", salary: 35000 },
-    { id: 5, name: "Emily", department: "engineering", salary: 55000 }
-  ];
-function increaseSalaries(employees){
-//Implement your function here to modify the salaray.
-    let emp = employees.map((employee)=>{
-        let newEmp = {  id :employee['id'], 
-                        name:employee['name'],
-                        department:employee['department'],
-                        salary:employee['salary']};
-        if (newEmp['department'] === 'sales'){
-            newEmp['salary'] += newEmp['salary'] * 0.10; 
-        }
-        else if (newEmp['department'] === 'engineering'){
-            newEmp['salary'] += newEmp['salary'] * 0.15;    
-        }else{
-            newEmp['salary'] += newEmp['salary'] * 0.05;   
-        }
-        return newEmp;
-    });
-    return emp;
-  
+  { id: 1, name: "Alice", department: "sales", salary: 40000 },
+  { id: 2, name: "Bob", department: "engineering", salary: 50000 },
+  { id: 3, name: "Charlie", department: "marketing", salary: 45000 },
+  { id: 4, name: "David", department: "sales", salary: 35000 },
+  { id: 5, name: "Emily", department: "engineering", salary: 55000 },
+];
+function increaseSalaries(employees) {
+  //Implement your function here to modify the salaray.
+  let emp = employees.map((employee) => {
+    let newEmp = {
+      id: employee["id"],
+      name: employee["name"],
+      department: employee["department"],
+      salary: employee["salary"],
+    };
+    if (newEmp["department"] === "sales") {
+      newEmp["salary"] += newEmp["salary"] * 0.1;
+    } else if (newEmp["department"] === "engineering") {
+      newEmp["salary"] += newEmp["salary"] * 0.15;
+    } else {
+      newEmp["salary"] += newEmp["salary"] * 0.05;
+    }
+    return newEmp;
+  });
+  return emp;
 }
-console.log('New :\n', increaseSalaries(employees));
-console.log('Old :\n', employees);
-
+console.log("New :\n", increaseSalaries(employees));
+console.log("Old :\n", employees);
 
 console.log("-------array.reduce(function, acc_initial_val)---1---");
-const arr_num = [1,2,3,4,5];
-var add = (accu, currentElement, index ) => {
-    console.log('index : ', index, ', accu :', accu, ', currentElement : ',currentElement);
-    return (accu + currentElement);
+const arr_num = [1, 2, 3, 4, 5];
+var add = (accu, currentElement, index) => {
+  console.log(
+    "index : ",
+    index,
+    ", accu :",
+    accu,
+    ", currentElement : ",
+    currentElement
+  );
+  return accu + currentElement;
 };
 var sum = arr_num.reduce(add, 0); // here 0 is initial value for accumulater.
-console.log('sum:',sum);
-
-
+console.log("sum:", sum);
 
 console.log("-------array.reduce(function, acc_initial_val)---2---");
 const contacts = [
-    { name: "Alice", company: "ABC Inc." },
-    { name: "Bob", company: "XYZ Corp." },
-    { name: "Charlie", company: "ABC Inc." }
-  ];
+  { name: "Alice", company: "ABC Inc." },
+  { name: "Bob", company: "XYZ Corp." },
+  { name: "Charlie", company: "ABC Inc." },
+];
 
 function mapContactsToCompanies(contacts) {
-    return contacts.reduce(function (accu, cont) {
-
-      if (accu[cont.company] == undefined) 
-            accu[cont.company] = [];
-      accu[cont.company].push(cont.name);
-      return accu;
-    }, {}); //here '{}' is initial value of accumulator
-  }
+  return contacts.reduce(function (accu, cont) {
+    if (accu[cont.company] == undefined) accu[cont.company] = [];
+    accu[cont.company].push(cont.name);
+    return accu;
+  }, {}); //here '{}' is initial value of accumulator
+}
 console.log(mapContactsToCompanies(contacts));
-
-
 
 console.log("-------array.reduce(function, acc_initial_val)---3---");
 // If we apply the reduce to an empty array, it will print the initial value that is passed although if the no initial value is passed with an empty array, it will throw an error.
 const arr = [];
-var val = arr.reduce((accu,curr_ele) =>{accu+curr_ele;} , 5);
+var val = arr.reduce((accu, curr_ele) => {
+  accu + curr_ele;
+}, 5);
 // var val = arr.reduce((accu,curr_ele) =>{accu+curr_ele;}); Error: if initial value and return value not given then it will give error.
-console.log('val : ',val);
+console.log("val : ", val);
 
-
-
-console.log('-------array.find(function) --------');
+console.log("-------array.find(function) --------");
 var array1 = [5, 12, 8, 130, 44];
 var found = array1.find((element) => element > 10);
 console.log(found);
 
-
-console.log('-------array.findIndex(function)--------');
+console.log("-------array.findIndex(function)--------");
 var array1 = [5, 12, 8, 130, 44];
 var isLargeNumber = (element) => element > 13;
 console.log(array1.findIndex(isLargeNumber));
 
-
-console.log('-------array.findLast(function)--------');
+console.log("-------array.findLast(function)--------");
 var array1 = [5, 12, 50, 130, 44];
 var found = array1.findLast((element) => element > 45);
 console.log(found);
 
-console.log('-------array.findLastIndex(function)--------');
+console.log("-------array.findLastIndex(function)--------");
 var array1 = [5, 12, 50, 130, 44];
 var isLargeNumber = (element) => element > 45;
 console.log(array1.findLastIndex(isLargeNumber));
 
-
-console.log('-------array.some(function)--------');
+console.log("-------array.some(function)--------");
 var array = [1, 2, 3, 4, 5];
 // Checks whether an element is even
 var even = (element) => element % 2 === 0;

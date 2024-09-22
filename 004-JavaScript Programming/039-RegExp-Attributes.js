@@ -7,7 +7,6 @@ In regular expressions (RegEx), there are several attributes or flags that can b
 
 */
 
-
 // g (global): This attribute performs a global search, meaning it searches for all occurrences of the pattern in the input string, rather than stopping after the first match.
 var regex = /pattern/g;
 
@@ -25,4 +24,3 @@ var regex = /pattern/u;
 
 // y (sticky): This attribute enables sticky mode, which restricts the search to match only at the current position in the input string, indicated by the lastIndex property of the RegEx object.
 var regex = /pattern/y;
-

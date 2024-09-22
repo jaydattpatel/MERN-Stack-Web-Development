@@ -9,10 +9,10 @@ Template literals are an alternative way of working with strings, which was intr
 var greet = "Hello";
 var place = "World";
 console.log(greet + " " + place + " !");
-console.log(`${greet} ${place} !`) //display both variables using template literals
+console.log(`${greet} ${place} !`); //display both variables using template literals
 
 var multi = `Hello
 World
 ${2023}
-!`
+!`;
 console.log(multi);

@@ -8,24 +8,23 @@ Note : can not be use with arrow => function;
 
 */
 
-
-console.log('-----------1----------');
+console.log("-----------1----------");
 function fun1(a, b, c) {
-    console.log('arguments.length :', arguments.length);
-    console.log(arguments[0]); // first argument
-    console.log(arguments[1]); // second argument
-    console.log(arguments[2]); // third argument
-  };
+  console.log("arguments.length :", arguments.length);
+  console.log(arguments[0]); // first argument
+  console.log(arguments[1]); // second argument
+  console.log(arguments[2]); // third argument
+}
 
-fun1(1, 'Hello', 3.14);
+fun1(1, "Hello", 3.14);
 
 // Note : can not be use with arrow => function; So it will generate error.
-console.log('-----------2----------');
-var fun2 = (a,b,c) => {
-    console.log('arguments.length :', arguments.length);
-    console.log(arguments[0]); // first argument
-    console.log(arguments[1]); // second argument
-    console.log(arguments[2]); // third argument
+console.log("-----------2----------");
+var fun2 = (a, b, c) => {
+  console.log("arguments.length :", arguments.length);
+  console.log(arguments[0]); // first argument
+  console.log(arguments[1]); // second argument
+  console.log(arguments[2]); // third argument
 };
 
-fun2(1, 'Hello', 3.14);
+fun2(1, "Hello", 3.14);

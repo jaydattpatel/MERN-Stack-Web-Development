@@ -14,66 +14,57 @@ Static methods are often utility functions, such as functions to create or clone
 
 */
 
+class Person {
+  static count;
+  // initialization of static
 
-class Person{
-    static count;
-    // initialization of static
-    
-    static{
-        Person.count = 0;
-    }
-    constructor(name,age){
-        this.name = name;
-        this.age = age;
-        Person.count++;
-    }
-    get(){
-        return `${this.name},${this.age},${Person.count}`;
-    }
+  static {
+    Person.count = 0;
+  }
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    Person.count++;
+  }
+  get() {
+    return `${this.name},${this.age},${Person.count}`;
+  }
 
-
-// creating static method. Static Methods can only use static properties and methods.
-    static show(){
-        return this.count;  //using static variable in static method.
-        // this.get(); //you can not use non static variable or methods in static method.
-    }
+  // creating static method. Static Methods can only use static properties and methods.
+  static show() {
+    return this.count; //using static variable in static method.
+    // this.get(); //you can not use non static variable or methods in static method.
+  }
 }
 
-class Student extends Person{
-    static count;
-    // initialization of static
-    
-    static{
-        Student.count = 0;
-    }
-    constructor(name,age,roll){
-        super(name,age);
-        this.roll = roll;
-        Student.count++;
-    }
-    info(){
-        return `${this.name},${this.age},${this.roll}`;
-    }
+class Student extends Person {
+  static count;
+  // initialization of static
 
+  static {
+    Student.count = 0;
+  }
+  constructor(name, age, roll) {
+    super(name, age);
+    this.roll = roll;
+    Student.count++;
+  }
+  info() {
+    return `${this.name},${this.age},${this.roll}`;
+  }
 }
 
 console.log(Person.show());
 
-let p1 = new Person('Amit',22);
+let p1 = new Person("Amit", 22);
 console.log(p1.get());
 // console.log(p1.show()); //error: It is not function
 
-
-let s1 = new Student('Darshil', 19,123);
+let s1 = new Student("Darshil", 19, 123);
 console.log(s1.info());
 console.log(Student.show());
 
-let s2 = new Student('Rahul', 12 ,333);
+let s2 = new Student("Rahul", 12, 333);
 
-console.log('Person.count : ',Person.count);
-console.log('Student.count : ',Student.count);
-
-
-
-
-
+console.log("Person.count : ", Person.count);
+console.log("Student.count : ", Student.count);

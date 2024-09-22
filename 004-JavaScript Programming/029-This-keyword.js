@@ -8,8 +8,8 @@ The value of this in JavaScript depends on how a function is invoked (runtime bi
 
 Arrow functions differ in their handling of this: they inherit this from the parent scope at the time they are defined. This behavior makes arrow functions particularly useful for callbacks and preserving context. However, arrow functions do not have their own this binding. Therefore, their this value cannot be set by bind(), apply() or call() methods, nor does it point to the current object in object methods. 
  */
-'use strict';
-console.log('-------------1-------------');
+"use strict";
+console.log("-------------1-------------");
 console.log(this);
 
 function checkThis() {
@@ -17,44 +17,43 @@ function checkThis() {
 }
 checkThis();
 
-console.log('-------------2-------------');
+console.log("-------------2-------------");
 const checkArrow = () => {
   console.log(this);
 };
 
 checkArrow();
 
-console.log('-------------3-------------');
+console.log("-------------3-------------");
 const user1 = {
-  userName: 'John',
+  userName: "John",
   userAge: 12,
 
   work: function () {
     console.log(this);
-  }
+  },
 };
-console.log('user1.work() :');
+console.log("user1.work() :");
 user1.work();
 
 const user2 = {
-  userName: 'Harry',
+  userName: "Harry",
 };
 
 user2.work = user1.work;
 
-console.log('user2 : ', user2);
-console.log('user2.work() :');
+console.log("user2 : ", user2);
+console.log("user2.work() :");
 user2.work();
 
-
-//constructor functions for the built-in objects, I can also define custom constructor functions. (looks like class) 
+//constructor functions for the built-in objects, I can also define custom constructor functions. (looks like class)
 function Icecream(product) {
   this.flavor = product;
-  this.melt = function() {
-      console.log(`The ${this.flavor} icecream has melted`);
-  }
+  this.melt = function () {
+    console.log(`The ${this.flavor} icecream has melted`);
+  };
 }
 let kiwi_Icecream = new Icecream("kiwi");
 let apple_Icecream = new Icecream("apple");
-kiwi_Icecream.melt(); 
-apple_Icecream.melt(); 
+kiwi_Icecream.melt();
+apple_Icecream.melt();

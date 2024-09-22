@@ -16,36 +16,33 @@ syntax:
  */
 
 class Person {
+  #type = "person";
+  constructor(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
 
-    #type = 'person';
-    constructor(name, age, gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-    }
-    
-    show(){
-        return(`${this.name}, ${this.age}, ${this.gender}`);
-    }
+  show() {
+    return `${this.name}, ${this.age}, ${this.gender}`;
+  }
 }
 
 class Student extends Person {
-    
-    constructor(roll,course,name,age,gender){
-        super(name,age,gender); //calling base class constructor
-        this.roll = roll;
-        this.course = course;
-        // this.#type = 'student'; // Error: Private variable of base class
-    }
+  constructor(roll, course, name, age, gender) {
+    super(name, age, gender); //calling base class constructor
+    this.roll = roll;
+    this.course = course;
+    // this.#type = 'student'; // Error: Private variable of base class
+  }
 
-    show(){
-        // calling base class method which is overridden
-        return (super.show() +  
-        `, ${this.roll}, ${this.course}`);
-    }
+  show() {
+    // calling base class method which is overridden
+    return super.show() + `, ${this.roll}, ${this.course}`;
+  }
 }
 
-console.log('-------------------------------');
-var st1 = new Student(101,'Computer','Amit',22,'Male');
+console.log("-------------------------------");
+var st1 = new Student(101, "Computer", "Amit", 22, "Male");
 console.log(st1.show());
 console.log(st1);

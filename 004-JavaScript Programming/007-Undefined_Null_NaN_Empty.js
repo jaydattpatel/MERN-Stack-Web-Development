@@ -12,21 +12,19 @@ NaN : Is is returned if arithmetic operation fail with undefined, null, string o
 
 //Undefined : if variable or function does not have value then it returns undefined
 var val;
-console.log("val : ",val);
+console.log("val : ", val);
 //console.log(a); ReferenceError: a is not defined
-var game = {score:100};
+var game = { score: 100 };
 console.log("game.sc : ", game.sc);
 //console.log(a); ReferenceError: a is not defined
 
-
-
 //Null is returned if value is not found
 var str = "ABC";
-console.log("str.match(\"B\"): ", str.match("B"));
-console.log("str.match(\"D\"): ", str.match("D"));
+console.log('str.match("B"): ', str.match("B"));
+console.log('str.match("D"): ', str.match("D"));
 
 var result = null;
-console.log("result : ",result);
+console.log("result : ", result);
 
 //Empty
 var set = ""; //string
@@ -39,21 +37,38 @@ console.log(set3);
 //sample program
 var x;
 
-  if(x === null) {
-    console.log("x is null");
-  } else if(x === undefined) {
-    console.log("x is undefined");
-  } else {
-    console.log("x is ok");
-  }
-
-
+if (x === null) {
+  console.log("x is null");
+} else if (x === undefined) {
+  console.log("x is undefined");
+} else {
+  console.log("x is ok");
+}
+console.log("--------------------");
 //(0 , null, undefined, Nan) are false value also called falsy.
 console.log("3 && 4 && 5 && 1 && 2 : ", 3 && 4 && 5 && 1 && 2);
-console.log("3 && 4 && 5 && 1 && 2 : ", 3 && 4 && 5 && null && 1 && 2);
-console.log("3 && 4 && 5 && 1 && 2 : ", 3 && 4 && 5 && undefined && 1 && 2);
-console.log("3 && 4 && 5 && 1 && 2 : ", 3 && 4 && 5 && NaN && 1 && 2);
+console.log("3 && 4 && 5 && null && 1 && 2 : ", 3 && 4 && 5 && null && 1 && 2);
+console.log(
+  "3 && 4 && 5 && undefined && 1 && 2 : ",
+  3 && 4 && 5 && undefined && 1 && 2
+);
+console.log("3 && 4 && 5 && NaN && 1 && 2 : ", 3 && 4 && 5 && NaN && 1 && 2);
+
+console.log("--------------------");
+
+console.log("0 && null && undefined && NaN : ", 0 && null && undefined && NaN);
+console.log("null && undefined && NaN && 0 : ", null && undefined && NaN && 0);
+console.log("undefined && NaN && 0 && null : ", undefined && NaN && 0 && null);
+console.log("NaN && 0 && null && undefined : ", NaN && 0 && null && undefined);
+
+console.log("--------------------");
 
 console.log("0 || null || undefined || NaN :", 0 || null || undefined || NaN);
-console.log("0 || null || undefined || 123 || NaN :", 0 || null || undefined || 123 || NaN);
-console.log("0 || null || 'string' || undefined || NaN :", 0 || null || 'string' || undefined || NaN);
+console.log(
+  "0 || null || undefined || 123 || NaN :",
+  0 || null || undefined || 123 || NaN
+);
+console.log(
+  "0 || null || 'string' || undefined || NaN :",
+  0 || null || "string" || undefined || NaN
+);

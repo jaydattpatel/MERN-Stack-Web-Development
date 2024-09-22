@@ -18,52 +18,42 @@ If for(of) loop is used with object of derived dictionary then it will iterate a
 console.log("~~~~~~~General loop~~~~~~~");
 
 console.log("----------for loop - 1:");
-for(var i = 1; i <=3 ; i++)
-    console.log(i);
+for (var i = 1; i <= 3; i++) console.log(i);
 
 console.log("----------for loop - 2:");
-var cubes = 'ABCDEFG';
-for (var i = 0; i < cubes.length; i++) 
-    console.log(cubes[i])
+var cubes = "ABCDEFG";
+for (var i = 0; i < cubes.length; i++) console.log(cubes[i]);
 
 console.log("~~~~~~~Loop with Array~~~~~~~");
 
 console.log("----------for loop - 3:");
-var arr = [11,12,13,14,15];
-for(var i in arr)
-    console.log('typeof(i) :', typeof(i),' , ',i,':',arr[i] );
+var arr = [11, 12, 13, 14, 15];
+for (var i in arr) console.log("typeof(i) :", typeof i, " , ", i, ":", arr[i]);
 
 console.log("----------for loop - 4:");
-var arr = [11,12,13,14,15];
-for(var i of arr)
-    console.log('typeof(i) :', typeof(i),' , ',i,':',arr[i] );
-    
+var arr = [11, 12, 13, 14, 15];
+for (var i of arr) console.log("typeof(i) :", typeof i, " , ", i, ":", arr[i]);
+
 console.log("----------for loop - 5:");
 const birds = ["Parrot", "Falcon", "Owl"];
-for (const bird of birds) 
-    console.log(bird);
-
-
+for (const bird of birds) console.log(bird);
 
 console.log("~~~~~~~Loop with Dictionary~~~~~~~");
 var car = {
-    color : "red",
-}
+  color: "red",
+};
 const sportsCar = Object.create(car);
 sportsCar.speed = "fast";
-console.log("sportsCar : ",sportsCar);
-
+console.log("sportsCar : ", sportsCar);
 
 //for(of) loop iterat properties keys with objects.
 console.log("----------for loop - 5:");
-for(const prop of (Object.keys(sportsCar)))
-    console.log(prop, ':',sportsCar[prop]);
+for (const prop of Object.keys(sportsCar))
+  console.log(prop, ":", sportsCar[prop]);
 
 //for(in) loop iterat properties keys with objects and its hidden prototype.
 console.log("----------for loop - 6:");
-for(const prop in sportsCar)
-    console.log(prop, ':',sportsCar[prop]);
-
+for (const prop in sportsCar) console.log(prop, ":", sportsCar[prop]);
 
 //styling console output using CSS with a %c format specifier
 /*
