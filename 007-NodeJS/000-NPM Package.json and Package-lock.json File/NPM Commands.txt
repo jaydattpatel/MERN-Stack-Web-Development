@@ -1,4 +1,5 @@
-https://docs.npmjs.com/cli/v6/commands
+
+https://docs.npmjs.com/cli/v10/commands
 
 npm init  :  to initialize package.json npm
 npm list : to list all local npm packages
@@ -13,4 +14,7 @@ npm update [package name] :  to update local npm package to its latest version.
 npm update -g [package name] :  to update global npm package to its latest version.
 npm install npm@latest -g : To update npm to its latest version globally.
 npm publish : to publish an npm package to the npm registry.
+
+npm install [package name] --save-dev : install local npm package in devDependencies
+npm install -g [package name] --save-dev : install global npm package in devDependencies
 npm i -D 'depended_PackegeName'  :  to make dependencies package to devDependencies package.
