@@ -1,7 +1,7 @@
 /* 
 Media queries allow you to apply CSS styles depending on a device's media type (such as print vs. screen) or other features or characteristics such as screen resolution or orientation, aspect ratio, browser viewport width or height, user preferences such as preferring reduced motion, data usage, or transparency.
 
-Media type: sceen, print, speech, all, ...
+Media type: screen, print, speech, all, ...
 
 all	- Used for all media type devices
 print - Used for print preview mode

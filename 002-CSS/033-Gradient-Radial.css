@@ -13,21 +13,16 @@ to direction : circle or ellipse  at top, circle or ellipse at top right,...
  
 color keyword : rgb, rgba, transparent....
 */
-#bg {
-  height: 100%;
-  width: 100%;
+body {
   background-image: url("Images/Galaxy.jpg");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  margin: -2%;
 }
 
 #main-screen {
-  width: 1200px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   justify-content: space-around;
 }
 
@@ -36,7 +31,7 @@ color keyword : rgb, rgba, transparent....
   width: 150px;
   border: 1px black solid;
   text-align: center;
-  margin: 1% auto;
+  margin: 5px;
   background-size: cover;
   text-wrap: wrap;
   word-wrap: break-word;
@@ -107,12 +102,7 @@ color keyword : rgb, rgba, transparent....
 .g20 {
   background: radial-gradient(farthest-side at 10%, red, green, blue);
 }
-.g21 {
-  background: radial-gradient(center at 10%, red, green, blue);
-}
-.g22 {
-  background: radial-gradient(center at 10% 50%, red, green, blue);
-}
+
 .g23 {
   background: radial-gradient(ellipse at 10%, red, green, blue);
 }

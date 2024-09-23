@@ -8,25 +8,20 @@ background : linear-gradient(colo-1 start% stop%, color-2 start% stop%,...);
 background : linear-gradient(to direction or degree,colo-1,color-2,...); 
 
 to direction : to top, to top right, to left...
-degree : 0deg, 33deg, 180deg, 360deg,.......
+degree : 0deg, 33deg, 180deg, 360deg,...
  
 color keyword : rgb, rgba, transparent....
 */
-#bg {
-  height: 100%;
-  width: 100%;
+body {
   background-image: url("Images/Galaxy.jpg");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  margin: -2%;
 }
 
 #main-screen {
-  width: 1200px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   justify-content: space-around;
 }
 
@@ -35,7 +30,7 @@ color keyword : rgb, rgba, transparent....
   width: 150px;
   border: 1px black solid;
   text-align: center;
-  margin: 1% auto;
+  margin: 5px;
   background-size: cover;
   text-wrap: wrap;
   word-wrap: break-word;

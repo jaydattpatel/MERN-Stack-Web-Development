@@ -95,10 +95,10 @@ transform: unset
   transform: rotate(90deg);
 }
 .div2 {
-  transform: rotateX(90deg);
+  transform: rotateX(70deg);
 }
 .div3 {
-  transform: rotateY(90deg);
+  transform: rotateY(70deg);
 }
 .div4 {
   transform: rotateZ(90deg);

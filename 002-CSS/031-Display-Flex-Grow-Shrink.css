@@ -6,97 +6,68 @@ flex-grow: If container have extra space available then it will increase the ele
 flex-shrink: If container does not have suficiant space for inner elements then it will decrease the element size according to shrink value by dividing among element's shrink values.
 
 */
-#main-screen {
-  height: fit-content;
-  width: 80vw;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-around;
-}
 
-#main-box {
+.growbox,
+.shrinkbox {
   height: fit-content;
-  width: 600px;
-  border: 2px solid rebeccapurple;
-  text-align: center;
-  margin: auto 3px;
-}
-
-.growbox {
-  height: fit-content;
-  width: 500px;
+  max-width: 1000px;
   background-color: lightpink;
   border: 1px black solid;
-  margin: auto;
+  margin: 10px;
   display: flex;
 }
 
-.growbox div {
+.growbox div,
+.shrinkbox div {
   height: 50px;
-  width: 50px;
+  width: 100px;
 }
 
-#div1 {
+.div1 {
   background-color: brown;
 }
-#div2 {
+.div2 {
   background-color: blueviolet;
 }
-#div3 {
+.div3 {
   background-color: blue;
 }
-#div4 {
+.div4 {
   background-color: crimson;
 }
-#div5 {
+.div5 {
   background-color: chocolate;
 }
 
-.growbox #div1 {
+.growbox .div1 {
   flex-grow: 2;
 }
-.growbox #div2 {
+.growbox .div2 {
   flex-grow: 1;
 }
-.growbox #div3 {
+.growbox .div3 {
   flex-grow: 2;
 }
-.growbox #div4 {
+.growbox .div4 {
   flex-grow: 3;
 }
-.growbox #div5 {
+.growbox .div5 {
   flex-grow: 0;
 }
 
-.shrinkbox {
-  height: fit-content;
-  width: 500px;
-  background-color: lightpink;
-  border: 1px black solid;
-  margin: auto;
-  display: flex;
+.shrinkbox .div1 {
+  flex-shrink: 5;
 }
-
-.shrinkbox div {
-  height: 150px;
-  width: 150px;
-}
-
-.shrinkbox #div1 {
-  flex-shrink: 2;
-}
-.shrinkbox #div2 {
+.shrinkbox .div2 {
   flex-shrink: 1;
 }
-.shrinkbox #div3 {
+.shrinkbox .div3 {
   flex-shrink: 2;
 }
-.shrinkbox #div4 {
+.shrinkbox .div4 {
   flex-shrink: 3;
 }
-.shrinkbox #div5 {
+.shrinkbox .div5 {
   flex-shrink: 0;
 }
 
