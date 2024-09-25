@@ -1,0 +1,10 @@
+npm i
+npm install bcryptjs
+npm install body-parser
+npm install cookie-parser
+npm install dotenv
+npm install express
+npm install jsonwebtoken
+npm install mongoose
+npm install nodemailer
+npm install validator
