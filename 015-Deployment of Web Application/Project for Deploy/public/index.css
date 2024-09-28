@@ -1,0 +1,14 @@
+h2,
+h3 {
+  text-align: center;
+}
+#main {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 3px dotted rgb(0, 0, 0);
+  border-radius: 10% 10% 10% 10%/10% 10% 10% 10%;
+}
+input {
+  border: 1px solid black;
+}
