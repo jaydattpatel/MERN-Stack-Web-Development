@@ -1,398 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jaydatt-Patel">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jaydatt-Patel" />
     <title>Artist Playlist</title>
-    <link rel="stylesheet" href="artist-playlist.css">
-    <script src="https://kit.fontawesome.com/b3348ae33f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="artist-playlist.css" />
+    <link
+      rel="stylesheet"
+      href="./Icons/fontawesome-free-6.6.0-web/css/all.css"
+    />
+  </head>
+  <body>
+    <div>
+      <nav>
+        <div id="logo">
+          <a href="#"><img src="Images/logo.png" /></a>
+        </div>
+        <div id="bar-links">
+          <div><a id="Home" href="#">Home</a></div>
+          <div><a id="favourites" href="#">Favourites</a></div>
+        </div>
 
-</head>
-<body>
+        <div id="bar-right">
+          <div id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="search" placeholder="Search" />
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+          <div id="bell">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div id="login">
+            <img id="logged-in" src="Images/logged-in.jpg" />
+          </div>
+        </div>
+      </nav>
 
-  <div>
-
-  <nav>
-       <div id="logo">
-           <a href="#"><img src="Images/logo.png"></a>
-       </div>
-       <div id="bar-links">
-           <div><a id="Home" href="#">Home</a></div>
-           <div><a id="favourites" href="#">Favourites</a></div>
-       </div> 
-   
-       <div id="bar-right">
-           <div id="search">
-               <i class="fa-solid fa-magnifying-glass"></i>
-               <input type="search" name="search" placeholder="Search">
-               <i class="fa-solid fa-microphone"></i>
-           </div>
-           <div id="bell">
-               <i class="fa-solid fa-bell"></i>
-           </div>
-           <div id="login">
-               <img id="logged-in" src="Images/logged-in.jpg">
-           </div>
-       </div>
-  </nav>
-   
-  <main id="main">
-   
-    <div id="part-left">
-      <div>
-       <div id="posters-area">
-         <div id="poster">
-           <div id="poster-images">
-            <div>
-               <!-- <img id="pt-1" src="Images/playlist-poster.png"> -->
-            </div>
-           </div>
-           <div id="poster-info">
-            <div>
-              <h2>ColdPlay</h2>
-              <h3>British Band</h3>
-              <h5>Coldplay is a British music band that has enjoyed continuous success since their inception in 1996 through their intelligent and soulful songs. The band members are Chris Martin (lead vocals), Jonny Buckland (lead guitar), Guy Berryman (bass guitar) and Will Champion (drums).
-              </h5>
-            </div>
-            <div>
-              <button type="submit">Play All</button>
-              <button type="button">Follow</button>
-            </div>
-            <div><h5>247 Tracks | 128 Albums</h5></div>
-           </div>
-         </div>
-       </div>
-
-       <div class="queue-content">
-        <div class="queue-list">
-  
-          <div id="q-1">
-            <div class="q-num">01</div>
-            <div class="image-play-pause">
-              <img src="Images/song(1).jpg">
-              <a href="#q-play-1">
-                  <i id="q-pause-1" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#q-pause-1">
-                  <i id="q-play-1" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-  
-            <div class="q-text">
-                <div class="q-name">Onism</div>
-                <div class="q-info">Song info</div>
-            </div>
-            <div class="icon">
-                <i class="fa-regular fa-heart"></i> 
-                <i class="fa-solid fa-plus"></i>   
-            </div>
-           </div>
-  
-          <div id="q-2">
-            <div class="q-num">    
-              <i class="fa-solid fa-chart-simple"></i>
-            </div>
-            <div class="image-play-pause">
-              <img src="Images/song(2).jpg">
-              <a href="#q-play-2">
-                  <i id="q-pause-2" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#q-pause-2">
-                  <i id="q-play-2" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-  
-            <div class="q-text">
-                <div class="q-name">Onism</div>
-                <div class="q-info">Song info</div>
-            </div>
-            <div class="icon">
-              <div>
-                <i class="fa-regular fa-heart"></i> 
-                <i class="fa-solid fa-plus"></i>
+      <main id="main">
+        <div id="part-left">
+          <div>
+            <div id="posters-area">
+              <div id="poster">
+                <div id="poster-images">
+                  <div>
+                    <!-- <img id="pt-1" src="Images/playlist-poster.png"> -->
+                  </div>
+                </div>
+                <div id="poster-info">
+                  <div>
+                    <h2>ColdPlay</h2>
+                    <h3>British Band</h3>
+                    <h5>
+                      Coldplay is a British music band that has enjoyed
+                      continuous success since their inception in 1996 through
+                      their intelligent and soulful songs. The band members are
+                      Chris Martin (lead vocals), Jonny Buckland (lead guitar),
+                      Guy Berryman (bass guitar) and Will Champion (drums).
+                    </h5>
+                  </div>
+                  <div>
+                    <button type="submit">Play All</button>
+                    <button type="button">Follow</button>
+                  </div>
+                  <div><h5>247 Tracks | 128 Albums</h5></div>
+                </div>
               </div>
-            </div>
-           </div>
-  
-          <div id="q-3">
-            <div class="q-num">03</div>
-            <div class="image-play-pause">
-              <img src="Images/song(3).jpg">
-              <a href="#q-play-3">
-                  <i id="q-pause-3" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#q-pause-3">
-                  <i id="q-play-3" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-  
-            <div class="q-text">
-                <div class="q-name">Onism</div>
-                <div class="q-info">Song info</div>
-            </div>
-            <div class="icon">
-              <div>
-                <i class="fa-regular fa-heart"></i> 
-                <i class="fa-solid fa-plus"></i>
-              </div>
-            </div>
-           </div>
-  
-          <div id="q-4">
-            <div class="q-num">04</div>
-            <div class="image-play-pause">
-              <img src="Images/song(4).jpg">
-              <a href="#q-play-4">
-                  <i id="q-pause-4" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#q-pause-4">
-                  <i id="q-play-4" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-  
-            <div class="q-text">
-                <div class="q-name">Onism</div>
-                <div class="q-info">Song info</div>
-            </div>
-            <div class="icon">
-              <div>
-                <i class="fa-regular fa-heart"></i> 
-                <i class="fa-solid fa-plus"></i>
-              </div>
-            </div>
-           </div>
-  
-          <div id="q-5">
-            <div class="q-num">05</div>
-            <div class="image-play-pause">
-              <img src="Images/song(5).jpg">
-              <a href="#q-play-5">
-                  <i id="q-pause-5" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#q-pause-5">
-                  <i id="q-play-5" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-  
-            <div class="q-text">
-                <div class="q-name">Onism</div>
-                <div class="q-info">Song info</div>
-            </div>
-            <div class="icon">
-              <div>
-                <i class="fa-regular fa-heart"></i> 
-                <i class="fa-solid fa-plus"></i>
-              </div>
-            </div>
-           </div>
-  
-          <div id="q-6">
-            <div class="q-num">06</div>
-            <div class="image-play-pause">
-              <img src="Images/song(6).jpg">
-              <a href="#q-play-6">
-                  <i id="q-pause-6" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#q-pause-6">
-                  <i id="q-play-6" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-  
-            <div class="q-text">
-                <div class="q-name">Onism</div>
-                <div class="q-info">Song info</div>
-            </div>
-            <div class="icon">
-              <div>
-                <i class="fa-regular fa-heart"></i> 
-                <i class="fa-solid fa-plus"></i>
-              </div>
-            </div>
-           </div>
-  
-          <div id="q-7">
-            <div class="q-num">07</div>
-            <div class="image-play-pause">
-              <img src="Images/song(7).jpg">
-              <a href="#q-play-7">
-                  <i id="q-pause-7" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#q-pause-7">
-                  <i id="q-play-7" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-  
-            <div class="q-text">
-                <div class="q-name">Onism</div>
-                <div class="q-info">Song info</div>
-            </div>
-            <div class="icon">
-              <div>
-                <i class="fa-regular fa-heart"></i> 
-                <i class="fa-solid fa-plus"></i>
-              </div>
-            </div>
-           </div>
-  
-          <div id="q-8">
-            <div class="q-num">08</div>
-            <div class="image-play-pause">
-              <img src="Images/song(8).jpg">
-              <a href="#q-play-8">
-                  <i id="q-pause-8" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#q-pause-8">
-                  <i id="q-play-8" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-  
-            <div class="q-text">
-                <div class="q-name">Onism</div>
-                <div class="q-info">Song info</div>
-            </div>
-            <div class="icon">
-              <div>
-                <i class="fa-regular fa-heart"></i> 
-                <i class="fa-solid fa-plus"></i>
-              </div>
-            </div>
-           </div>
-  
-          <div id="q-9">
-            <div class="q-num">09</div>
-            <div class="image-play-pause">
-              <img src="Images/song(9).jpg">
-              <a href="#q-play-9">
-                  <i id="q-pause-9" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#q-pause-9">
-                  <i id="q-play-9" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-  
-            <div class="q-text">
-                <div class="q-name">Onism</div>
-                <div class="q-info">Song info</div>
-            </div>
-            <div class="icon">
-              <div>
-                <i class="fa-regular fa-heart"></i> 
-                <i class="fa-solid fa-plus"></i>
-              </div>
-            </div>
-           </div>
-  
-          <div id="q-10">
-            <div class="q-num">10</div>
-            <div class="image-play-pause">
-              <img src="Images/song(10).jpg">
-              <a href="#q-play-10">
-                  <i id="q-pause-10" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#q-pause-10">
-                  <i id="q-play-10" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-  
-            <div class="q-text">
-                <div class="q-name">Onism</div>
-                <div class="q-info">Song info</div>
-            </div>
-            <div class="icon">
-              <div>
-                <i class="fa-regular fa-heart"></i> 
-                <i class="fa-solid fa-plus"></i>
-              </div>
-            </div>
-           </div>
-  
-          <div id="q-11">
-            <div class="q-num">11</div>
-            <div class="image-play-pause">
-              <img src="Images/song(11).jpg">
-              <a href="#q-play-11">
-                  <i id="q-pause-11" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#q-pause-11">
-                  <i id="q-play-11" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-  
-            <div class="q-text">
-                <div class="q-name">Onism</div>
-                <div class="q-info">Song info</div>
-            </div>
-            <div class="icon">
-              <div>
-                <i class="fa-regular fa-heart"></i> 
-                <i class="fa-solid fa-plus"></i>
-              </div>
-            </div>
-           </div>
-  
-          <div id="q-12">
-            <div class="q-num">12</div>
-            <div class="image-play-pause">
-              <img src="Images/song(12).jpg">
-              <a href="#q-play-12">
-                  <i id="q-pause-12" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#q-pause-12">
-                  <i id="q-play-12" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-  
-            <div class="q-text">
-                <div class="q-name">Onism</div>
-                <div class="q-info">Song info</div>
-            </div>
-            <div class="icon">
-              <div>
-                <i class="fa-regular fa-heart"></i> 
-                <i class="fa-solid fa-plus"></i>
-              </div>
-            </div>
-           </div>
-  
-         </div>
-       </div>
-      </div>
-    </div>
-   
-    <div id="part-right">
-      
-    <div class="release">
-        <p>Similar Artists</p>
-        <div class="release-content">
-
-          <div id="r-1">
-
-            <div class="image-play-pause">
-              <img src="Images/song(11).jpg">
-              <a href="#r-play-1">
-                  <i id="r-pause-1" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#r-pause-1">
-                  <i id="r-play-1" class="fa-solid fa-play"></i>
-              </a>
             </div>
 
-            <div class="r-text">
-                <div class="r-name">Onism</div>
-                <div class="r-date">Aug 11, 2017</div>
+            <div class="queue-content">
+              <div class="queue-list">
+                <div id="q-1">
+                  <div class="q-num">01</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(1).jpg" />
+                    <a href="#q-play-1">
+                      <i id="q-pause-1" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-1">
+                      <i id="q-play-1" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
+                </div>
+
+                <div id="q-2">
+                  <div class="q-num">
+                    <i class="fa-solid fa-chart-simple"></i>
+                  </div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(2).jpg" />
+                    <a href="#q-play-2">
+                      <i id="q-pause-2" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-2">
+                      <i id="q-play-2" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <div>
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="q-3">
+                  <div class="q-num">03</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(3).jpg" />
+                    <a href="#q-play-3">
+                      <i id="q-pause-3" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-3">
+                      <i id="q-play-3" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <div>
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="q-4">
+                  <div class="q-num">04</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(4).jpg" />
+                    <a href="#q-play-4">
+                      <i id="q-pause-4" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-4">
+                      <i id="q-play-4" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <div>
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="q-5">
+                  <div class="q-num">05</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(5).jpg" />
+                    <a href="#q-play-5">
+                      <i id="q-pause-5" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-5">
+                      <i id="q-play-5" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <div>
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="q-6">
+                  <div class="q-num">06</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(6).jpg" />
+                    <a href="#q-play-6">
+                      <i id="q-pause-6" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-6">
+                      <i id="q-play-6" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <div>
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="q-7">
+                  <div class="q-num">07</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(7).jpg" />
+                    <a href="#q-play-7">
+                      <i id="q-pause-7" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-7">
+                      <i id="q-play-7" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <div>
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="q-8">
+                  <div class="q-num">08</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(8).jpg" />
+                    <a href="#q-play-8">
+                      <i id="q-pause-8" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-8">
+                      <i id="q-play-8" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <div>
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="q-9">
+                  <div class="q-num">09</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(9).jpg" />
+                    <a href="#q-play-9">
+                      <i id="q-pause-9" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-9">
+                      <i id="q-play-9" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <div>
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="q-10">
+                  <div class="q-num">10</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(10).jpg" />
+                    <a href="#q-play-10">
+                      <i id="q-pause-10" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-10">
+                      <i id="q-play-10" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <div>
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="q-11">
+                  <div class="q-num">11</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(11).jpg" />
+                    <a href="#q-play-11">
+                      <i id="q-pause-11" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-11">
+                      <i id="q-play-11" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <div>
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="q-12">
+                  <div class="q-num">12</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(12).jpg" />
+                    <a href="#q-play-12">
+                      <i id="q-pause-12" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-12">
+                      <i id="q-play-12" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <div>
+                      <i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div class="r-dot-time">
+        <div id="part-right">
+          <div class="release">
+            <p>Similar Artists</p>
+            <div class="release-content">
+              <div id="r-1">
+                <div class="image-play-pause">
+                  <img src="Images/song(11).jpg" />
+                  <a href="#r-play-1">
+                    <i id="r-pause-1" class="fa-solid fa-pause"></i>
+                  </a>
+                  <a href="#r-pause-1">
+                    <i id="r-play-1" class="fa-solid fa-play"></i>
+                  </a>
+                </div>
 
-                <div class="r-dot">
-                    <input type="checkbox" id="s1">
+                <div class="r-text">
+                  <div class="r-name">Onism</div>
+                  <div class="r-date">Aug 11, 2017</div>
+                </div>
+
+                <div class="r-dot-time">
+                  <div class="r-dot">
+                    <input type="checkbox" id="s1" />
                     <label for="s1">
-                        <i class="fa-solid fa-ellipsis"></i>
+                      <i class="fa-solid fa-ellipsis"></i>
                     </label>
 
                     <div class="r-drop-menu">
-
                       <div>
                         <a href="#">
                           <div><i class="fa-solid fa-play"></i></div>
@@ -420,549 +417,516 @@
                           <div>Get info</div>
                         </a>
                       </div>
-
                     </div>
-                </div>
-
-                <div id="r-time">4:44</div>
-
-            </div>
-
-          </div>
-
-          <div id="r-2">
-
-            <div class="image-play-pause">
-              <img src="Images/song(12).jpg">
-              <a href="#r-play-2">
-                  <i id="r-pause-2" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#r-pause-2">
-                  <i id="r-play-2" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-
-            <div class="r-text">
-                <div class="r-name">Onism</div>
-                <div class="r-date">Aug 11, 2017</div>
-            </div>
-
-            <div class="r-dot-time">
-
-              <div class="r-dot">
-                <input type="checkbox" id="s2">
-                <label for="s2">
-                    <i class="fa-solid fa-ellipsis"></i>
-                </label>
-
-                <div class="r-drop-menu">
-
-                  <div>
-                    <a href="#">
-                      <div><i class="fa-solid fa-play"></i></div>
-                      <div>Play Now</div>
-                    </a>
                   </div>
 
-                  <div>
-                    <a href="#">
-                      <div><i class="fa-solid fa-plus"></i></div>
-                      <div>Add to Queue</div>
-                    </a>
-                  </div>
-
-                  <div>
-                    <a href="#">
-                      <div><i class="fa-solid fa-list-check"></i></div>
-                      <div>Add to Favourites</div>
-                    </a>
-                  </div>
-
-                  <div>
-                    <a href="#">
-                      <div><i class="fa-solid fa-circle-info"></i></div>
-                      <div>Get info</div>
-                    </a>
-                  </div>
-
-                </div>
-            </div>
-
-                <div id="r-time">4:44</div>
-
-            </div>
-
-          </div>
-
-          <div id="r-3">
-            
-            <div class="image-play-pause">
-              <img src="Images/song(13).jpg">
-              <a href="#r-play-3">
-                  <i id="r-pause-3" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#r-pause-3">
-                  <i id="r-play-3" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-
-            <div class="r-text">
-                <div class="r-name">Onism</div>
-                <div class="r-date">Aug 11, 2017</div>
-            </div>
-
-            <div class="r-dot-time">
-
-              <div class="r-dot">
-                <input type="checkbox" id="s3">
-                <label for="s3">
-                    <i class="fa-solid fa-ellipsis"></i>
-                </label>
-
-                <div class="r-drop-menu">
-
-                  <div>
-                    <a href="#">
-                      <div><i class="fa-solid fa-play"></i></div>
-                      <div>Play Now</div>
-                    </a>
-                  </div>
-
-                  <div>
-                    <a href="#">
-                      <div><i class="fa-solid fa-plus"></i></div>
-                      <div>Add to Queue</div>
-                    </a>
-                  </div>
-
-                  <div>
-                    <a href="#">
-                      <div><i class="fa-solid fa-list-check"></i></div>
-                      <div>Add to Favourites</div>
-                    </a>
-                  </div>
-
-                  <div>
-                    <a href="#">
-                      <div><i class="fa-solid fa-circle-info"></i></div>
-                      <div>Get info</div>
-                    </a>
-                  </div>
-
-                </div>
-            </div>
-
-                <div id="r-time">4:44</div>
-
-            </div>
-            
-          </div>
-
-          <div id="r-4">
-
-            <div class="image-play-pause">
-              <img src="Images/song(14).jpg">
-              <a href="#r-play-4">
-                  <i id="r-pause-4" class="fa-solid fa-pause"></i>
-              </a>
-              <a href="#r-pause-4">
-                  <i id="r-play-4" class="fa-solid fa-play"></i>
-              </a>
-            </div>
-
-            <div class="r-text">
-                <div class="r-name">Onism</div>
-                <div class="r-date">Aug 11, 2017</div>
-            </div>
-
-            <div class="r-dot-time">
-
-              <div class="r-dot">
-                <input type="checkbox" id="s4">
-                <label for="s4">
-                    <i class="fa-solid fa-ellipsis"></i>
-                </label>
-
-                <div class="r-drop-menu">
-
-                  <div>
-                    <a href="#">
-                      <div><i class="fa-solid fa-play"></i></div>
-                      <div>Play Now</div>
-                    </a>
-                  </div>
-
-                  <div>
-                    <a href="#">
-                      <div><i class="fa-solid fa-plus"></i></div>
-                      <div>Add to Queue</div>
-                    </a>
-                  </div>
-
-                  <div>
-                    <a href="#">
-                      <div><i class="fa-solid fa-list-check"></i></div>
-                      <div>Add to Favourites</div>
-                    </a>
-                  </div>
-
-                  <div>
-                    <a href="#">
-                      <div><i class="fa-solid fa-circle-info"></i></div>
-                      <div>Get info</div>
-                    </a>
-                  </div>
-
+                  <div id="r-time">4:44</div>
                 </div>
               </div>
 
-              <div id="r-time">4:44</div>
+              <div id="r-2">
+                <div class="image-play-pause">
+                  <img src="Images/song(12).jpg" />
+                  <a href="#r-play-2">
+                    <i id="r-pause-2" class="fa-solid fa-pause"></i>
+                  </a>
+                  <a href="#r-pause-2">
+                    <i id="r-play-2" class="fa-solid fa-play"></i>
+                  </a>
+                </div>
 
+                <div class="r-text">
+                  <div class="r-name">Onism</div>
+                  <div class="r-date">Aug 11, 2017</div>
+                </div>
+
+                <div class="r-dot-time">
+                  <div class="r-dot">
+                    <input type="checkbox" id="s2" />
+                    <label for="s2">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </label>
+
+                    <div class="r-drop-menu">
+                      <div>
+                        <a href="#">
+                          <div><i class="fa-solid fa-play"></i></div>
+                          <div>Play Now</div>
+                        </a>
+                      </div>
+
+                      <div>
+                        <a href="#">
+                          <div><i class="fa-solid fa-plus"></i></div>
+                          <div>Add to Queue</div>
+                        </a>
+                      </div>
+
+                      <div>
+                        <a href="#">
+                          <div><i class="fa-solid fa-list-check"></i></div>
+                          <div>Add to Favourites</div>
+                        </a>
+                      </div>
+
+                      <div>
+                        <a href="#">
+                          <div><i class="fa-solid fa-circle-info"></i></div>
+                          <div>Get info</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="r-time">4:44</div>
+                </div>
+              </div>
+
+              <div id="r-3">
+                <div class="image-play-pause">
+                  <img src="Images/song(13).jpg" />
+                  <a href="#r-play-3">
+                    <i id="r-pause-3" class="fa-solid fa-pause"></i>
+                  </a>
+                  <a href="#r-pause-3">
+                    <i id="r-play-3" class="fa-solid fa-play"></i>
+                  </a>
+                </div>
+
+                <div class="r-text">
+                  <div class="r-name">Onism</div>
+                  <div class="r-date">Aug 11, 2017</div>
+                </div>
+
+                <div class="r-dot-time">
+                  <div class="r-dot">
+                    <input type="checkbox" id="s3" />
+                    <label for="s3">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </label>
+
+                    <div class="r-drop-menu">
+                      <div>
+                        <a href="#">
+                          <div><i class="fa-solid fa-play"></i></div>
+                          <div>Play Now</div>
+                        </a>
+                      </div>
+
+                      <div>
+                        <a href="#">
+                          <div><i class="fa-solid fa-plus"></i></div>
+                          <div>Add to Queue</div>
+                        </a>
+                      </div>
+
+                      <div>
+                        <a href="#">
+                          <div><i class="fa-solid fa-list-check"></i></div>
+                          <div>Add to Favourites</div>
+                        </a>
+                      </div>
+
+                      <div>
+                        <a href="#">
+                          <div><i class="fa-solid fa-circle-info"></i></div>
+                          <div>Get info</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="r-time">4:44</div>
+                </div>
+              </div>
+
+              <div id="r-4">
+                <div class="image-play-pause">
+                  <img src="Images/song(14).jpg" />
+                  <a href="#r-play-4">
+                    <i id="r-pause-4" class="fa-solid fa-pause"></i>
+                  </a>
+                  <a href="#r-pause-4">
+                    <i id="r-play-4" class="fa-solid fa-play"></i>
+                  </a>
+                </div>
+
+                <div class="r-text">
+                  <div class="r-name">Onism</div>
+                  <div class="r-date">Aug 11, 2017</div>
+                </div>
+
+                <div class="r-dot-time">
+                  <div class="r-dot">
+                    <input type="checkbox" id="s4" />
+                    <label for="s4">
+                      <i class="fa-solid fa-ellipsis"></i>
+                    </label>
+
+                    <div class="r-drop-menu">
+                      <div>
+                        <a href="#">
+                          <div><i class="fa-solid fa-play"></i></div>
+                          <div>Play Now</div>
+                        </a>
+                      </div>
+
+                      <div>
+                        <a href="#">
+                          <div><i class="fa-solid fa-plus"></i></div>
+                          <div>Add to Queue</div>
+                        </a>
+                      </div>
+
+                      <div>
+                        <a href="#">
+                          <div><i class="fa-solid fa-list-check"></i></div>
+                          <div>Add to Favourites</div>
+                        </a>
+                      </div>
+
+                      <div>
+                        <a href="#">
+                          <div><i class="fa-solid fa-circle-info"></i></div>
+                          <div>Get info</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="r-time">4:44</div>
+                </div>
+              </div>
             </div>
-            
           </div>
 
+          <div class="queue">
+            <header class="q-head">
+              <div class="q-text">Recently Played</div>
+
+              <div id="q-btn-drop">
+                <input type="checkbox" id="d-arrow" />
+                <label for="d-arrow">
+                  Queue
+                  <i class="fa-solid fa-angle-down"></i>
+                </label>
+                <div class="q-drop">
+                  <div>Playlists</div>
+                  <hr />
+                  <div>Favourit Songs</div>
+                </div>
+              </div>
+            </header>
+            <div class="queue-content">
+              <div class="queue-list">
+                <div id="q-1">
+                  <div class="q-num">01</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(1).jpg" />
+                    <a href="#q-play-1">
+                      <i id="q-pause-1" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-1">
+                      <i id="q-play-1" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+
+                <div id="q-2">
+                  <div class="q-num">
+                    <i class="fa-solid fa-chart-simple"></i>
+                  </div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(2).jpg" />
+                    <a href="#q-play-2">
+                      <i id="q-pause-2" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-2">
+                      <i id="q-play-2" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+
+                <div id="q-3">
+                  <div class="q-num">03</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(3).jpg" />
+                    <a href="#q-play-3">
+                      <i id="q-pause-3" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-3">
+                      <i id="q-play-3" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+
+                <div id="q-4">
+                  <div class="q-num">04</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(4).jpg" />
+                    <a href="#q-play-4">
+                      <i id="q-pause-4" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-4">
+                      <i id="q-play-4" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+
+                <div id="q-5">
+                  <div class="q-num">05</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(5).jpg" />
+                    <a href="#q-play-5">
+                      <i id="q-pause-5" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-5">
+                      <i id="q-play-5" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+
+                <div id="q-6">
+                  <div class="q-num">06</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(6).jpg" />
+                    <a href="#q-play-6">
+                      <i id="q-pause-6" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-6">
+                      <i id="q-play-6" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+
+                <div id="q-7">
+                  <div class="q-num">07</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(7).jpg" />
+                    <a href="#q-play-7">
+                      <i id="q-pause-7" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-7">
+                      <i id="q-play-7" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+
+                <div id="q-8">
+                  <div class="q-num">08</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(8).jpg" />
+                    <a href="#q-play-8">
+                      <i id="q-pause-8" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-8">
+                      <i id="q-play-8" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+
+                <div id="q-9">
+                  <div class="q-num">09</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(9).jpg" />
+                    <a href="#q-play-9">
+                      <i id="q-pause-9" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-9">
+                      <i id="q-play-9" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+
+                <div id="q-10">
+                  <div class="q-num">10</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(10).jpg" />
+                    <a href="#q-play-10">
+                      <i id="q-pause-10" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-10">
+                      <i id="q-play-10" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+
+                <div id="q-11">
+                  <div class="q-num">11</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(11).jpg" />
+                    <a href="#q-play-11">
+                      <i id="q-pause-11" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-11">
+                      <i id="q-play-11" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+
+                <div id="q-12">
+                  <div class="q-num">12</div>
+                  <div class="image-play-pause">
+                    <img src="Images/song(12).jpg" />
+                    <a href="#q-play-12">
+                      <i id="q-pause-12" class="fa-solid fa-pause"></i>
+                    </a>
+                    <a href="#q-pause-12">
+                      <i id="q-play-12" class="fa-solid fa-play"></i>
+                    </a>
+                  </div>
+
+                  <div class="q-text">
+                    <div class="q-name">Onism</div>
+                    <div class="q-info">Song info</div>
+                  </div>
+                  <div class="icon">
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div> 
-   
-    <div class="queue">
-   
-       <header class="q-head">
-         <div class="q-text">Recently Played</div>
+      </main>
 
-         <div id="q-btn-drop">
-          <input type="checkbox" id="d-arrow">
-          <label for="d-arrow">
-              Queue
-              <i class="fa-solid fa-angle-down"></i>
-          </label>
-          <div class="q-drop">
-            <div>Playlists</div>
-            <hr>
-            <div>Favourit Songs</div>
+      <div class="music-bar">
+        <div class="play-song">
+          <div class="p-img">
+            <img src="Images/song(4).jpg" />
           </div>
+
+          <div class="p-text">
+            <div class="p-name">Onism</div>
+            <div class="p-info">Song info</div>
+          </div>
+
+          <div class="p-heart-block">
+            <div class="hrt">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div class="blk">
+              <i class="fa-solid fa-ban"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="music-player">
+          <div class="music-icon">
+            <div><i class="fa-solid fa-shuffle"></i></div>
+            <div><i class="fa-solid fa-backward-step"></i></div>
+            <div class="m-play-pause">
+              <div id="m-play"><i class="fa-regular fa-circle-play"></i></div>
+              <div id="m-pause"><i class="fa-regular fa-circle-pause"></i></div>
+            </div>
+            <div><i class="fa-solid fa-forward-step"></i></div>
+            <div><i class="fa-solid fa-repeat"></i></div>
+          </div>
+          <div class="song-range">
+            1.39
+            <input type="range" />
+            4.44
+          </div>
+        </div>
+
+        <div class="icon-volume">
+          <div><i class="fa-solid fa-list-check"></i></div>
+          <div><i class="fa-solid fa-computer-speaker"></i></div>
+          <div><i class="fa-solid fa-volume-high"></i></div>
+          <div id="vol"><input type="range" /></div>
+          <div>
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
+        </div>
       </div>
-
-       </header>
-       <div class="queue-content">
-         <div class="queue-list">
-   
-           <div id="q-1">
-             <div class="q-num">01</div>
-             <div class="image-play-pause">
-               <img src="Images/song(1).jpg">
-               <a href="#q-play-1">
-                   <i id="q-pause-1" class="fa-solid fa-pause"></i>
-               </a>
-               <a href="#q-pause-1">
-                   <i id="q-play-1" class="fa-solid fa-play"></i>
-               </a>
-             </div>
-   
-             <div class="q-text">
-                 <div class="q-name">Onism</div>
-                 <div class="q-info">Song info</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-regular fa-heart"></i> 
-             </div>
-            </div>
-   
-           <div id="q-2">
-             <div class="q-num">    
-               <i class="fa-solid fa-chart-simple"></i>
-             </div>
-             <div class="image-play-pause">
-               <img src="Images/song(2).jpg">
-               <a href="#q-play-2">
-                   <i id="q-pause-2" class="fa-solid fa-pause"></i>
-               </a>
-               <a href="#q-pause-2">
-                   <i id="q-play-2" class="fa-solid fa-play"></i>
-               </a>
-             </div>
-   
-             <div class="q-text">
-                 <div class="q-name">Onism</div>
-                 <div class="q-info">Song info</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-regular fa-heart"></i> 
-             </div>
-            </div>
-   
-           <div id="q-3">
-             <div class="q-num">03</div>
-             <div class="image-play-pause">
-               <img src="Images/song(3).jpg">
-               <a href="#q-play-3">
-                   <i id="q-pause-3" class="fa-solid fa-pause"></i>
-               </a>
-               <a href="#q-pause-3">
-                   <i id="q-play-3" class="fa-solid fa-play"></i>
-               </a>
-             </div>
-   
-             <div class="q-text">
-                 <div class="q-name">Onism</div>
-                 <div class="q-info">Song info</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-regular fa-heart"></i> 
-             </div>
-            </div>
-   
-           <div id="q-4">
-             <div class="q-num">04</div>
-             <div class="image-play-pause">
-               <img src="Images/song(4).jpg">
-               <a href="#q-play-4">
-                   <i id="q-pause-4" class="fa-solid fa-pause"></i>
-               </a>
-               <a href="#q-pause-4">
-                   <i id="q-play-4" class="fa-solid fa-play"></i>
-               </a>
-             </div>
-   
-             <div class="q-text">
-                 <div class="q-name">Onism</div>
-                 <div class="q-info">Song info</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-regular fa-heart"></i> 
-             </div>
-            </div>
-   
-           <div id="q-5">
-             <div class="q-num">05</div>
-             <div class="image-play-pause">
-               <img src="Images/song(5).jpg">
-               <a href="#q-play-5">
-                   <i id="q-pause-5" class="fa-solid fa-pause"></i>
-               </a>
-               <a href="#q-pause-5">
-                   <i id="q-play-5" class="fa-solid fa-play"></i>
-               </a>
-             </div>
-   
-             <div class="q-text">
-                 <div class="q-name">Onism</div>
-                 <div class="q-info">Song info</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-regular fa-heart"></i> 
-             </div>
-            </div>
-   
-           <div id="q-6">
-             <div class="q-num">06</div>
-             <div class="image-play-pause">
-               <img src="Images/song(6).jpg">
-               <a href="#q-play-6">
-                   <i id="q-pause-6" class="fa-solid fa-pause"></i>
-               </a>
-               <a href="#q-pause-6">
-                   <i id="q-play-6" class="fa-solid fa-play"></i>
-               </a>
-             </div>
-   
-             <div class="q-text">
-                 <div class="q-name">Onism</div>
-                 <div class="q-info">Song info</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-regular fa-heart"></i> 
-             </div>
-            </div>
-   
-           <div id="q-7">
-             <div class="q-num">07</div>
-             <div class="image-play-pause">
-               <img src="Images/song(7).jpg">
-               <a href="#q-play-7">
-                   <i id="q-pause-7" class="fa-solid fa-pause"></i>
-               </a>
-               <a href="#q-pause-7">
-                   <i id="q-play-7" class="fa-solid fa-play"></i>
-               </a>
-             </div>
-   
-             <div class="q-text">
-                 <div class="q-name">Onism</div>
-                 <div class="q-info">Song info</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-regular fa-heart"></i> 
-             </div>
-            </div>
-   
-           <div id="q-8">
-             <div class="q-num">08</div>
-             <div class="image-play-pause">
-               <img src="Images/song(8).jpg">
-               <a href="#q-play-8">
-                   <i id="q-pause-8" class="fa-solid fa-pause"></i>
-               </a>
-               <a href="#q-pause-8">
-                   <i id="q-play-8" class="fa-solid fa-play"></i>
-               </a>
-             </div>
-   
-             <div class="q-text">
-                 <div class="q-name">Onism</div>
-                 <div class="q-info">Song info</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-regular fa-heart"></i> 
-             </div>
-            </div>
-   
-           <div id="q-9">
-             <div class="q-num">09</div>
-             <div class="image-play-pause">
-               <img src="Images/song(9).jpg">
-               <a href="#q-play-9">
-                   <i id="q-pause-9" class="fa-solid fa-pause"></i>
-               </a>
-               <a href="#q-pause-9">
-                   <i id="q-play-9" class="fa-solid fa-play"></i>
-               </a>
-             </div>
-   
-             <div class="q-text">
-                 <div class="q-name">Onism</div>
-                 <div class="q-info">Song info</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-regular fa-heart"></i> 
-             </div>
-            </div>
-   
-           <div id="q-10">
-             <div class="q-num">10</div>
-             <div class="image-play-pause">
-               <img src="Images/song(10).jpg">
-               <a href="#q-play-10">
-                   <i id="q-pause-10" class="fa-solid fa-pause"></i>
-               </a>
-               <a href="#q-pause-10">
-                   <i id="q-play-10" class="fa-solid fa-play"></i>
-               </a>
-             </div>
-   
-             <div class="q-text">
-                 <div class="q-name">Onism</div>
-                 <div class="q-info">Song info</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-regular fa-heart"></i> 
-             </div>
-            </div>
-   
-           <div id="q-11">
-             <div class="q-num">11</div>
-             <div class="image-play-pause">
-               <img src="Images/song(11).jpg">
-               <a href="#q-play-11">
-                   <i id="q-pause-11" class="fa-solid fa-pause"></i>
-               </a>
-               <a href="#q-pause-11">
-                   <i id="q-play-11" class="fa-solid fa-play"></i>
-               </a>
-             </div>
-   
-             <div class="q-text">
-                 <div class="q-name">Onism</div>
-                 <div class="q-info">Song info</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-regular fa-heart"></i> 
-             </div>
-            </div>
-   
-           <div id="q-12">
-             <div class="q-num">12</div>
-             <div class="image-play-pause">
-               <img src="Images/song(12).jpg">
-               <a href="#q-play-12">
-                   <i id="q-pause-12" class="fa-solid fa-pause"></i>
-               </a>
-               <a href="#q-pause-12">
-                   <i id="q-play-12" class="fa-solid fa-play"></i>
-               </a>
-             </div>
-   
-             <div class="q-text">
-                 <div class="q-name">Onism</div>
-                 <div class="q-info">Song info</div>
-             </div>
-             <div class="icon">
-                 <i class="fa-regular fa-heart"></i> 
-             </div>
-            </div>
-   
-          </div>
-       </div>
-   
     </div>
-   
-    </div>
-   
-  </main>
-   
-  <div class="music-bar">
-   
-     <div class="play-song">
-   
-         <div class="p-img">
-           <img src="Images/song(4).jpg">
-         </div>
-   
-         <div class="p-text">
-             <div class="p-name">Onism</div>
-             <div class="p-info">Song info</div>
-         </div>
-   
-         <div class="p-heart-block">
-           <div class="hrt">
-             <i class="fa-regular fa-heart"></i> 
-           </div>
-           <div class="blk">
-             <i class="fa-solid fa-ban"></i> 
-           </div>
-         </div>
-   
-     </div>
-   
-     <div class="music-player">
-       <div class="music-icon">
-           <div><i class="fa-solid fa-shuffle"></i></div>
-           <div><i class="fa-solid fa-backward-step"></i></div>
-           <div class="m-play-pause">
-             <div id="m-play"><i class="fa-regular fa-circle-play"></i></div>
-             <div id="m-pause"><i class="fa-regular fa-circle-pause"></i></div> 
-           </div>
-           <div><i class="fa-solid fa-forward-step"></i></div>
-           <div><i class="fa-solid fa-repeat"></i></div>
-       </div>
-       <div class="song-range">
-         1.39
-         <input type="range">
-         4.44
-       </div>
-     </div>
-   
-     <div class="icon-volume">
-         <div><i class="fa-solid fa-list-check"></i></div>
-         <div><i class="fa-solid fa-computer-speaker"></i></div>
-         <div><i class="fa-solid fa-volume-high"></i></div>
-         <div id="vol"><input type="range"></div>
-         <div><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
-     </div>
-   
-  </div>
-   
-  </div>
-    
-</body>
+  </body>
 </html>

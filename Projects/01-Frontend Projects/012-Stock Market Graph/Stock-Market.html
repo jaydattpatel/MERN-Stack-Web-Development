@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="author" content="JaydattPatel">
-  <!-- Plotly.js -->
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <link rel="stylesheet" href="Stock-Market.css">
-</head>
-<body>
-<header>
-  <h1>Stock Market Analysis</h1>
-</header>
+  <head>
+    <meta name="author" content="JaydattPatel" />
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="Stock-Market.css" />
+  </head>
+  <body>
+    <div
+      id="jaydattlogo"
+      style="
+        position: fixed;
+        bottom: 1%;
+        right: 1%;
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 10;
+      "
+    >
+      @Jaydatt
+    </div>
+    <header>
+      <h1>Stock Market Analysis</h1>
+    </header>
 
-<div class="main">
-  <div id="graphInfo">
-    <div id="graphDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
-    <div id="periods"></div>
-  </div>
-  <div id="stocks"></div>
-</div>
+    <div class="main">
+      <div id="graphInfo">
+        <div id="graphDiv">
+          <!-- Plotly chart will be drawn inside this DIV -->
+        </div>
+        <div id="periods"></div>
+      </div>
+      <div id="stocks"></div>
+    </div>
 
-<div id="stockInfo"></div>
-<div id="summary"></div>
+    <div id="stockInfo"></div>
+    <div id="summary"></div>
 
-  <script type="module" src="Stock-Market.js"></script>
-  
-</body>
+    <script type="module" src="Stock-Market.js"></script>
+  </body>
 </html>

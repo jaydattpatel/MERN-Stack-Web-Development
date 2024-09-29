@@ -1,85 +1,86 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
 
-  #header {
-    text-align: center;
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
+#header {
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #4caf50;
+  color: #fff;
+  margin-bottom: 10px;
+}
 
-  #container {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-  }
+#container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
 
-  #player1, #player2 {
-    width: 450px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+#player1,
+#player2 {
+  width: 450px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+#card1 img,
+#card2 img {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  padding-left: 60px;
+}
 
-  #card1 img, #card2 img{
-    width: 250px;
-    height: 250px;
-    text-align: center;
-    padding-left: 60px;
-  }
+#card_header {
+  background-color: #ddd;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+#abilities {
+  list-style: none;
+  padding: 20px;
+  background-color: #ddd;
+  margin-bottom: 0px;
+}
 
-  #card_header{
-      background-color: #ddd;
-      padding: 8px;
-      margin-bottom: 10px;
-  }
-  #abilities {
-    list-style: none;
-    padding: 20px;
-    background-color: #ddd;
-    margin-bottom: 0px;
-  }
+#abilities li {
+  margin-left: 20px;
+  background-color: #c6c5c5;
+  padding-left: 5px;
+}
 
-  #abilities li {
-    margin-left: 20px;
-    background-color: #c6c5c5;
-    padding-left: 5px;
-  }
-
-  #p1_score {
-    float: right;
-  }
-  #p2_score {
-    float: right;
-  }
-  #experience{
-      float: right;
-  padding-right: 40px;    
+#p1_score {
+  float: right;
+}
+#p2_score {
+  float: right;
+}
+#experience {
+  float: right;
+  padding-right: 40px;
   font-size: larger;
   font-style: italic;
 }
-  #name{
-      margin-top: 30px;
-      padding-left: 20px;
-      /* font-weight:300; */
-      font-size: larger;
-      font-style: italic;
-  }
-  #fight{
-      position: relative;
-      left: 50%;
-      width: 70px;
-      height: 40px;
-      font-size: larger;
-      background-color: rgb(243, 85, 85);
-      border-radius: 5px;
-      border: none;
-      cursor: pointer;
-  }
+#name {
+  margin-top: 30px;
+  padding-left: 20px;
+  /* font-weight:300; */
+  font-size: larger;
+  font-style: italic;
+}
+#fight {
+  position: relative;
+  left: 50%;
+  width: 70px;
+  height: 40px;
+  font-size: larger;
+  background-color: rgb(243, 85, 85);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}

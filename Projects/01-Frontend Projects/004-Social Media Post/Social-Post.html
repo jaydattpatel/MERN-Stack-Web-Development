@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="author" content="JaydattPatel">
-    <link rel="stylesheet" href="Social-Post.css">
-</head>
-<body>
-  <div class="container">
-    <div class="posts-container">
-      <h1>Instagram </h1>
-      <div id="posts"></div>
+  <head>
+    <meta name="author" content="JaydattPatel" />
+    <link rel="stylesheet" href="Social-Post.css" />
+  </head>
+  <body>
+    <div
+      id="jaydattlogo"
+      style="
+        position: fixed;
+        bottom: 1%;
+        right: 1%;
+        font-size: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 10;
+      "
+    >
+      @Jaydatt
     </div>
-    <div class="sidebar">
+    <h1>Instagram</h1>
+    <div class="container">
+      <div class="posts-container">
+        <div id="posts"></div>
+      </div>
+      <div class="sidebar">
         <h3>Create new Post</h3>
-      <form id="postForm">
-        <input type="text" id="postInput" placeholder="Write the caption for your post.">
-        <input type="file" id="imageInput">
-        <button type="submit" class = "submit-button">Post</button>
-      </form>
+        <form id="postForm">
+          <input
+            type="text"
+            id="postInput"
+            placeholder="Write the caption for your post."
+          />
+          <input
+            type="url"
+            id="imageInput"
+            placeholder="http://www.xyz.com/image.jpg"
+          />
+          <div>
+            <button type="submit" class="submit-button">Post</button>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
 
-  <script src="Social-Post.js"></script>
-</body>
+    <script src="Social-Post.js"></script>
+  </body>
 </html>
