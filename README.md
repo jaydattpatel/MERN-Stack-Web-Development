@@ -1,7 +1,7 @@
 # MERN Full Stack Web Development (Coding Ninjas)
-<h2>
-  <a href='https://github.com/jaydattpatel/JavaScript'>  
-       Click here for JavaScript Programming 
+<h2>  
+  <a href='https://jaydatt.onrender.com/projects/'>  
+       Projects
   </a>
 </h2>
 <div id="badges">
