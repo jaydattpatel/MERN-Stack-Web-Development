@@ -21,10 +21,7 @@ import otpRouter from "./src/features/otp/otp.routes.js";
 //create server
 const server = express();
 const port = 4200;
-// //CORS policy configuration
-// var corsOptions = {
-//   origin: `http://localhost:5500`,
-// };
+
 server.use(cors());
 
 server.use(express.json());
@@ -32,6 +29,10 @@ server.use(express.json());
 server.use("/api-docs", swagger.serve, swagger.setup(apiDocs));
 //   use loggermiddleware
 server.use(loggerMiddleware);
+
+server.get("/", (req, res) => {
+  res.redirect("/api-docs");
+});
 
 //for all requests related to user,redirect to user routes
 server.use("/api/users", userRouter);
@@ -46,9 +47,7 @@ server.use("/api/friends", friendShipRouter);
 //for all requests related to otp,redirect to post routes
 server.use("/api/otp", otpRouter);
 //default request handler
-server.get("/", (req, res) => {
-  res.send("welcome to Social Media API");
-});
+
 //Error handler Middleware
 server.use((err, req, res, next) => {
   console.log(err);
@@ -69,7 +68,7 @@ server.use((req, res) => {
   res
     .status(404)
     .send(
-      "API not found please check our documentation for more at localhost:4200/api-docs"
+      "API not found please check our documentation for more at localhost:****/api-docs"
     );
 });
 //specific port

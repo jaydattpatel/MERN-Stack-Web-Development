@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 import nodemailer from "nodemailer";
 import { userSchema } from "../user/user.schema.js";
 import { ApplicationError } from "../../error-handler/applicationError.js";
-const senderEmail = process.env.OTP_SENDER_EMAIL;
-const senderPass = process.env.OTP_SENDER_PASSWORD;
+const senderEmail = process.env.SENDER_EMAIL;
+const senderPass = process.env.SENDER_PASSWORD;
 let otp = "";
 let isOtpMatched = false;
 //creating model from schema

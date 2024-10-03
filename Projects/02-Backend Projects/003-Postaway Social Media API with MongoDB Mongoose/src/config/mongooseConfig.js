@@ -1,12 +1,13 @@
 import mongoose from "mongoose";
-const url = process.env.DB_URL || "mongodb://0.0.0.0:27017/Postaway";
 
+const ip = process.env.DBURL || "mongodb://0.0.0.0:27017";
+
+const DBURL = ip + `/Postaway`;
 export const connectUsingMongoose = async () => {
   try {
-    await mongoose.connect(url);
-    console.log("MongoDb is connected using mongoose");
+    await mongoose.connect(DBURL);
+    console.log("MongoDB is connected successfully :\n", DBURL);
   } catch (error) {
-    console.log("mongoose connection error!!");
-    console.log(error);
+    console.log("mongoose connection error!!\n", error);
   }
 };
