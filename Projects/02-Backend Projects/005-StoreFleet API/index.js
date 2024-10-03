@@ -1,5 +1,6 @@
 import "./env.js";
 import express from "express";
+import cors from "cors";
 import { connectDB } from "./config/db.js";
 import productRoutes from "./src/product/routes/product.routes.js";
 import {
@@ -11,11 +12,16 @@ import cookieParser from "cookie-parser";
 import orderRoutes from "./src/order/routes/order.routes.js";
 
 const server = express();
+server.use(cors());
 server.use(express.json());
 server.use(cookieParser());
 
-server.use("/", (req, res) => {
-  res.status(200).sendFile("index.html");
+server.get("/", (req, res) => {
+  res
+    .status(200)
+    .redirect(
+      "https://www.postman.com/aviation-geoscientist-41373396/storefleets-jaydatt-render/collection/pktp0fj/storefleet-jaydatt-render"
+    );
 });
 // configure routes
 server.use("/api/storefleet/product", productRoutes);
