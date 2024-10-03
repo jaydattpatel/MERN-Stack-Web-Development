@@ -10,14 +10,19 @@ import authenticateToken from "../../middlewares/checkBlacklistedToken.js";
 //get router initialize
 const otpRouter = express.Router();
 const otpController = new OtpController();
-otpRouter.post("/send", jwtAuth, (req, res) => {
-  otpController.sendOtp(req, res);
+otpRouter.post("/send", jwtAuth, (req, res, next) => {
+  otpController.sendOtp(req, res, next);
 });
-otpRouter.get("/verify/:otp", authenticateToken, jwtAuth, (req, res) => {
-  otpController.verifyOtp(req, res);
+otpRouter.get("/verify/:otp", authenticateToken, jwtAuth, (req, res, next) => {
+  otpController.verifyOtp(req, res, next);
 });
-otpRouter.post("/reset-password", authenticateToken, jwtAuth, (req, res) => {
-  otpController.resetPassword(req, res);
-});
+otpRouter.post(
+  "/reset-password",
+  authenticateToken,
+  jwtAuth,
+  (req, res, next) => {
+    otpController.resetPassword(req, res, next);
+  }
+);
 
 export default otpRouter;

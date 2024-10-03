@@ -14,7 +14,7 @@ export class PostController {
       console.log("the req body is");
       console.log(req.body);
       // modelize all data related to post
-      const post = new PostModel(req.userID, caption, req.file.filename);
+      const post = new PostModel(req.userID, caption, req.file?.filename);
       console.log("new user is", post);
       //called function to add data to db
       const newPost = await this.postRepository.addPost(post);

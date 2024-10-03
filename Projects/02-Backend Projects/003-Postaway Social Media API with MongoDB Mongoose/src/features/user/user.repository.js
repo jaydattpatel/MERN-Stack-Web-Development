@@ -14,7 +14,7 @@ export default class UserRepository {
     try {
       //create instance of model
       const newUser = new UserModel(user);
-      console.log(newUser);
+      // console.log(newUser);
 
       return await newUser.save(); //save new user
 

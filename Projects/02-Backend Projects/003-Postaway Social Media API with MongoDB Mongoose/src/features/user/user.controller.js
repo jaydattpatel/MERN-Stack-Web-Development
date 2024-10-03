@@ -22,7 +22,7 @@ export class UserController {
         email,
         hashPassword,
         gender,
-        req.file.filename
+        req.file?.filename
       );
       console.log("new user is", user);
       const newUser = await this.userRepository.signUp(user); // new user created

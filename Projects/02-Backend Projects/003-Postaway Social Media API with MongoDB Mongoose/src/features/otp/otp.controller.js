@@ -7,7 +7,7 @@ export class OtpController {
   constructor() {
     this.otpRepository = new OtpRepository();
   }
-  async sendOtp(req, res) {
+  async sendOtp(req, res, next) {
     try {
       const userID = req.userID;
       console.log("user:-", userID);
@@ -15,13 +15,10 @@ export class OtpController {
       res.status(201).send("OTP is sent");
     } catch (error) {
       console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with otp controller ",
-        500
-      );
+      next(error);
     }
   }
-  async verifyOtp(req, res) {
+  async verifyOtp(req, res, next) {
     try {
       // const userID=req.userID;
       const otp = req.params.otp;
@@ -35,13 +32,10 @@ export class OtpController {
       }
     } catch (error) {
       console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with otp controller ",
-        500
-      );
+      next(error);
     }
   }
-  async resetPassword(req, res) {
+  async resetPassword(req, res, next) {
     const { newPassword } = req.body;
     ///hash password
     const hashPassword = await bcrypt.hash(newPassword, 13);
@@ -59,7 +53,7 @@ export class OtpController {
       console.log(error);
       // throw new ApplicationError("Something went wrong with signup controller ",500);
       console.log("Passing error to middleware");
-      // next(error);
+      next(error);
     }
   }
 }
