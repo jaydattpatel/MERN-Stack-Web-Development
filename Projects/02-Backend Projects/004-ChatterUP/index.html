@@ -2,14 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChatterUp App</title>
     <link rel="stylesheet" href="style.css" />
     <!-- Include the SocketIOFile library -->
 
-    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
   </head>
 
   <body>
+    <div
+      id="jaydattlogo"
+      style="
+        position: fixed;
+        bottom: 2%;
+        right: 3%;
+        color: red;
+        font-family: Arial, sans-serif;
+        font-weight: bolder;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 10;
+      "
+    >
+      @Jaydatt
+    </div>
     <div class="chatterup-heading">ChatterUp</div>
     <!-- Display the form here for entry in app by name -->
     <div id="promt">
@@ -30,7 +46,7 @@
     <div id="container" class="container">
       <div class="left-container">
         <!-- welcome message -->
-        <div id="welcome" style="text-align: left"></div>
+        <div id="welcome"></div>
         <div id="message-list">
           <!-- Tasks will be displayed here -->
         </div>

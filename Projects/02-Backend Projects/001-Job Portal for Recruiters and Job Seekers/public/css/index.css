@@ -1,122 +1,102 @@
-.error-box
-{
+.error-box {
   min-height: 96vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
-.top
-{
+.top {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
 body,
 html {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
 }
-.pink
-{
-color: #FF2C90;
+.pink {
+  color: #ff2c90;
 }
-.bold
-{
+.bold {
   font-weight: bold;
 }
-.container-lpage
-{
+.container-lpage {
   background-color: #181642;
-  height: 100vh;
+  height: 100%;
 }
-.main
-{
+.main {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.left
-{
+.left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 10px;
 }
-.lbtn
-{
-  background-color: #FF2C90;
-  color: #FFFFFF;
+.lbtn {
+  background-color: #ff2c90;
+  color: #ffffff;
 }
-.lbtn:hover
-{
+.lbtn:hover {
   background-color: #da096a;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-.main-heading
-{
-  color: #FF2C90;
+.main-heading {
+  color: #ff2c90;
   font-weight: bolder;
   font-size: 2.5em;
 }
 
-#mynav
-{
+#mynav {
   background-color: #181642 !important;
-  color: white ;
+  color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 1px 10px;
 }
-.modal-footer i{
+.modal-footer i {
   font-size: 22px;
   margin: 0 2px;
 }
-.form-group i
-{
- font-size: 20px;
- margin-right: 2px;
- margin-bottom: 1px;
+.form-group i {
+  font-size: 20px;
+  margin-right: 2px;
+  margin-bottom: 1px;
 }
-.form-group label
-{
-
- margin-bottom: 3px;
+.form-group label {
+  margin-bottom: 3px;
 }
-.hiring-btn
-{
+.hiring-btn {
   margin-top: -1px;
 }
-.fw-bold
-{
+.fw-bold {
   font-weight: bold;
 }
-.skills
-{
+.skills {
   margin: 2px;
   display: flex;
   flex-wrap: wrap;
   gap: 3px;
 }
-.form-box
-{
+.form-box {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-top: 5px solid #181642;
   border-left: 3px solid #181642;
-border-radius: 10px;
+  border-radius: 10px;
 }
-.card-header
-{
+.card-header {
   gap: 5px;
 }
-.bg-theme
-{
+.bg-theme {
   background-color: #0e0d23;
   color: white;
 }

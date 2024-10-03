@@ -1,25 +1,25 @@
 body {
   text-align: center;
-  padding: 20px;
+
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
 }
 
 h1 {
-  margin-bottom: 40px;
+  margin: 0.5rem;
   color: #333;
 }
 
 #description {
   font-size: 200px;
-  margin-bottom: 20px;
+  margin-bottom: 0.5rem;
   color: #333;
 }
 
 #guess-input {
   font-size: 20px;
-  padding: 10px;
-  width: 300px;
+  padding: 0.5rem;
+  width: 85%;
   margin-bottom: 20px;
   border: none;
   border: 2px Red solid;
@@ -48,7 +48,7 @@ h1 {
   max-width: 500px;
   margin: auto;
   background-color: #fff;
-  padding: 30px;
+  padding: 0.2rem;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

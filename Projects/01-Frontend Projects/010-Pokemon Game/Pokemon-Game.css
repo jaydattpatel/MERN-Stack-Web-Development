@@ -15,16 +15,17 @@ body {
 
 #container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px;
 }
 
 #player1,
 #player2 {
-  width: 450px;
+  margin: 0.5rem 0.2rem;
+  width: 400px;
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #060000;
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -32,10 +33,15 @@ body {
 #card2 img {
   width: 250px;
   height: 250px;
-  text-align: center;
-  padding-left: 60px;
 }
-
+#card1 #name,
+#card2 #name {
+  align-content: start;
+}
+#card1 #experience,
+#card2 #experience {
+  text-align: end;
+}
 #card_header {
   background-color: #ddd;
   padding: 8px;
@@ -43,13 +49,12 @@ body {
 }
 #abilities {
   list-style: none;
-  padding: 20px;
+  padding: 0.2rem;
   background-color: #ddd;
   margin-bottom: 0px;
 }
 
 #abilities li {
-  margin-left: 20px;
   background-color: #c6c5c5;
   padding-left: 5px;
 }
@@ -73,9 +78,11 @@ body {
   font-size: larger;
   font-style: italic;
 }
+
 #fight {
-  position: relative;
-  left: 50%;
+  text-align: center;
+}
+#fightBtn {
   width: 70px;
   height: 40px;
   font-size: larger;

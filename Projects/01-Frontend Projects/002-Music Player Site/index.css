@@ -12,11 +12,12 @@ body {
 }
 
 nav {
-  height: 4rem;
+  min-height: 4rem;
   width: 100%;
   margin: auto;
   color: white;
   display: flex;
+  flex-wrap: wrap;
   /* border:  var(--br); */
 }
 
@@ -32,6 +33,8 @@ nav > div {
 
 #bar-links {
   display: flex;
+  flex-wrap: wrap;
+  min-width: 350px;
   /* border: var(--br-r); */
 }
 
@@ -50,14 +53,17 @@ nav > div {
 
 #bar-right {
   height: 100%;
-  width: 80%;
+  width: 60%;
+  min-width: 350px;
   display: flex;
   justify-content: end;
   align-items: center;
+  margin: 0.5rem 0;
   /* border: var(--br-r); */
 }
 
 #bar-right > div {
+  min-height: 2.5rem;
   margin: 0px 0.5rem;
 }
 
@@ -100,29 +106,36 @@ nav > div {
 }
 
 #logged-in {
-  height: 70%;
-  width: 2.8rem;
+  height: 35px;
+  width: 35px;
   background-color: white;
   border-radius: 50% 50% 50% 50%;
   object-fit: cover;
   object-position: 50% 0.3rem;
 }
 
+#main {
+  margin: 0;
+  padding: 0;
+}
+
 #part-left {
-  width: 60%;
-  margin: 1rem 1rem;
+  width: 65%;
+  min-width: 400px;
   display: inline-block;
   vertical-align: top;
+  margin: 0.5rem 0;
   /* border: var(--br-r); */
 }
 
 #part-left > div {
-  margin: 1.5rem 0rem;
+  margin: 0.5rem 0rem;
 }
 
 #part-right {
-  width: 30%;
-  margin: 1rem 1rem;
+  position: relative;
+  max-width: 350px;
+  margin: 0.2rem;
   display: inline-block;
   vertical-align: top;
   /* border: var(--br-y); */
@@ -278,20 +291,24 @@ nav > div {
   /* border: var(--br-y); */
 }
 .release > p {
-  margin: 0.5rem 1rem;
+  margin: 0.5rem;
   font-size: 1.5rem;
 }
+
 .release-content {
   display: flex;
   flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .release-content > div {
   height: 5rem;
-  width: 22rem;
-  /* position: relative; */
-  margin: 0.5rem 1rem;
+  min-width: 400px;
+  margin: 5px;
   display: flex;
+  flex-wrap: wrap;
   /* border: var(--br-y); */
 }
 
@@ -338,7 +355,8 @@ nav > div {
 
 .release-content .r-text {
   height: 100%;
-  width: 15rem;
+  max-width: 15rem;
+  min-width: 180px;
   display: inline;
   margin: 0 0.5rem;
   padding: 0 0.5rem;
@@ -431,20 +449,22 @@ nav > div {
   /* border: var(--br-y); */
 }
 .artist > p {
-  margin: 0.5rem 0rem;
+  margin: 0.5rem;
   font-size: 1.5rem;
 }
 .artist-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: start;
+  min-width: 350px;
+  margin: 0;
 }
 
 .artist-content > div {
   height: 10rem;
   width: 6rem;
   border-radius: 50%;
-
+  margin: 0.2rem 0.7rem;
   /* border: var(--br-y); */
 }
 
@@ -511,16 +531,18 @@ nav > div {
 }
 
 .category-content {
-  display: flex;
   align-items: center;
+  min-width: 350px;
+  max-width: fit-content;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: start;
 }
 
 .category-content > div {
   height: 5rem;
   width: 5rem;
-  margin: 0.5rem 0.6rem;
+  margin: 0.3rem 0.8rem;
   position: relative;
   /* border: var(--br-y); */
 }
@@ -569,8 +591,9 @@ nav > div {
 }
 
 .cat-sec-content {
-  display: flex;
   align-items: center;
+  min-width: 400px;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -649,12 +672,15 @@ nav > div {
 .english-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: start;
+  min-width: 350px;
 }
 
 .english-content > div {
   height: 12rem;
   width: 8rem;
+  margin: 0.6rem;
+
   /* border: var(--br-y); */
 }
 
@@ -735,12 +761,14 @@ nav > div {
 .hindi-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: start;
+  min-width: 350px;
 }
 
 .hindi-content > div {
   height: 12rem;
   width: 8rem;
+  margin: 0.5rem;
   /* border: var(--br-y); */
 }
 
@@ -818,8 +846,11 @@ nav > div {
 .q-head {
   height: 2rem;
   width: 100%;
+  max-width: 350px;
   display: flex;
   justify-content: space-around;
+  margin: 0;
+  padding: 0;
   /* border: var(--br-r); */
 }
 
@@ -882,12 +913,14 @@ nav > div {
 
 .queue-content {
   width: 100%;
+  max-width: 350px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .queue-list {
   width: 25rem;
+  min-width: 350px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -896,9 +929,10 @@ nav > div {
 .queue-list > div {
   height: 3.5rem;
   width: 100%;
-  margin: 1rem 0rem;
+  min-width: 350px;
+  margin: 0.3rem 0rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
   /* border: var(--br-y); */
 }
 
@@ -907,7 +941,7 @@ nav > div {
   width: 2rem;
   font-size: 1rem;
   color: gray;
-  margin: 0 0.2rem;
+  margin: 0 0.1rem;
   text-align: center;
   align-content: center;
   /* border: var(--br-r); */
@@ -921,6 +955,7 @@ nav > div {
   position: relative;
   height: 100%;
   width: 15%;
+  margin: 0 0.2rem;
   /* border: var(--br-r); */
 }
 .queue-content .image-play-pause img {
@@ -1019,16 +1054,18 @@ nav > div {
   position: fixed;
   left: 0;
   bottom: 0;
-  height: 5rem;
+  min-height: 5rem;
   width: 100%;
   background-color: rgb(30, 30, 30);
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .play-song {
-  height: 100%;
+  height: 5rem;
   width: 20rem;
+  min-width: 360px;
   display: flex;
   justify-content: space-around;
   /* border: var(--br-y); */
@@ -1097,8 +1134,10 @@ nav > div {
 }
 
 .music-bar .music-player {
-  height: 100%;
-  width: 40rem;
+  height: 5rem;
+  max-width: 40rem;
+  min-width: 350px;
+  margin: 0 0.2rem;
   /* border: var(--br); */
 }
 .music-bar .music-player > div {
@@ -1106,6 +1145,7 @@ nav > div {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
   /* border: var(--br-r); */
 }
 
@@ -1153,9 +1193,11 @@ nav > div {
 }
 
 .icon-volume {
-  height: 100%;
+  height: 5rem;
   width: 18rem;
+  min-width: 350px;
   display: flex;
+  margin: 0 0.2rem;
   /* border: var(--br); */
 }
 
@@ -1177,4 +1219,10 @@ nav > div {
 .icon-volume #vol input {
   height: 100%;
   width: 95%;
+}
+
+@media screen and (max-width: 500px) {
+  #posters-area {
+    scale: 0.8;
+  }
 }

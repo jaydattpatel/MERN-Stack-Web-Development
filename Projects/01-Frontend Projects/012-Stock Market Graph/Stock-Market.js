@@ -12,54 +12,56 @@ let currentStockPeriod = periodList[0];
 
 async function fetchStocks() {
   try {
-    let response1 = await fetch(
-      `https://stocksapi-uhe1.onrender.com/api/stocks/getstocksdata`
-    );
-    if (!response1.ok) {
-      throw new Error("Failed to fetch Stocks");
-    }
-    let data1 = await response1.json();
-    if (!data1 || !data1.stocksData || !Array.isArray(data1.stocksData)) {
-      throw new Error("Invalid data format of Stocks");
-    }
-    stocks = data1.stocksData[0];
+    //bypass program and fetch manual with error
+    throw new Error("Failed to fetch Stocks");
+    // let response1 = await fetch(
+    //   `https://stocksapi-uhe1.onrender.com/api/stocks/getstocksdata`
+    // );
+    // if (!response1.ok) {
+    //   throw new Error("Failed to fetch Stocks");
+    // }
+    // let data1 = await response1.json();
+    // if (!data1 || !data1.stocksData || !Array.isArray(data1.stocksData)) {
+    //   throw new Error("Invalid data format of Stocks");
+    // }
+    // stocks = data1.stocksData[0];
 
-    let response2 = await fetch(
-      `https://stocksapi-uhe1.onrender.com/api/stocks/getstocksprofiledata`
-    );
-    if (!response2.ok) {
-      throw new Error("Failed to fetch Stocks Data");
-    }
-    let data2 = await response2.json();
-    if (
-      !data2 ||
-      !data2.stocksProfileData ||
-      !Array.isArray(data2.stocksProfileData)
-    ) {
-      throw new Error("Invalid data format of Stocks Data");
-    }
-    stocksProfileData = data2.stocksProfileData[0];
+    // let response2 = await fetch(
+    //   `https://stocksapi-uhe1.onrender.com/api/stocks/getstocksprofiledata`
+    // );
+    // if (!response2.ok) {
+    //   throw new Error("Failed to fetch Stocks Data");
+    // }
+    // let data2 = await response2.json();
+    // if (
+    //   !data2 ||
+    //   !data2.stocksProfileData ||
+    //   !Array.isArray(data2.stocksProfileData)
+    // ) {
+    //   throw new Error("Invalid data format of Stocks Data");
+    // }
+    // stocksProfileData = data2.stocksProfileData[0];
 
-    let response3 = await fetch(
-      `https://stocksapi-uhe1.onrender.com/api/stocks/getstockstatsdata`
-    );
-    if (!response3.ok) {
-      throw new Error("Failed to fetch Stocks status");
-    }
-    let data3 = await response3.json();
-    if (
-      !data3 ||
-      !data3.stocksStatsData ||
-      !Array.isArray(data3.stocksStatsData)
-    ) {
-      throw new Error("Invalid data format of Stocks status");
-    }
-    stocksStatsData = data3.stocksStatsData[0];
+    // let response3 = await fetch(
+    //   `https://stocksapi-uhe1.onrender.com/api/stocks/getstockstatsdata`
+    // );
+    // if (!response3.ok) {
+    //   throw new Error("Failed to fetch Stocks status");
+    // }
+    // let data3 = await response3.json();
+    // if (
+    //   !data3 ||
+    //   !data3.stocksStatsData ||
+    //   !Array.isArray(data3.stocksStatsData)
+    // ) {
+    //   throw new Error("Invalid data format of Stocks status");
+    // }
+    // stocksStatsData = data3.stocksStatsData[0];
   } catch (error) {
     stocks = getstocksdata.stocksData[0];
     stocksProfileData = getstocksprofiledata.stocksProfileData[0];
     stocksStatsData = getstockstatsdata.stocksStatsData[0];
-    console.error("Error fetching Stocks:", error);
+    // console.error("Error fetching Stocks:", error);
   } finally {
     // console.log(stocks);
     // console.log(stocksProfileData);

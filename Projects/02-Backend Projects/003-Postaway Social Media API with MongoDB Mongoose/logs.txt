@@ -1,0 +1,2 @@
+{"level":"info","message":"/-{}","service":"request-logging"}
+{"level":"info","message":"/favicon.ico-{}","service":"request-logging"}

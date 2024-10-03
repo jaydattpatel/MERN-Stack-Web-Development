@@ -33,7 +33,7 @@ let onlineUser = [];
 
 // Event handling for Socket.IO connections
 io.on("connection", (socket) => {
-  console.log("Connection Made ");
+  // console.log("Connection Made ");
 
   // Event: User joins
   socket.on("join", async (name) => {
@@ -67,12 +67,12 @@ io.on("connection", (socket) => {
     const indexToRemove = onlineUser.findIndex((user) => user.id == socket.id);
     onlineUser.splice(indexToRemove, 1);
     io.emit("onlineUser", onlineUser);
-    console.log("Connection disconnected.");
+    // console.log("Connection disconnected.");
   });
 });
 
 server.listen(3000, () => {
-  console.log("Server is running on port 3000");
+  console.log("Server is running on port : 3000....");
   // call the connect to database here
   connectToDatabase();
 });

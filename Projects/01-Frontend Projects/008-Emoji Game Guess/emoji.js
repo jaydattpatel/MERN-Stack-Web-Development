@@ -35,7 +35,7 @@ function checkGuess() {
     resultElement.textContent = "Correct!";
     score++;
   } else {
-    resultElement.textContent = "Wrong! \n Correct : " + correctEmoji;
+    resultElement.innerHTML = "Wrong! <hr> Correct : " + correctEmoji;
   }
   console.log(score);
   scoreElement.textContent = `Score: ${score}`;

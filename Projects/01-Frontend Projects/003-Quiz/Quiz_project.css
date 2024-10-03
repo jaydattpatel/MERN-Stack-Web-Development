@@ -23,7 +23,7 @@ h1 {
 #options {
   display: flex;
   background-color: #a1a1a1;
-  width: 50%;
+  max-width: 80%;
   border-radius: 8px;
   flex-direction: column;
   margin: auto;
@@ -33,7 +33,7 @@ h1 {
 #options button {
   display: block;
   width: 80%;
-  height: 40px;
+  /* height: 40px; */
   cursor: pointer;
   margin: auto;
   margin-bottom: 10px;

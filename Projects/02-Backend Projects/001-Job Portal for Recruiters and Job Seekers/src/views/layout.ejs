@@ -1,7 +1,10 @@
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>easily</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
@@ -9,6 +12,21 @@
     <link rel="stylesheet" href="/css/index.css">
   </head>
   <body>
+    <div
+    id="jaydattlogo"
+    style="
+      position: fixed;
+      bottom: 2%;
+      right: 3%;
+      color: red;
+      font-family: Arial, sans-serif;
+      font-weight: bolder;
+      background-color: rgba(0, 0, 0, 0);
+      z-index: 10;
+    "
+  >
+    @Jaydatt
+  </div>
     <nav id="mynav" class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">easily</a>
@@ -75,8 +93,8 @@
         </h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <form action="/register" method="post" class="p-2">
+      <div class="modal-body p-1">
+        <form action="/register" method="post" class="">
           <div class="mb-3">
             <div class="input-group">
               <span class="input-group-text">Name</span>
@@ -97,7 +115,7 @@
             </div>
           </div>
 
-          <button type="submit" class="btn btn-md mt-2 lbtn">Register</button>
+          <button type="submit" class="btn btn-md m-2  lbtn">Register</button>
         </form>
       </div>
       <div class="modal-footer d-flex align-items-centre justify-content-between">
@@ -122,16 +140,16 @@
 
 <!-- Modal for login -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
+  <div class="modal-dialog  modal-dialog-centered m-0 mx-auto d-flex justify-content-center align-items-centre px-3" style="width: 100%; height: 100%;">
+    <div class="modal-content mx-auto w-100" style="min-width: 300px;">
       <div class="modal-header">
         <h1 class="modal-title fs-5 text-success" id="exampleModalLabel">
           Experience easily!
         </h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <form action="/login" method="post" class="p-2">
+      <div class="modal-body p-1">
+        <form action="/login" method="post" class="">
           <div class="mb-3">
             <div class="input-group">
               <span class="input-group-text">Email</span>

@@ -1,9 +1,11 @@
-<div><div class="container my-2">
+<div>
+  <div class="container my-2">
     <div class="card mb-3">
-      <a href="#"><img src="/images/jobimage.jpg" class="card-img-top" alt="poster"></a>
-  
-      <div class="card-body">
+      <a href="#"
+        ><img src="/images/jobimage.jpg" class="card-img-top" alt="poster"
+      /></a>
 
+      <div class="card-body">
         <h1 class="text-center text-success">
           <span class="text-danger"> <%= job.designation%> </span> oppertunity
           in <%= job.location%> at
@@ -11,125 +13,277 @@
         </h1>
 
         <div class="actions d-flex align-items-centre">
-          <span style="width: 160px" class="bg-warning bg-opacity-100 border border-success border border-success p-1 border-opacity-50 rounded">
-            Actively hiring<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up-arrow mx-2" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"></path></svg></span>
+          <span
+            style="width: 160px"
+            class="bg-warning bg-opacity-100 border border-success border border-success p-1 border-opacity-50 rounded"
+          >
+            Actively hiring<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-graph-up-arrow mx-2"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"
+              ></path></svg
+          ></span>
           <%if(userEmail){%>
           <div class="action-right mx-2 px-2 mt-1">
+            <a href="/job/<%=job.id%>/update" class="mx-2"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-pencil-square"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"
+                ></path></svg
+            ></a>
 
-            <a href="/job/<%=job.id%>/update" class="mx-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"></path>
-                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"></path></svg></a>
-  
             <a class="text-danger" href="/job/<%=job.id%>/delete">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-x" viewBox="0 0 16 16">
-                <path d="M6.854 7.146a.5.5 0 1 0-.708.708L7.293 9l-1.147 1.146a.5.5 0 0 0 .708.708L8 9.707l1.146 1.147a.5.5 0 0 0 .708-.708L8.707 9l1.147-1.146a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146z"></path>
-                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"></path>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-file-earmark-x"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6.854 7.146a.5.5 0 1 0-.708.708L7.293 9l-1.147 1.146a.5.5 0 0 0 .708.708L8 9.707l1.146 1.147a.5.5 0 0 0 .708-.708L8.707 9l1.147-1.146a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146z"
+                ></path>
+                <path
+                  d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"
+                ></path>
               </svg>
             </a>
           </div>
           <%}%>
         </div>
-        
-        <div class="container d-flex flex-column align-items-centre justify-content-start my-3">
+
+        <div
+          class="container d-flex flex-column align-items-centre justify-content-start my-3"
+        >
           <h5 class="my-1"><%= job.company%></h5>
           <div>
             <span><%= job.category%></span>
             <span class="text-success"><%= job.designation%></span>
           </div>
-          <div class="d-flex flex-column align-items-centre justify-content-start p-2">
+          <div
+            class="d-flex flex-column align-items-centre justify-content-start p-2"
+          >
             <span class="">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-fill" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"></path></svg><%= job.location%>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-geo-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"
+                ></path></svg
+              ><%= job.location%>
             </span>
             <span class="">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
-                <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"></path></svg><%= job.salary %>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-currency-rupee"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"
+                ></path></svg
+              ><%= job.salary %>
             </span>
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
-                <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"></path>
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-hourglass-split"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"
+                ></path>
               </svg>
               Apply By <%= job.applyby %>
             </span>
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
-                <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"></path>
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-bar-chart-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"
+                ></path>
               </svg>
-              Number of openings <%= job.numberOfOpening%></span>
-            <a style="text-decoration: none; color: rgb(215, 20, 85)" href="/job/<%=job.id%>/applicants">
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"></path>
+              Number of openings <%= job.numberOfOpening%></span
+            >
+            <a
+              style="text-decoration: none; color: rgb(215, 20, 85)"
+              href="/job/<%=job.id%>/applicants"
+            >
+              <span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-people-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+                  ></path>
                 </svg>
-                Applicants <%= job.applicantList.length%></span>
+                Applicants <%= job.applicantList.length%></span
+              >
             </a>
           </div>
-  
+
           <div class="container">
-            <div class="skills p-1">
+            <div class="skills">
               <% job.skills.forEach((skill)=>{%>
               <button class="btn btn-sm btn-outline-info"><%=skill%></button>
               <%})%>
-              
             </div>
-            <button data-bs-toggle="modal" data-bs-target="#applyModal" class="btn btn-md btn-primary px-5 my-2">
+            <button
+              data-bs-toggle="modal"
+              data-bs-target="#applyModal"
+              class="btn btn-md btn-primary px-5 my-2"
+            >
               Apply Now
             </button>
           </div>
         </div>
         <!-- job posted -->
         <small class="text-body-secondary">
-          <span style="width: 160px" class="bg-success text-white border border-success border border-success p-1 border-opacity-50 rounded">
+          <span
+            style="width: 160px"
+            class="bg-success text-white border border-success border border-success p-1 border-opacity-50 rounded"
+          >
             Posted: <%= job.postedDate%>
-          </span></small>
+          </span></small
+        >
         <!-- job posted -->
       </div>
     </div>
   </div>
-  
+
   <!-- applicant form  -->
   <!-- Modal -->
-  <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div
+    class="modal fade"
+    id="applyModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5 text-success" id="exampleModalLabel">
             easily
           </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
         <div class="modal-body">
           <!-- form start  -->
-          <div class="container p-3 mx-auto w-75 form-box my-5 rounded-md">
+          <div class="container p-1 mx-auto w-90 form-box my-5 rounded-md">
             <h4 style="color: #181642" class="text-center mb-3">
               apply in less than 1 minute
             </h4>
-            <form action="/apply/<%=job.id%>" method="post" enctype="multipart/form-data">
+            <form
+              action="/apply/<%=job.id%>"
+              method="post"
+              enctype="multipart/form-data"
+            >
               <div class="mb-3">
                 <div class="input-group">
                   <span class="input-group-text">Name</span>
-                  <input required="" name="name" type="text" aria-label="First name" class="form-control" placeholder="enter your name">
+                  <input
+                    required=""
+                    name="name"
+                    type="text"
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="enter your name"
+                  />
                 </div>
               </div>
-  
+
               <div class="mb-3">
                 <div class="input-group">
                   <span class="input-group-text">Email</span>
-                  <input required="" name="email" type="email" aria-label="email" class="form-control" placeholder="enter your email">
+                  <input
+                    required=""
+                    name="email"
+                    type="email"
+                    aria-label="email"
+                    class="form-control"
+                    placeholder="enter your email"
+                  />
                 </div>
               </div>
-  
+
               <div class="mb-3">
                 <div class="input-group">
                   <span class="input-group-text">Contact</span>
-                  <input required="" name="contact" type="tel" aria-label="First name" class="form-control" placeholder="+91 ____ __ ____">
+                  <input
+                    required=""
+                    name="contact"
+                    type="tel"
+                    aria-label="First name"
+                    class="form-control"
+                    placeholder="+91 ____ __ ____"
+                  />
                 </div>
               </div>
-  
+
               <div class="input-group mb-3">
-                <label class="input-group-text" for="inputGroupFile01">Resume</label>
-                <input name="resume" type="file" class="form-control" id="inputGroupFile01" required="">
+                <label class="input-group-text" for="inputGroupFile01"
+                  >Resume</label
+                >
+                <input
+                  name="resume"
+                  type="file"
+                  class="form-control"
+                  id="inputGroupFile01"
+                  required=""
+                />
               </div>
-  
-              <button class="w-100 mb-3 mt-2 btn btn-md btn-success" type="submit">
+
+              <button
+                class="w-100 mb-3 mt-2 btn btn-md btn-success"
+                type="submit"
+              >
                 Submit
               </button>
             </form>
@@ -143,8 +297,7 @@
           </button>
           <button type="button" class="btn btn-primary">Save changes</button>
         </div> -->
-
       </div>
     </div>
   </div>
-  </div>
+</div>

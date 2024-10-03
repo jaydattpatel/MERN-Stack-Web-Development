@@ -13,10 +13,11 @@
       id="jaydattlogo"
       style="
         position: fixed;
-        bottom: 1%;
-        right: 1%;
-        font-size: 1rem;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        bottom: 2%;
+        right: 3%;
+        color: red;
+        font-family: Arial, sans-serif;
+        font-weight: bolder;
         background-color: rgba(0, 0, 0, 0);
         z-index: 10;
       "
@@ -25,30 +26,16 @@
     </div>
     <input type="checkbox" id="theme" />
     <header>
-      <div></div>
+      <div class="empty"></div>
       <div id="head-txt">Music Player</div>
       <div id="toggle">
-        Dark:
+        <div>Theme</div>
         <label class="switch" for="theme">
           <span class="slider"></span>
         </label>
       </div>
     </header>
     <main>
-      <div id="all-songs">
-        <div>
-          <span>Filter by Genre:</span>
-          <select id="filter">
-            <option>All</option>
-          </select>
-        </div>
-        <div><h2>All Songs</h2></div>
-        <div id="songList">
-          <div class="song">Song-1</div>
-          <div class="song">Song-1</div>
-        </div>
-      </div>
-
       <div id="player">
         <div class="songInfo">
           <img src="Images/song(1).jpg" alt="No Image" />
@@ -66,6 +53,20 @@
         </div>
         <div class="addSongToList">
           <button class="addToListBtn">Add To Playlist</button>
+        </div>
+      </div>
+
+      <div id="all-songs">
+        <div>
+          <span>Filter by Genre:</span>
+          <select id="filter">
+            <option>All</option>
+          </select>
+        </div>
+        <div><h2>All Songs</h2></div>
+        <div id="songList">
+          <div class="song">Song-1</div>
+          <div class="song">Song-1</div>
         </div>
       </div>
 

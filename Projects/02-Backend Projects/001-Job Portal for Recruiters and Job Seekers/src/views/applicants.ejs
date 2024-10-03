@@ -1,5 +1,5 @@
 <div>
-    <div class="container">
+  <div class="container">
     <table class="table table-striped">
       <thead>
         <tr>
@@ -18,7 +18,12 @@
           <td><%= app.email %></td>
           <td><%= app.contact %></td>
           <td>
-            <a class="btn btn-sm btn-primary" href="http://localhost:3000/<%= app.resumePath%>" target="_blank">View</a>
+            <a
+              class="btn btn-sm btn-primary"
+              href="/<%= app.resumePath%>"
+              target="_blank"
+              >View</a
+            >
           </td>
         </tr>
         <%})%>

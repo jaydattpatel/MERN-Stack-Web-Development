@@ -30,9 +30,12 @@ let postsData = [
 ];
 
 postsData.forEach((post) => {
-  post.image = `https://picsum.photos/id/${Math.round(
-    Math.random() * 1000
-  )}/500/300`;
+  let postID = 0;
+  do {
+    postID = Math.round(Math.random() * 1000);
+  } while (postID <= 0);
+
+  post.image = `https://picsum.photos/id/${postID}/500/300`;
 });
 
 let posts = document.querySelector("#posts");
@@ -56,6 +59,9 @@ function renderPosts() {
     p.textContent = postInfo.content;
     post.appendChild(p);
 
+    let info = document.createElement("div");
+    info.classList.add("info");
+
     let likeBtn = document.createElement("button");
     likeBtn.textContent = "Like";
     likeBtn.addEventListener("click", () => {
@@ -63,16 +69,20 @@ function renderPosts() {
         postInfo.likes += 1;
         likeBtn.classList.add("like-button");
         likeBtn.style.backgroundColor = "red";
-        updateLikesAndCommentsCounter();
+      } else {
+        postInfo.likes -= 1;
+        likeBtn.classList.remove("like-button");
+        likeBtn.style.backgroundColor = "white";
       }
+      updateLikesAndCommentsCounter();
     });
-    post.appendChild(likeBtn);
+    info.appendChild(likeBtn);
 
     let commentInput = document.createElement("input");
     commentInput.type = "text";
     commentInput.placeholder = "Write a comment...";
 
-    post.appendChild(commentInput);
+    info.appendChild(commentInput);
 
     let commentBtn = document.createElement("button");
     commentBtn.textContent = "Comment";
@@ -84,7 +94,7 @@ function renderPosts() {
         updateComments();
       }
     });
-    post.appendChild(commentBtn);
+    info.appendChild(commentBtn);
 
     let footer = document.createElement("div");
     footer.classList.add("post-footer");
@@ -97,12 +107,13 @@ function renderPosts() {
         commentDiv.style.display = "block";
       } else commentDiv.style.display = "none";
     });
-    post.appendChild(footer);
+    info.appendChild(footer);
 
     let commentDiv = document.createElement("div");
     commentDiv.classList.add("comments-container");
     commentDiv.style.display = "none";
-    post.appendChild(commentDiv);
+    info.appendChild(commentDiv);
+    post.appendChild(info);
 
     function updateComments() {
       commentDiv.innerHTML = "";

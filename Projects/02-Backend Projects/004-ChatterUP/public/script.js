@@ -1,4 +1,5 @@
-const socket = io.connect("http://localhost:3000");
+const socket = io.connect();
+
 // DOM elements
 const myPrompt = document.getElementById("my-prompt");
 const userName = document.getElementById("name");
@@ -53,9 +54,10 @@ socket.on("joined", (oldMessage) => {
         <div class="message-block" >
             <img src="images/face.png" alt="pic">
             <div class="message-content">
-                <p class="name" style="margin-bottom: 15px;">${message.name}</p>
-                <p class="message" >${message.message}</p>
-                <p class="timestamp">${timestamp.getHours()}:${timestamp.getMinutes()}</p>
+                <span class="name" >${message.name}</span>
+                <span class="timestamp">${timestamp.getHours()}:${timestamp.getMinutes()}</span>
+                <div class="message" >${message.message}</div>
+                
             </div>
         </div>`;
     messageList.appendChild(oldmsg);
@@ -105,11 +107,12 @@ socket.on("newMessage", (obj) => {
         <div class="message-block-user">
             <img src="images/me.jpg" alt="pic">
             <div class="message-content" style="background-color: #6b63e1; color: white;">
-                <p class="name" style="color:white; font-weight: bold; margin-bottom: 15px;">${
+                <span class="name" style="color:white;">${
                   newMessage.name
-                }</p>
-                <p class="message">${newMessage.message}</p>
-                <p class="timestamp">${timestamp.getHours()}:${timestamp.getMinutes()}</p>
+                }</span>
+                <span class="timestamp">${timestamp.getHours()}:${timestamp.getMinutes()}</span>
+                <div class="message">${newMessage.message}</div>
+                
             </div>
         </div>`;
     messageList.appendChild(msg);
@@ -118,9 +121,10 @@ socket.on("newMessage", (obj) => {
         <div class="message-block">
             <img src="images/face.png" alt="pic">
             <div class="message-content">
-                <p class="name">${newMessage.name}</p>
-                <p class="message">${newMessage.message}</p>
-                <p class="timestamp">Sent 12:11:1</p>
+                <span class="name">${newMessage.name}</span>
+                <span class="timestamp">Sent ${timestamp.getHours()}:${timestamp.getMinutes()}</span>
+                <div class="message">${newMessage.message}</div>
+                
             </div>
         </div>`;
     messageList.appendChild(msg);
