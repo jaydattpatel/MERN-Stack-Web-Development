@@ -11,8 +11,8 @@ const userRouter = express.Router();
 const userController = new UserController();
 
 //all the path to controller methods
-userRouter.post("/signup", uploadA.single("avatar"), (req, res) => {
-  userController.signUpController(req, res);
+userRouter.post("/signup", uploadA.single("avatar"), (req, res, next) => {
+  userController.signUpController(req, res, next);
 });
 userRouter.post("/signin", (req, res, next) => {
   userController.signInController(req, res, next);
@@ -27,20 +27,25 @@ userRouter.get(
   "/get-details/:userID",
   authenticateToken,
   jwtAuth,
-  (req, res) => {
-    userController.getById(req, res);
+  (req, res, next) => {
+    userController.getById(req, res, next);
   }
 );
-userRouter.get("/get-all-details", authenticateToken, jwtAuth, (req, res) => {
-  userController.getAll(req, res);
-});
+userRouter.get(
+  "/get-all-details",
+  authenticateToken,
+  jwtAuth,
+  (req, res, next) => {
+    userController.getAll(req, res, next);
+  }
+);
 userRouter.put(
   "/update-details",
   authenticateToken,
   jwtAuth,
   uploadA.single("avatar"),
-  (req, res) => {
-    userController.update(req, res);
+  (req, res, next) => {
+    userController.update(req, res, next);
   }
 );
 

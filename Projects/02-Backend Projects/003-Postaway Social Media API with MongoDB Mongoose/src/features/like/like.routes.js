@@ -9,11 +9,11 @@ import authenticateToken from "../../middlewares/checkBlacklistedToken.js";
 //get router initialize
 const likeRouter = express.Router();
 const likeController = new LikeController();
-likeRouter.post("/toggle/:id", authenticateToken, jwtAuth, (req, res) => {
-  likeController.toggleLike(req, res);
+likeRouter.post("/toggle/:id", authenticateToken, jwtAuth, (req, res, next) => {
+  likeController.toggleLike(req, res, next);
 });
-likeRouter.get("/:id", authenticateToken, jwtAuth, (req, res) => {
-  likeController.getLike(req, res);
+likeRouter.get("/:id", authenticateToken, jwtAuth, (req, res, next) => {
+  likeController.getLike(req, res, next);
 });
 
 export default likeRouter;

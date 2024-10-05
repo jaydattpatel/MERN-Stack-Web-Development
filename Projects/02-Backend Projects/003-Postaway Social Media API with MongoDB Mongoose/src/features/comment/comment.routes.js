@@ -10,17 +10,17 @@ const commentRouter = express.Router();
 const commentController = new CommentController();
 
 //all the path to controller methods
-commentRouter.post("/:postID", authenticateToken, jwtAuth, (req, res) => {
-  commentController.add(req, res);
+commentRouter.post("/:postID", authenticateToken, jwtAuth, (req, res, next) => {
+  commentController.add(req, res, next);
 });
-commentRouter.get("/:postID", authenticateToken, jwtAuth, (req, res) => {
-  commentController.get(req, res);
+commentRouter.get("/:postID", authenticateToken, jwtAuth, (req, res, next) => {
+  commentController.get(req, res, next);
 });
-commentRouter.put("/:id", authenticateToken, jwtAuth, (req, res) => {
-  commentController.update(req, res);
+commentRouter.put("/:id", authenticateToken, jwtAuth, (req, res, next) => {
+  commentController.update(req, res, next);
 });
-commentRouter.delete("/:id", authenticateToken, jwtAuth, (req, res) => {
-  commentController.delete(req, res);
+commentRouter.delete("/:id", authenticateToken, jwtAuth, (req, res, next) => {
+  commentController.delete(req, res, next);
 });
 
 export default commentRouter;

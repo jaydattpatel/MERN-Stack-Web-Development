@@ -16,30 +16,30 @@ postRouter.post(
   authenticateToken,
   jwtAuth,
   uploadB.single("imageUrl"),
-  (req, res) => {
-    postController.addPost(req, res);
+  (req, res, next) => {
+    postController.addPost(req, res, next);
   }
 );
-postRouter.get("/all", authenticateToken, jwtAuth, (req, res) => {
-  postController.getAllPosts(req, res);
+postRouter.get("/all", authenticateToken, jwtAuth, (req, res, next) => {
+  postController.getAllPosts(req, res, next);
 });
-postRouter.get("/", authenticateToken, jwtAuth, (req, res) => {
-  postController.getAll(req, res);
+postRouter.get("/", authenticateToken, jwtAuth, (req, res, next) => {
+  postController.getAll(req, res, next);
 });
-postRouter.get("/:postID", authenticateToken, jwtAuth, (req, res) => {
-  postController.getById(req, res);
+postRouter.get("/:postID", authenticateToken, jwtAuth, (req, res, next) => {
+  postController.getById(req, res, next);
 });
 postRouter.put(
   "/:postID",
   authenticateToken,
   jwtAuth,
   uploadB.single("imageUrl"),
-  (req, res) => {
-    postController.update(req, res);
+  (req, res, next) => {
+    postController.update(req, res, next);
   }
 );
-postRouter.delete("/:postID", authenticateToken, jwtAuth, (req, res) => {
-  postController.delete(req, res);
+postRouter.delete("/:postID", authenticateToken, jwtAuth, (req, res, next) => {
+  postController.delete(req, res, next);
 });
 
 export default postRouter;

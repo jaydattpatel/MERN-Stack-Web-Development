@@ -10,7 +10,7 @@ export class LikeController {
     this.postRepository = new PostRepository();
     this.commentRepository = new CommentRepository();
   }
-  async getLike(req, res) {
+  async getLike(req, res, next) {
     try {
       const id = req.params.id;
       const post = await this.postRepository.getById(id);
@@ -25,14 +25,10 @@ export class LikeController {
         res.status(404).send("no liked post or comment found");
       }
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something with wrong with Like Controller",
-        500
-      );
+      next(error);
     }
   }
-  async toggleLike(req, res) {
+  async toggleLike(req, res, next) {
     try {
       const id = req.params.id;
       console.log("this is toggleLike function is called");
@@ -50,11 +46,7 @@ export class LikeController {
         res.status(400).send("You cant like this post or comment");
       }
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something with wrong with Like Controller",
-        500
-      );
+      next(error);
     }
   }
   async getLikes() {}

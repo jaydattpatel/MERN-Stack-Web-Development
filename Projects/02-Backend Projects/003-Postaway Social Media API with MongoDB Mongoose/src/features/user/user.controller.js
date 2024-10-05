@@ -28,12 +28,8 @@ export class UserController {
       const newUser = await this.userRepository.signUp(user); // new user created
       res.status(201).send(newUser); //success and sent new user to client
     } catch (error) {
-      console.log(error);
       // catched error and throw error
-      throw new ApplicationError(
-        "Something went wrong with signup controller",
-        500
-      );
+      next(error);
     }
   }
   // controller for sign in
@@ -69,11 +65,7 @@ export class UserController {
         }
       }
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with signIn controller ",
-        500
-      );
+      next(error);
     }
   }
   // controller for sign out
@@ -134,7 +126,7 @@ export class UserController {
     }
   }
 
-  async getById(req, res) {
+  async getById(req, res, next) {
     try {
       const userID = req.params.userID;
       console.log("swager userID", userID);
@@ -146,14 +138,10 @@ export class UserController {
         return res.status(201).send(user);
       }
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with getting user by id ",
-        500
-      );
+      next(error);
     }
   }
-  async getAll(req, res) {
+  async getAll(req, res, next) {
     try {
       const users = await this.userRepository.getAll();
       if (users) {
@@ -162,14 +150,10 @@ export class UserController {
         return res.status(404).send("Users not found");
       }
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with getting all users ",
-        500
-      );
+      next(error);
     }
   }
-  async update(req, res) {
+  async update(req, res, next) {
     try {
       const userID = req.userID;
       const name = req.body.name;
@@ -186,11 +170,7 @@ export class UserController {
       const updatedUser = await this.userRepository.getById(userID);
       res.status(201).send(updatedUser);
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with updating users ",
-        500
-      );
+      next(error);
     }
   }
 }

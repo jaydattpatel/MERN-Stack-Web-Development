@@ -8,7 +8,7 @@ export class PostController {
     this.postRepository = new PostRepository(); //initialize repository for calling its funcion
   }
   //adding post to db
-  async addPost(req, res) {
+  async addPost(req, res, next) {
     const { caption } = req.body; //storing data from req body
     try {
       console.log("the req body is");
@@ -20,15 +20,13 @@ export class PostController {
       const newPost = await this.postRepository.addPost(post);
       res.status(201).send(newPost); // success and sent newPost to client view
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with post controller",
-        500
+      next(
+        new ApplicationError("Something went wrong with post controller", 500)
       );
     }
   }
   //getting all posts
-  async getAllPosts(req, res) {
+  async getAllPosts(req, res, next) {
     try {
       //handle operation to get posts
       const posts = await this.postRepository.getAllPosts();
@@ -38,15 +36,13 @@ export class PostController {
         return res.status(404).send("Posts not found");
       }
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong in retrieving posts",
-        500
+      next(
+        new ApplicationError("Something went wrong in retrieving posts", 500)
       );
     }
   }
   //getting all posts of user
-  async getAll(req, res) {
+  async getAll(req, res, next) {
     try {
       //handle operation to get posts of user
       const posts = await this.postRepository.getAll(req.userID);
@@ -56,15 +52,13 @@ export class PostController {
         return res.status(404).send("Posts not found");
       }
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong in retrieving posts",
-        500
+      next(
+        new ApplicationError("Something went wrong in retrieving posts", 500)
       );
     }
   }
   //get post by post ID
-  async getById(req, res) {
+  async getById(req, res, next) {
     try {
       const postID = req.params.postID; //params data stored
       //handle operation to get post by post iD
@@ -76,15 +70,16 @@ export class PostController {
         return res.status(200).send(post); //success and sent post to client
       }
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with getting post by id ",
-        500
+      next(
+        new ApplicationError(
+          "Something went wrong with getting post by id ",
+          500
+        )
       );
     }
   }
   //update post
-  async update(req, res) {
+  async update(req, res, next) {
     try {
       const postID = req.params.postID; //store data from req body and params
       const caption = req.body.caption;
@@ -104,25 +99,27 @@ export class PostController {
         return res.status(201).send(post); //success and sent post to the client
       }
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with getting post by id ",
-        500
+      next(
+        new ApplicationError(
+          "Something went wrong with getting post by id ",
+          500
+        )
       );
     }
   }
   //delete post by postID
-  async delete(req, res) {
+  async delete(req, res, next) {
     try {
       const postID = req.params.postID; // params data
       //handle operation to delete post by post iD
       await this.postRepository.delete(postID);
       res.status(201).send("post is deleted successfully!"); //success
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with delete post by id ",
-        500
+      next(
+        new ApplicationError(
+          "Something went wrong with delete post by id ",
+          500
+        )
       );
     }
   }

@@ -6,7 +6,7 @@ export class FriendShipController {
   constructor() {
     this.friendShipRepository = new FriendShipRepository();
   }
-  async toggleFriendShip(req, res) {
+  async toggleFriendShip(req, res, next) {
     try {
       const friendID = req.params.friendID;
       const userID = req.userID;
@@ -16,14 +16,10 @@ export class FriendShipController {
       );
       res.status(201).send(pendingReq);
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with frndship controller",
-        500
-      );
+      next(error);
     }
   }
-  async getPendingReq(req, res) {
+  async getPendingReq(req, res, next) {
     try {
       const userID = req.userID;
       const pendingReq = await this.friendShipRepository.getPendingReq(userID);
@@ -33,14 +29,10 @@ export class FriendShipController {
         res.status(404).send("There is no pending request!!");
       }
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with frndship controller",
-        500
-      );
+      next(error);
     }
   }
-  async responseToReq(req, res) {
+  async responseToReq(req, res, next) {
     try {
       const userID = req.userID;
       const friendID = req.params.friendID;
@@ -48,13 +40,10 @@ export class FriendShipController {
       res.status(201).send("updated successfully!!");
     } catch (error) {
       console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with frndship controller",
-        500
-      );
+      next(error);
     }
   }
-  async getFriends(req, res) {
+  async getFriends(req, res, next) {
     try {
       const userID = req.params.userID;
       const friends = await this.friendShipRepository.getFriends(userID);
@@ -64,11 +53,7 @@ export class FriendShipController {
         res.status(404).send("No friends of this user");
       }
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with frndship controller",
-        500
-      );
+      next(error);
     }
   }
 }

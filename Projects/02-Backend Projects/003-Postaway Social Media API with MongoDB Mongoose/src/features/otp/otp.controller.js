@@ -14,7 +14,6 @@ export class OtpController {
       await this.otpRepository.sendOtp(userID);
       res.status(201).send("OTP is sent");
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -31,7 +30,6 @@ export class OtpController {
         res.status(404).send("otp is not matched");
       }
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -50,9 +48,7 @@ export class OtpController {
         res.status(404).send("sent a new otp please");
       }
     } catch (error) {
-      console.log(error);
       // throw new ApplicationError("Something went wrong with signup controller ",500);
-      console.log("Passing error to middleware");
       next(error);
     }
   }

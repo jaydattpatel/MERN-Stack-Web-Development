@@ -7,7 +7,7 @@ export class CommentController {
   constructor() {
     this.commentRepository = new CommentRepository();
   }
-  async add(req, res) {
+  async add(req, res, next) {
     try {
       const userID = req.userID;
       const postID = req.params.postID;
@@ -18,28 +18,20 @@ export class CommentController {
       const newComment = await this.commentRepository.add(commentModel);
       res.status(201).send(newComment);
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with adding comment on post ",
-        500
-      );
+      next(error);
     }
   }
-  async get(req, res) {
+  async get(req, res, next) {
     try {
       const postID = req.params.postID;
       const comments = await this.commentRepository.get(postID);
       res.status(201).send(comments);
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with adding comment on post ",
-        500
-      );
+      next(error);
     }
   }
 
-  async update(req, res) {
+  async update(req, res, next) {
     try {
       const id = req.params.id;
       const comment = req.body.comment;
@@ -50,25 +42,17 @@ export class CommentController {
       );
       res.status(201).send(updatedComment);
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with updating comment on post ",
-        500
-      );
+      next(error);
     }
   }
-  async delete(req, res) {
+  async delete(req, res, next) {
     try {
       const id = req.params.id;
       // const comment=req.body.comment;
       await this.commentRepository.delete(req.userID, id);
       res.status(201).send("Comment is deleted successfully");
     } catch (error) {
-      console.log(error);
-      throw new ApplicationError(
-        "Something went wrong with deleting comment on post ",
-        500
-      );
+      next(error);
     }
   }
 }

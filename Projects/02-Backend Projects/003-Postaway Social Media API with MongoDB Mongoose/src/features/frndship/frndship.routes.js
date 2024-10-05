@@ -12,32 +12,32 @@ friendShipRouter.post(
   "/toggle-friendship/:friendID",
   authenticateToken,
   jwtAuth,
-  (req, res) => {
-    friendShipController.toggleFriendShip(req, res);
+  (req, res, next) => {
+    friendShipController.toggleFriendShip(req, res, next);
   }
 );
 friendShipRouter.get(
   "/get-pending-requests",
   authenticateToken,
   jwtAuth,
-  (req, res) => {
-    friendShipController.getPendingReq(req, res);
+  (req, res, next) => {
+    friendShipController.getPendingReq(req, res, next);
   }
 );
 friendShipRouter.post(
   "/response-to-request/:friendID",
   authenticateToken,
   jwtAuth,
-  (req, res) => {
-    friendShipController.responseToReq(req, res);
+  (req, res, next) => {
+    friendShipController.responseToReq(req, res, next);
   }
 );
 friendShipRouter.get(
   "/get-friends/:userID",
   authenticateToken,
   jwtAuth,
-  (req, res) => {
-    friendShipController.getFriends(req, res);
+  (req, res, next) => {
+    friendShipController.getFriends(req, res, next);
   }
 );
 
