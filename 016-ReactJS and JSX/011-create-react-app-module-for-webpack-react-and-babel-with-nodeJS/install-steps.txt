@@ -1,0 +1,11 @@
+Firstly, Install create-react-app globally:
+npm i -g create-react-app
+
+Secondly, create project and install module using npx command: 
+npx create-react-app my-app
+
+Thirdy, Open VS code from created project directory
+
+forthly, opern terminal and write 'npm start' to run server
+
+fifthly, check server with http://localhost:3000/
