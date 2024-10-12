@@ -1,0 +1,96 @@
+/*
+display: flex
+
+flex-wrap: wrap, wrap-reverse, none.
+
+flex-direction : row, column, row-reverse, column-reverse
+
+order: 0 by default
+order is used to which element occur.
+Low value order element occur first then other.
+
+*/
+#main-screen {
+  height: fit-content;
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around;
+}
+
+#main-box {
+  height: 260px;
+  width: 280px;
+  border: 2px solid rebeccapurple;
+  text-align: center;
+  margin: 3px 0px;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  background-color: lightpink;
+  border: 1px black solid;
+  display: flex;
+  margin: auto;
+}
+
+.box div {
+  height: 55px;
+  width: 55px;
+}
+
+#div1 {
+  background-color: brown;
+}
+#div2 {
+  background-color: blueviolet;
+}
+#div3 {
+  background-color: blue;
+}
+#div4 {
+  background-color: crimson;
+}
+#div5 {
+  background-color: chocolate;
+}
+
+.m1 {
+  flex-direction: row;
+}
+.m2 {
+  flex-direction: row-reverse;
+}
+.m3 {
+  flex-direction: column;
+}
+.m4 {
+  flex-direction: column-reverse;
+}
+
+.order #div1 {
+  order: 1;
+}
+.order #div2 {
+  order: 0;
+}
+.order #div3 {
+  order: 3;
+}
+.order #div4 {
+  order: -1;
+}
+.order #div5 {
+  order: 2;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-rev {
+  flex-wrap: wrap-reverse;
+}

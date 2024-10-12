@@ -1,0 +1,25 @@
+p {
+  font-size: medium;
+}
+
+h2 {
+  font-size: large;
+}
+
+/* now making properties for both tags*/
+p,
+h2 {
+  color: brown;
+}
+
+/* now making properties for both IDs*/
+#hh,
+#pp {
+  background-color: aquamarine;
+}
+
+/* now making properties for both IDs*/
+.hd,
+.pg {
+  font-family: cursive;
+}

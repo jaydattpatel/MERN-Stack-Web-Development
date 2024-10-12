@@ -1,0 +1,36 @@
+/* CSS syntax for perticular ID
+
+    #ID_name{
+        properties...
+    }
+
+*/
+
+body {
+  background-color: rgb(226, 248, 170);
+}
+
+/* creating properties for ID */
+#hh {
+  color: rgb(255, 0, 25);
+  font-size: 20px;
+  text-align: center;
+  font-family: cursive;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: brown;
+}
+
+article {
+  width: 700px;
+}
+
+ol h3 {
+  color: rgb(135, 0, 103);
+}
+
+li {
+  color: rgb(13, 0, 255);
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- add author in file -->
+    <meta name="author" content="Jaydatt-Patel" />
+
+    <title>Table</title>
+  </head>
+  <body>
+    <h3>TABLE</h3>
+
+    <!-- create table by <table> </table> also border properties
+        add Table heading using <caption></caption>
+        add header of table by <thead></thead> 
+        add footer of table by <tfoot></tfoot> 
+        data will be in <tbody></tbody> 
+        <tr></tr> for add row 
+        <th></th> for heading entry in cell of row 
+        <td></td> for normal entry in cell of row
+
+        Attribute:
+        colspan = "2" for combine horizontal cells
+        rowspan = "2" for combine vertical cells.
+
+    -->
+    <table>
+      <tr>
+        <th>DAY</th>
+        <th>I</th>
+        <th>II</th>
+        <th rowspan="7">
+          <b>T<br />E<br />A<br /><br />B<br />R<br />E<br />A<br />K</b>
+        </th>
+        <th>III</th>
+        <th>IV</th>
+        <th rowspan="7">
+          <b
+            >L<br />U<br />N<br />C<br />H<br /><br />B<br />R<br />E<br />A<br />K</b
+          >
+        </th>
+        <th>V</th>
+        <th>VI</th>
+        <th>VII</th>
+      </tr>
+      <tr>
+        <th>MON</th>
+        <td>IS</td>
+        <td>WT</td>
+        <td>SEM</td>
+        <td>OOAD</td>
+        <td>SCI</td>
+        <td>C#</td>
+        <td>COMP</td>
+      </tr>
+      <tr>
+        <th>TUE</th>
+        <td>AP</td>
+        <td>AP Lab</td>
+        <td colspan="2">AP Lab</td>
+        <td>WT</td>
+        <td>IS</td>
+        <td>OOAD</td>
+      </tr>
+      <tr>
+        <th>WED</th>
+        <td>WT</td>
+        <td>IS</td>
+        <td>C#</td>
+        <td>SCI</td>
+        <td colspan="3">MOOC'S</td>
+      </tr>
+      <tr>
+        <th>THU</th>
+        <td>IS</td>
+        <td>LIB</td>
+        <td>OOAD</td>
+        <td>WT</td>
+        <td colspan="3">WT Lab</td>
+      </tr>
+      <tr>
+        <th>FRI</th>
+        <td>AP</td>
+        <td>AP</td>
+        <td>C#</td>
+        <td>OOAD</td>
+        <td colspan="3">C# Lab</td>
+      </tr>
+      <tr>
+        <th>SAT</th>
+        <td>OOAD</td>
+        <td>SCI</td>
+        <td>WT</td>
+        <td>SEM</td>
+        <td>AP</td>
+        <td>AP</td>
+        <td>C#</td>
+      </tr>
+    </table>
+
+    <table>
+      <caption>
+        <b>Employees Table - 1</b>
+      </caption>
+      <thead>
+        <tr>
+          <th>Sr.No</th>
+          <th>Name</th>
+          <th>ID</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <!-- <th> for heading text for first element of row -->
+          <td>Rahul</td>
+          <!-- <td> for normal text of row element -->
+          <td>235</td>
+          <td>Engineer</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>Amit</td>
+          <td>964</td>
+          <td>Accountant</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>Sanket</td>
+          <td>524</td>
+          <td>Programmer</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <!-- <tfoot> </tfoot> to add footer lines-->
+        <tr>
+          <td>Total = 3</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <br />
+
+    <table>
+      <caption>
+        <b>Employees Table - 2</b>
+      </caption>
+      <thead>
+        <tr>
+          <th>Sr.No</th>
+          <th colspan="2">Name and ID</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <!-- <th> for heading text for first element of row -->
+          <td ="colspan" ="2">Rahul 235</td>
+          <!-- <td> for normal text of row element -->
+          <td>Engineer</td>
+        </tr>
+        <tr>
+          <th rowspan="2">2,3</th>
+          <td>Amit</td>
+          <td>964</td>
+          <td>Accountant</td>
+        </tr>
+        <tr>
+          <td>Sanket</td>
+          <td>524</td>
+          <td>Programmer</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <!-- <tfoot> </tfoot> to add footer lines-->
+        <tr>
+          <td colspan="4">Total = 3</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

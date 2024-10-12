@@ -1,0 +1,56 @@
+/* 
+CSS Variable:
+
+Syntax : 
+        --varname : value;
+
+Syntax to use in css:
+        property : var(--varname)   or
+        property : var(--varname, default value)
+
+
+*/
+
+.normal {
+  height: 50px;
+  width: 50px;
+}
+.large {
+  height: 300px;
+  width: 200px;
+}
+
+div {
+  border: 1px solid black;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: large;
+  text-align: center;
+}
+
+.mx-a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* root to change within entire page scope */
+:root {
+  --my-color: red;
+}
+
+#d1,
+#d2,
+#d3,
+#sd1,
+#sd2 {
+  color: var(--my-color);
+}
+
+#d3 {
+  --my-color: blue;
+}
+
+/* using variable with default value */
+#sd3 {
+  color: var(--xyz, orange);
+}

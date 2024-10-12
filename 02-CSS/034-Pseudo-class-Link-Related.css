@@ -1,0 +1,57 @@
+/*
+hover: used when moving mouse pointer on content
+visited: used to when content visited
+active: used when clicking on content
+target: used when move to target  
+checked: use to check element selected or not for checkbox or radio button.
+nth-child(odd/even) or nth-child(An+B):  to select specific children is using nth-child.
+
+*/
+
+div {
+  font-size: 1.5rem;
+}
+#a1:visited {
+  color: rgb(226, 43, 214);
+}
+
+#a2:active {
+  color: orange;
+}
+
+#a3:active {
+  color: white;
+  background-color: rgb(255, 0, 200);
+}
+
+#tx1:target,
+#tx2:target,
+#tx3:target {
+  background-color: burlywood;
+  font-size: 2rem;
+}
+
+#tx2:target {
+  color: blue;
+}
+
+#ver1 li:nth-child(even) {
+  color: aqua;
+}
+
+#ver2 li:nth-child(2n + 1) {
+  color: red;
+}
+
+div a:hover {
+  box-shadow: 0 0 3px 4px cyan;
+}
+
+div p:hover,
+div ol:hover {
+  box-shadow: 0 0 3px 4px red;
+}
+
+div ol:hover {
+  background-color: yellow;
+}

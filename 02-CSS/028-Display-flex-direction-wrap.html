@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- add author in file -->
+    <meta name="author" content="Jaydatt-Patel" />
+    <title>Display-Flex-Direction-Wrap</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="028-Display-flex-direction-wrap.css"
+    />
+  </head>
+  <body>
+    <h3>Display : Flex</h3>
+    <hr />
+    <div id="main-screen">
+      <div id="main-box">
+        flex-direction:row;
+        <div class="box m1">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        flex-direction:row-reverse;
+        <div class="box m2">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        flex-direction:column;
+        <div class="box m3">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        flex-direction: column-reverse;
+        <div class="box m4">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        order:(div1:1,div2:0,div3:3,div4:-1,div5:2);<br />
+        flex-direction: row;
+        <div class="box order m1">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        order:(div1:1,div2:0,div3:3,div4:-1,div5:2);<br />
+        flex-direction: row-reverse;
+        <div class="box order m2">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        order:(div1:1,div2:0,div3:3,div4:-1,div5:2);<br />
+        flex-direction: column;
+        <div class="box order m3">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        order:(div1:1,div2:0,div3:3,div4:-1,div5:2);<br />
+        flex-direction: column-reverse;
+        <div class="box order m4">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        flex-direction:row;<br />
+        flex-wrap: wrap;
+        <div class="box m1 wrap">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        flex-direction:row-reverse;<br />
+        flex-wrap: wrap;
+        <div class="box m2 wrap">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        flex-direction:column;<br />
+        flex-wrap: wrap;
+        <div class="box m3 wrap">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        flex-direction: column-reverse;<br />
+        flex-wrap: wrap;
+        <div class="box m4 wrap">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        order:(div1:1,div2:0,div3:3,div4:-1,div5:2);<br />
+        flex-direction:row;<br />
+        flex-wrap: wrap;
+        <div class="box order m1 wrap">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        order:(div1:1,div2:0,div3:3,div4:-1,div5:2);<br />
+        flex-direction: row-reverse;<br />
+        flex-wrap: wrap;
+        <div class="box order m2 wrap">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        order:(div1:1,div2:0,div3:3,div4:-1,div5:2);<br />
+        flex-direction: column;<br />
+        flex-wrap: wrap;
+        <div class="box order m3 wrap">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        order:(div1:1,div2:0,div3:3,div4:-1,div5:2);<br />
+        flex-direction: column-reverse;<br />
+        flex-wrap: wrap;
+        <div class="box order m4 wrap">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+      <div id="main-box">
+        flex-direction:row;<br />
+        flex-wrap: wrap-rev;
+        <div class="box m1 wrap-rev">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        flex-direction:row-reverse;<br />
+        flex-wrap: wrap-rev;
+        <div class="box m2 wrap-rev">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        flex-direction:column;<br />
+        flex-wrap: wrap-rev;
+        <div class="box m3 wrap-rev">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        flex-direction: column-reverse;<br />
+        flex-wrap: wrap-rev;
+        <div class="box m4 wrap-rev">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        order:(div1:1,div2:0,div3:3,div4:-1,div5:2);<br />
+        flex-direction: row;<br />
+        flex-wrap: wrap-rev;
+        <div class="box order m1 wrap-rev">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        order:(div1:1,div2:0,div3:3,div4:-1,div5:2);<br />
+        flex-direction: row-reverse;<br />
+        flex-wrap: wrap-rev;
+        <div class="box order m2 wrap-rev">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        order:(div1:1,div2:0,div3:3,div4:-1,div5:2);<br />
+        flex-direction: column;<br />
+        flex-wrap: wrap-rev;
+        <div class="box order m3 wrap-rev">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+
+      <div id="main-box">
+        order:(div1:1,div2:0,div3:3,div4:-1,div5:2);<br />
+        flex-direction: column-reverse;<br />
+        flex-wrap: wrap-rev;
+        <div class="box order m4 wrap-rev">
+          <div id="div1">B-1</div>
+          <div id="div2">B-2</div>
+          <div id="div3">B-3</div>
+          <div id="div4">B-4</div>
+          <div id="div5">B-5</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

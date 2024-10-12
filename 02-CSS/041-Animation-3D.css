@@ -1,0 +1,88 @@
+/*
+
+*/
+#main {
+  height: 40rem;
+  width: 40rem;
+  border: 1px dotted red;
+  display: flex;
+}
+.cube {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  border: 1px solid orange;
+  transform-style: preserve-3d;
+  perspective: none;
+  transform: rotateX(0deg) rotateY(-50deg) rotateZ(0deg);
+}
+
+.face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 1px green solid;
+  transition: all 1s;
+}
+
+.f1 {
+  background-color: blueviolet;
+  transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg);
+}
+.f2 {
+  background-color: chartreuse;
+  transform: translateX(0px) translateY(-50px) translateZ(-50px) rotateX(90deg)
+    rotateY(0deg) rotateZ(0deg);
+}
+.f3 {
+  background-color: orangered;
+  transform: translateX(0px) translateY(0px) translateZ(-100px) rotateX(0deg)
+    rotateY(180deg) rotateZ(0deg);
+}
+.f4 {
+  background-color: red;
+  transform: translateX(0px) translateY(50px) translateZ(-50px) rotateX(90deg)
+    rotateY(180deg) rotateZ(0deg);
+}
+.f5 {
+  background-color: deeppink;
+  transform: translateX(-50px) translateY(0px) translateZ(-50px) rotateX(0deg)
+    rotateY(-90deg) rotateZ(0deg);
+}
+.f6 {
+  background-color: darkblue;
+  transform: translateX(50px) translateY(0px) translateZ(-50px) rotateX(0deg)
+    rotateY(90deg) rotateZ(0deg);
+}
+
+@keyframes cuberotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  25% {
+    transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
+  }
+  26% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+  }
+  51% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  75% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
+  }
+  76% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+.cube {
+  animation: cuberotate 20s ease-in-out infinite alternate;
+}

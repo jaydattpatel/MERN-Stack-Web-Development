@@ -1,0 +1,32 @@
+#box {
+  width: 100%;
+  display: flex;
+}
+#box div {
+  height: 5rem;
+  width: 5rem;
+  background-color: yellow;
+  border: 1px solid black;
+  margin: auto;
+}
+.b1 {
+  transition: transform 1s ease-in-out;
+}
+.b1:hover {
+  transform: scale(200%) translate(80%, 80%);
+}
+
+.b2 {
+  transition: transform 1s steps(4, end);
+}
+.b2:hover {
+  transform: translate(-80%, 80%) rotate(360deg);
+}
+
+.b3 {
+  transition: all 0.5s 0.2s linear;
+}
+.b3:hover {
+  transform: scale(0.5, 0.5) translateX(200%) rotate(360deg);
+  border-radius: 50%;
+}

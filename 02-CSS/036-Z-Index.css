@@ -1,0 +1,55 @@
+/*
+The z-index property specifies the stack order of an element.
+
+An element with greater stack order is always in front of an element with a lower stack order.
+
+Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements).
+*/
+.main {
+  height: 100%;
+  width: 100%;
+}
+.main div {
+  height: 200px;
+  width: 200px;
+}
+
+.pink,
+.blue,
+.orange,
+.cyan,
+.red {
+  position: absolute;
+  text-align: center;
+  font-size: 2rem;
+}
+.pink {
+  top: 10%;
+  left: 10%;
+  z-index: 7;
+  background-color: pink;
+}
+.blue {
+  top: 15%;
+  left: 15%;
+  z-index: 8;
+  background-color: blue;
+}
+.orange {
+  top: 20%;
+  left: 20%;
+  z-index: 10;
+  background-color: orange;
+}
+.cyan {
+  top: 0%;
+  left: 25%;
+  background-color: cyan;
+}
+
+.red {
+  top: 10%;
+  left: 30%;
+  z-index: 5;
+  background-color: red;
+}
