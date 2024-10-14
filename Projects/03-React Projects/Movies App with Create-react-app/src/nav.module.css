@@ -1,0 +1,39 @@
+/* Navbar classes */
+
+.cartIcon {
+	height: 48px;
+	margin-right: 20px;
+}
+
+.nav {
+	height: 70px;
+	background: #4267b2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.title {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    margin-left: 20px ;
+}
+
+.cartIconContainer {
+	position: relative;
+	cursor: pointer;
+}
+
+.cartCount {
+	background: orange;
+	border-radius: 50%;
+	padding: 4px 8px;
+	position: absolute;
+	right: 10px;
+	top: -5px;
+	font-size: 12px;
+}
