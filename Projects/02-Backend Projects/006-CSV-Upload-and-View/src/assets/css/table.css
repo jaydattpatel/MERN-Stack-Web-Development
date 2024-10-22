@@ -1,0 +1,33 @@
+.container{
+  margin: 1rem 0px;
+  padding: 1rem;
+}
+
+.container h2{
+  color: #0044d4;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.container h2 a{
+  text-decoration: none;
+  color: #0044d4;
+}
+
+#dataTable_wrapper{
+  width: 107%;
+}
+
+.row{
+  margin-bottom: 10px;
+  
+}
+
+.col-sm-12{
+  overflow-x: auto;
+  margin-bottom: 5px;
+}
+
+.table{
+  font-size: 14px;
+}

@@ -1,0 +1,27 @@
+footer {
+  height: 10vh;
+  /* background-color:#ebedf1; */
+  background-color: #555659;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgb(21, 255, 0);
+  padding: 0 10%;
+}
+footer .footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+footer a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: rgb(32, 215, 0);
+}
+
+footer a:hover {
+  color: #00aeff;
+}

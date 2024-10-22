@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  /* background-color: black; */
+}
+
+.main {
+  margin: auto 3%;
+  height: auto; 
+  /* color: white; */
+  /* background-color: black; */
+}
+
+.chat-window-app {
+  right: 60px;
+  bottom: 50px;
+  position: fixed;
+  z-index: 10000;
+  background-color: #129bf4;
+  padding: 10px;
+  height: 25vh; 
+}

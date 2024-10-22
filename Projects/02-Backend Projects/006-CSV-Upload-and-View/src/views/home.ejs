@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/home.css" />
+
+<!-- ejs for home page -->
+
+<div class="home-container">
+  <form action="/file/uploads" method="POST" enctype="multipart/form-data">
+    <h2>Upload CSV File</h2>
+    <label for="file-upload" class="custom-file-upload">Select File</label>
+    <input type="file" id="file-upload" name="csv" required />
+    <button type="submit">Upload</button>
+  </form>
+  <% if(files.length) { %> <% for(let i = 0; i < files.length; i++) { %>
+  <div class="uploaded-files">
+    <ul>
+      <a href="/view/<%= files[i]._id %>"><%= files[i].name %></a>
+      <a href="/delete/<%= files[i]._id %>"
+        ><i class="fa-solid fa-trash"></i
+      ></a>
+    </ul>
+  </div>
+
+  <% }}else{ %>
+  <div class="uploaded-files">
+    <h4>No files available...</h4>
+  </div>
+  <% } %>
+</div>

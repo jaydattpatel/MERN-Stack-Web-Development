@@ -1,0 +1,39 @@
+header {
+  height: 10vh;
+  /* background-color: #ebedf1; */
+  background-color: #555555;
+  color: rgb(0, 185, 77);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 0 5%;
+}
+header h2 {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+header li {
+  display: flex;
+  gap: 1rem;
+}
+
+header a {
+  list-style: none;
+  color: #0044d4;
+  background-color: white;
+  padding: 8px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+}
