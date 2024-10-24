@@ -1,6 +1,6 @@
 # MERN Full Stack Web Development (Coding Ninjas)
 <h2>  
-  <a href='https://mern-jp.glitch.me/projects/'>  
+  <a href='https://mern-jp.glitch.me'>  
        Projects
   </a>
 </h2>
