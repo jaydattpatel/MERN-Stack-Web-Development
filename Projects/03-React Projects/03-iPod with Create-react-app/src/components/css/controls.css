@@ -1,0 +1,51 @@
+/* Controls Component */
+#controls {
+  background-color: rgb(158, 153, 153);
+  width: 215px;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 0px 7px 7px;
+}
+#wheel {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.buttons {
+  position: absolute;
+  font-weight: 700;
+  font-size: larger;
+  opacity: 0.7;
+  z-index: 1;
+}
+#menu-button {
+  cursor: pointer;
+}
+#ok-button {
+  background-color: rgb(130, 160, 82);
+  width: 37%;
+  height: 37%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: larger;
+  cursor: pointer;
+}
+#ok-button:active,
+#menu-button:active {
+  transform: scale(0.9);
+}
+
+#gestureBtn {
+  opacity: 0.25;
+  z-index: 0;
+}
