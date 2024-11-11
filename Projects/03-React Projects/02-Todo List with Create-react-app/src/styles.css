@@ -1,0 +1,74 @@
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.App > span {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  width: 70%;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+
+.form button {
+  border: none;
+  width: 20%;
+  background-color: rgb(45, 166, 247);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgb(238, 238, 238);
+  padding: 30px 10px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  padding-inline: 10px;
+  border-radius: 10px;
+  background-color: rgb(215, 254, 255);
+  border: 1px solid gray;
+}
+
+.todo p {
+  width: 80%;
+  margin: 5px;
+}
+
+.todo button {
+  border: none;
+  width: 22px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: rgb(247, 45, 45);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
