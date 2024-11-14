@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+body {
+  background: lightsalmon;
+}
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.mainHeading {
+  text-align: center;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.App {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  min-height: 100vh;
+  /* width: 100%; */
+  --input-width: 95%;
+  --input-height: 2rem;
+}
+
+.App > * {
+  margin: 10px;
+}

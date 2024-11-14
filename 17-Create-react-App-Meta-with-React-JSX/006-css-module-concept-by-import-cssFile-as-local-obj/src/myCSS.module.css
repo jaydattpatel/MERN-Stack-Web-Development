@@ -1,0 +1,18 @@
+.main {
+  background-color: blue;
+  min-height: 100px;
+  align-content: center;
+}
+
+.main:hover {
+  background-color: yellow;
+}
+
+.text {
+  color: red;
+  font-weight: bold;
+  font-size: 50px;
+  &:hover {
+    background-color: cyan;
+  }
+}

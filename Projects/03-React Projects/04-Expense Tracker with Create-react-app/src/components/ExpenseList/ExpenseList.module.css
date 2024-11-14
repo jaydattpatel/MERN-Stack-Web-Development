@@ -1,0 +1,28 @@
+.expenseListContainer {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 350px;
+  min-height: 300px;
+}
+
+.expenseListContainer h3 {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #dedede;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.transactionList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  /* height: 100%; */
+}
+
+.transactionList li {
+  list-style: none;
+}

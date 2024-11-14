@@ -1,0 +1,64 @@
+.transaction {
+  width: 100%;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 0.5rem;
+  height: 3.25rem;
+  padding-block: 0.25rem;
+  background: white;
+}
+
+.amount {
+  margin-right: 10px;
+  transform: translateX(100px);
+  transition: all 0.3s ease-in-out;
+}
+
+.profit {
+  border-right: 5px solid rgb(16, 134, 0);
+}
+
+.loss {
+  border-right: 5px solid rgb(150, 2, 2);
+}
+
+.movePrice {
+  transform: translateX(0);
+}
+
+.transactionOptions {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+}
+
+.btnContainer {
+  height: 100%;
+  align-items: center;
+  gap: 12px;
+  transform: translateX(110%);
+  display: flex;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.edit,
+.delete {
+  height: 100%;
+  transition: all 0.15s ease-in-out;
+}
+
+.edit:hover,
+.delete:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
