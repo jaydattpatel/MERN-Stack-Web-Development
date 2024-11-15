@@ -1,7 +1,8 @@
-# MERN Full Stack Web Development (Coding Ninjas)
+# MERN Stack Web Development - Coding Ninjas
+
 <h2>  
   <a href='https://mern-jp.glitch.me'>  
-       Projects
+      Projects Links
   </a>
 </h2>
 <div id="badges">
