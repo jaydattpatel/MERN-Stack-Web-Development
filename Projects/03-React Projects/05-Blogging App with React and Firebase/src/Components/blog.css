@@ -1,0 +1,95 @@
+.section {
+  padding: 15px;
+  padding-left: 15px;
+  margin: auto;
+  max-width: 60%;
+  background-color: rgb(215, 104, 6);
+  color: white;
+  border-radius: 10px;
+  font-weight: bolder;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: block;
+  align-self: center;
+}
+
+.blog {
+  max-width: 60%;
+  background-color: rgb(192, 237, 236);
+  color: black;
+  font-weight: lighter;
+  border: 1px black solid;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: block;
+  padding-left: 10px;
+  max-width: 60%;
+}
+.input {
+  min-height: 34px;
+  width: 80%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 1em;
+  margin-bottom: 2;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.content {
+  height: 100px;
+}
+
+label {
+  display: block;
+  padding: 2px;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(98, 0, 255);
+  text-align: center;
+  margin-top: 10px;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btn {
+  border-radius: 5px;
+  background-color: rgb(68, 68, 243);
+  color: white;
+  border-style: none;
+  width: 80px;
+  height: 30px;
+  font-size: 15px;
+  margin: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.update {
+  background-color: rgb(83, 98, 230);
+  width: fit-content;
+}
+
+.remove {
+  background-color: rgb(230, 83, 83);
+  width: fit-content;
+}
+
+.blog-btn {
+  text-align: end;
+  margin-right: 10px;
+}
+/* Created with https://www.css-gradient.com */
+/* background: #565318;
+background: -webkit-linear-gradient(right, #565318, #3C464E);
+background: -moz-linear-gradient(right, #565318, #3C464E);
+background: linear-gradient(to left, #565318, #3C464E); */
