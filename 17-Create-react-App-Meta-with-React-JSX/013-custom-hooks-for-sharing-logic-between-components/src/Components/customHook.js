@@ -7,7 +7,7 @@ You must follow these naming conventions:
 
 - React component names must start with a capital letter, like StatusBar and SaveButton. 
 
-- Hook names must start with use followed by a capital letter, like useState (built-in) or useOnlineStatus (custom, like earlier on the page). Hooks may return arbitrary values.
+- Hook names must start with 'use' followed by a capital letter, like useState (built-in) or useOnlineStatus (custom, like earlier on the page). Hooks may return arbitrary values.
 
 Note : Hook names always start with use followed by a capital letter like useState.
 */
