@@ -7,16 +7,16 @@ function Items() {
       <main>
         <h2>Items Page</h2>
       </main>
-      {ITEMS.map((item) => (
-        /* defining relative path */
-        <ul style={{ listStyleType: "none" }}>
-          <NavLink to={`details/${item.id}`}>
-            <li>
+      <ul style={{ listStyleType: "none" }}>
+        {ITEMS.map((item, i) => (
+          /* defining relative path */
+          <li key={i}>
+            <NavLink to={`details/${item.id}`}>
               <button style={{ background: "yellow" }}>{item.id}</button>
-            </li>
-          </NavLink>
-        </ul>
-      ))}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

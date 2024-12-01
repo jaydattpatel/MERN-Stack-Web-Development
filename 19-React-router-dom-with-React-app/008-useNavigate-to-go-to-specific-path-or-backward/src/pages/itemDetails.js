@@ -6,7 +6,7 @@ function ItemDetails() {
   const { id } = useParams();
 
   const item = ITEMS.find((item) => item.id === id);
-  console.log(item);
+  // console.log(item);
 
   return (
     <>
