@@ -1,0 +1,60 @@
+.albumForm {
+  width: 50vw;
+  margin: 50px auto;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.albumForm span {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.albumForm form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.albumForm form input {
+  outline: none;
+  border: none;
+  padding: 10px;
+  padding-left: 15px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  border-radius: 30px;
+  width: 60%;
+  transition: 0.3s;
+  border: 3px solid transparent;
+}
+
+.albumForm form input:focus {
+  border-color: rgb(0, 119, 255);
+}
+
+.albumForm form button {
+  border: none;
+  outline: none;
+  width: 100px;
+  padding-block: 7px;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgb(0, 119, 255);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.albumForm form button:nth-of-type(1) {
+  background-color: rgb(255, 19, 0);
+}

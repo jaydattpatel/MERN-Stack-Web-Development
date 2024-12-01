@@ -1,0 +1,22 @@
+.navbar {
+  height: 70px;
+  background-color: rgb(160, 160, 249);
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 70%;
+}
+
+.logo span {
+  font-size: 1.2rem;
+  font-weight: 700;
+}

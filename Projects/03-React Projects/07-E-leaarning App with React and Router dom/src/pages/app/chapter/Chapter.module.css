@@ -1,0 +1,10 @@
+.para{
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    text-align: justify;
+}
+
+.videos{
+    display: flex;
+    justify-content: space-around;
+}

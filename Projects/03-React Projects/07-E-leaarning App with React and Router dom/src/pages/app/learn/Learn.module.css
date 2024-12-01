@@ -1,0 +1,74 @@
+.courses_container {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-block: 1rem;
+  background-color: var(--clr-bg);
+}
+
+.heading {
+  display: flex;
+}
+
+.top_head {
+  display: flex;
+  color: var(--clr-text-main);
+  padding: 0.3rem 1rem;
+  background-color: var(--clr-bg-contrast);
+  border-radius: 0.5rem;
+  margin: 0.3rem 0;
+  align-content: space-between;
+}
+
+.back {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.back:hover {
+  color: var(--clr-accent);
+}
+
+.chapter_box {
+  display: flex;
+  color: var(--clr-text-main);
+  padding: 1rem;
+}
+
+.chapters {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--clr-bg-contrast);
+  border-radius: 0.5rem;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.chapter_box a {
+  text-decoration: none;
+  color: var(--clr-text-main);
+}
+
+.chapter_box a:hover {
+  color: var(--clr-accent);
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--clr-bg-contrast);
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.chapterId {
+  font-size: 1.2rem;
+  padding-top: 0.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

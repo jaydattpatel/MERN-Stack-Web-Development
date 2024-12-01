@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-accent: #eb455f;
+  --clr-bg: #181d31;
+  --clr-bg-shade: #010412;
+  --clr-bg-contrast: #2b3a55;
+  --clr-text-main: #fcffe7;
+  --clr-text-secondary: #fefcf3;
+  --clr-touch: #46c2cb;
+}
+
+.dark-theme {
+  --clr-accent: #eb455f;
+  --clr-bg: #181d31;
+  --clr-bg-shade: #010412;
+  --clr-bg-contrast: #2b3a55;
+  --clr-text-main: #fcffe7;
+  --clr-text-secondary: #fefcf3;
+  --clr-touch: #46c2cb;
+}
+
+.light-theme {
+  --clr-accent: #eb455f;
+  --clr-bg: #fcffe7;
+  --clr-bg-shade: #c0c7e7;
+  --clr-bg-contrast: #181d31;
+  --clr-text-main: #181d31;
+  --clr-text-secondary: #fffbe9;
+  --clr-touch: #46c2cb;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  background-color: var(--clr-bg);
+  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Unbounded", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

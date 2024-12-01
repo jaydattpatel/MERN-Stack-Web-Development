@@ -1,0 +1,247 @@
+[
+  {
+    "id": "id-8827gdf0c",
+    "title": "React",
+    "description": "React is a JavaScript library for building user interfaces.",
+    "img": "https://cdn-icons-png.flaticon.com/512/3334/3334886.png",
+    "chapters": [
+      {
+        "chapter": 1,
+        "title": "Introduction",
+        "description": "Introduction to React",
+        "details": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications. However, React is only concerned with rendering data to the DOM, and so creating React applications usually requires the use of additional libraries for state management and routing. Redux and React Router are respective examples of such libraries.",
+        "video": "https://www.youtube.com/embed/FZ0cG47msEk"
+      },
+      {
+        "chapter": 2,
+        "title": "JSX",
+        "description": "Learning JSX",
+        "details": "JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript. JSX gets compiled to React.createElement() calls which return plain JavaScript objects called 'React elements'. These objects are then used to build the DOM.",
+        "video": "https://www.youtube.com/embed/7HSd1sk07uU?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0"
+      },
+      {
+        "chapter": 3,
+        "title": "Components",
+        "description": "What are Components?",
+        "details": "Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called 'props') and return React elements describing what should appear on the screen.",
+        "video": "https://www.youtube.com/embed/MGuKhcnrqGA?list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY"
+      },
+      {
+        "chapter": 4,
+        "title": "Props",
+        "description": "Passing the data through Props",
+        "details": "Props are a way of passing data from parent to child. They are immutable and are passed from parent to child via attributes."
+      },
+      {
+        "chapter": 5,
+        "title": "State",
+        "description": "Single Source of Truth - State",
+        "details": "State is similar to props, but it is private and fully controlled by the component."
+      },
+      {
+        "chapter": 6,
+        "title": "Lifecycle",
+        "description": "Methods involved in Component Lifecycle",
+        "details": "Each component has several “lifecycle methods” that you can override to run code at particular times in the process. Methods prefixed with will are called right before something happens, and methods prefixed with did are called right after something happens."
+      },
+      {
+        "chapter": 7,
+        "title": "Handling Events",
+        "description": "Handling Events",
+        "details": "Handling events with React elements is very similar to handling events on DOM elements. There are some syntax differences:"
+      },
+      {
+        "chapter": 8,
+        "title": "Conditional Rendering",
+        "description": "Conditional Rendering",
+        "details": "In React, you can create distinct components that encapsulate behavior you need. Then, you can render only some of them, depending on the state of your application."
+      },
+      {
+        "chapter": 9,
+        "title": "Lists and Keys",
+        "description": "Lists and Keys",
+        "details": "You can build collections of elements and include them in JSX using curly braces {}."
+      }
+    ]
+  },
+  {
+    "id": "id-akkvbh735",
+    "title": "Node",
+    "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment .",
+    "img": "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
+    "chapters": [
+      {
+        "chapter": 1,
+        "title": "Introduction",
+        "description": "Introduction to Node",
+        "details": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser."
+      },
+      {
+        "chapter": 2,
+        "title": "NPM",
+        "description": "NPM",
+        "details": "NPM is a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js."
+      },
+      {
+        "chapter": 3,
+        "title": "Modules",
+        "description": "Modules",
+        "details": "Modules are the basic building blocks in Node.js. Each file in Node.js application is considered as a Module. It has its own scope, so it does not interfere with other modules or pollute global scope."
+      },
+      {
+        "chapter": 4,
+        "title": "HTTP",
+        "description": "HTTP",
+        "details": "The HTTP module can create an HTTP server that listens to server ports and gives a response back to the client."
+      },
+      {
+        "chapter": 5,
+        "title": "Express",
+        "description": "Express",
+        "details": "Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications."
+      },
+      {
+        "chapter": 6,
+        "title": "MongoDB",
+        "description": "MongoDB",
+        "details": "MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas."
+      },
+      {
+        "chapter": 7,
+        "title": "Mongoose",
+        "description": "Mongoose",
+        "details": "Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks."
+      }
+    ]
+  },
+  {
+    "id": "id-345knvkhj",
+    "title": "Azure",
+    "description": "Azure is a cloud computing service created by Microsoft.",
+    "img": "https://cdn-icons-png.flaticon.com/512/873/873107.png",
+    "chapters": [
+      {
+        "chapter": 1,
+        "title": "Introduction",
+        "description": "Introduction to Azure",
+        "details": "Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services"
+      },
+      {
+        "chapter": 2,
+        "title": "Azure Portal",
+        "description": "Azure Portal",
+        "details": "The Azure portal is a web-based, unified console that you can use to manage and configure your Azure resources."
+      },
+      {
+        "chapter": 3,
+        "title": "Azure CLI",
+        "description": "Azure CLI",
+        "details": "The Azure CLI is a set of commands used to create and manage Azure resources. The CLI is available across many platforms, including Windows, macOS, and Linux."
+      },
+      {
+        "chapter": 4,
+        "title": "Azure PowerShell",
+        "description": "Azure PowerShell",
+        "details": "Azure PowerShell is a set of cmdlets used to create and manage Azure resources. The cmdlets are available in Windows PowerShell and PowerShell Core."
+      },
+      {
+        "chapter": 5,
+        "title": "Azure SDK",
+        "description": "Azure SDK",
+        "details": "The Azure SDK is a set of libraries used to create and manage Azure resources. The SDK is available for many programming languages, including .NET, Java, JavaScript, Python, and Ruby."
+      },
+      {
+        "chapter": 6,
+        "title": "Azure Resource Manager",
+        "description": "Azure Resource Manager",
+        "details": "Azure Resource Manager is a service that provides a management layer for Azure resources. You can use the Azure portal, Azure PowerShell, Azure CLI, or Azure SDK to manage resources by using Azure Resource Manager."
+      },
+      {
+        "chapter": 7,
+        "title": "Azure Resource Manager Templates",
+        "description": "Azure Resource Manager Templates",
+        "details": "Azure Resource Manager templates are JSON files that define one or more Azure resources. You can use templates to deploy resources to Azure, or to validate that a template is valid."
+      },
+      {
+        "chapter": 8,
+        "title": "Azure Resource Manager Template Functions",
+        "description": "Azure Resource Manager Template Functions",
+        "details": "Azure Resource Manager template functions are expressions that you can use in Azure Resource Manager templates to perform operations on values."
+      },
+      {
+        "chapter": 9,
+        "title": "Azure Resource Manager Template Parameters",
+        "description": "Azure Resource Manager Template Parameters",
+        "details": "Azure Resource Manager template parameters are values that you can pass to a template when you deploy it. You can use parameters to customize the deployment of a template."
+      }
+    ]
+  },
+  {
+    "id": "id-sdffi89nf",
+    "title": "SQL",
+    "description": "SQL is a standard language for storing, manipulating and retrieving data in databases.",
+    "img": "https://cdn-icons-png.flaticon.com/512/8452/8452873.png",
+    "chapters": [
+      {
+        "chapter": 1,
+        "title": "Introduction",
+        "description": "Introduction to SQL",
+        "details": "SQL is a standard language for storing, manipulating and retrieving data in databases."
+      },
+      {
+        "chapter": 2,
+        "title": "SQL Syntax",
+        "description": "SQL Syntax",
+        "details": "SQL is a standard language for storing, manipulating and retrieving data in databases."
+      },
+      {
+        "chapter": 3,
+        "title": "SQL SELECT Statement",
+        "description": "SQL SELECT Statement",
+        "details": "The SELECT statement is used to select data from a database."
+      },
+      {
+        "chapter": 4,
+        "title": "SQL SELECT DISTINCT Statement",
+        "description": "SQL SELECT DISTINCT Statement",
+        "details": "The SELECT DISTINCT statement is used to return only distinct (different) values."
+      },
+      {
+        "chapter": 5,
+        "title": "SQL WHERE Clause",
+        "description": "SQL WHERE Clause",
+        "details": "The WHERE clause is used to filter records."
+      },
+      {
+        "chapter": 6,
+        "title": "SQL AND, OR and NOT Operators",
+        "description": "SQL AND, OR and NOT Operators",
+        "details": "The AND, OR, and NOT operators are used to filter records based on more than one condition."
+      },
+      {
+        "chapter": 7,
+        "title": "SQL ORDER BY Keyword",
+        "description": "SQL ORDER BY Keyword",
+        "details": "The ORDER BY keyword is used to sort the result-set in ascending or descending order."
+      },
+      {
+        "chapter": 8,
+        "title": "SQL INSERT INTO Statement",
+        "description": "SQL INSERT INTO Statement",
+        "details": "The INSERT INTO statement is used to insert new records in a table."
+      },
+      {
+        "chapter": 9,
+        "title": "SQL UPDATE Statement",
+        "description": "SQL UPDATE Statement",
+        "details": "The UPDATE statement is used to modify the existing records in a table."
+      },
+      {
+        "chapter": 10,
+        "title": "SQL DELETE Statement",
+        "description": "SQL DELETE Statement",
+        "details": "The DELETE statement is used to delete existing records in a table."
+      }
+    ]
+  }
+]
