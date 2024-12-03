@@ -1,15 +1,15 @@
 {
+  "name": "store-fleet",
   "type": "module",
-  "name": "not_decided",
   "version": "1.0.0",
-  "description": "",
+  "description": "store-fleet-APIs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js"
   },
-  "author": "",
+  "author": "jaydatt",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.7",

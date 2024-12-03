@@ -4,15 +4,15 @@
   createRef creates a ref object which can contain arbitrary value. Refs are created using React.createRef() and attached to React elements via the ref attribute. Refs are commonly assigned to an instance property when a component is constructed so they can be referenced throughout the component.
 
   syntax :
-    const objRef = React.createRef()
+    const refNode = React.createRef()
 
     function Main(){
-      return (<input ref={objRef} type="email">Email</input>);
+      return (<input ref={refNode} type="email">Email</input>);
     }
-    console.log(objRef.current)
-    console.log(objRef.current.property)
+    console.log(refNode.current)
+    console.log(refNode.current.property)
 
-  Here objRef.current is node element which is referencing and you can access properties of node using objRef.current.property
+  Here refNode.current is node element which is referencing and you can access properties of node using refNode.current.property
 
  */
 

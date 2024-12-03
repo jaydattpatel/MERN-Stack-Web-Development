@@ -1,4 +1,14 @@
 {
+  "name": "job-portal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jaydatt",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "ejs": "^3.1.9",
@@ -7,15 +17,5 @@
     "express-session": "^1.18.0",
     "express-validator": "^7.1.0",
     "multer": "^1.4.5-lts.1"
-  },
-  "name": "product-crud",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "type": "module"
+  }
 }

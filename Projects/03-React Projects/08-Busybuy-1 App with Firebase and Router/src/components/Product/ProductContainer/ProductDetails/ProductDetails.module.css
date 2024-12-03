@@ -1,0 +1,103 @@
+.productDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 1.15em;
+  padding-bottom: 0.4em;
+  margin-bottom: 0px;
+  color: #224957;
+  font-weight: bold;
+}
+
+.productName {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #224957;
+  padding: 8px 0;
+  font-size: 1.25rem;
+}
+
+.productName p {
+  margin: 0;
+}
+
+.productOptions {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productOptions p {
+  font-weight: 700;
+  color: #224957;
+  margin: 0;
+}
+
+.quantityContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.quantityContainer img {
+  transition: all 0.1s ease-in-out;
+}
+
+.quantityContainer img:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.addBtn {
+  color: #fff;
+  padding: 0.75rem 0;
+  border: 1px solid #7064e5;
+  border-radius: 6px;
+  width: 50%;
+  font-size: 20px;
+  background: #7064e5;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.removeBtn {
+  color: #fff;
+  padding: 0.75rem 0;
+  border: 1px solid red;
+  border-radius: 6px;
+  width: 50%;
+  font-size: 20px;
+  background: rgb(241, 68, 68);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.addBtn:hover {
+  cursor: pointer;
+  color: #7064e5;
+  background-color: transparent;
+  border: 1px solid #7064e5;
+}
+
+.removeBtn:hover {
+  cursor: pointer;
+  color: rgb(241, 68, 68);
+  background-color: transparent;
+  border: 1px solid rgb(241, 68, 68);
+}
+
+.editForm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

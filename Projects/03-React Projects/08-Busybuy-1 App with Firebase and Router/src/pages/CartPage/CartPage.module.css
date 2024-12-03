@@ -1,0 +1,46 @@
+.cartPageContainer {
+  margin: auto;
+}
+
+.totalPrice {
+  position: fixed;
+  left: 0.5rem;
+  top: 30%;
+  background: #f1f1f1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-right: 2rem;
+  border-radius: 10px;
+}
+
+.totalPrice p {
+  font-size: 1.15em;
+  color: #224957;
+  font-weight: bold;
+}
+
+.purchaseBtn {
+  color: #fff;
+  border: 1px solid #7064e5;
+  border-radius: 6px;
+  font-size: 20px;
+  background: #7064e5;
+  transition: all 0.3s ease-in-out;
+  margin: auto;
+}
+
+.purchaseBtn:hover {
+  color: #7064e5;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .totalPrice {
+    position: inherit;
+    margin: 0.5rem;
+  }
+}

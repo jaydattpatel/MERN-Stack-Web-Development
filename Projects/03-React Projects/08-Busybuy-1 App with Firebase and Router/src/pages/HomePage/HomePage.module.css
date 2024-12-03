@@ -1,0 +1,33 @@
+.homePageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: auto;
+}
+
+.searchInput {
+  margin: 1em 0px !important;
+  font-size: 1.2em;
+  color: #7064e5 !important;
+  background: #f4f6f8 !important;
+  border: 1px solid #7064e5;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: 400;
+  line-height: 1.5;
+  outline: none;
+  width: 100%;
+}
+
+.form {
+  margin: auto;
+  width: 25%;
+}
+
+div h2 {
+  font-size: 1.25em;
+  color: #224957;
+  font-weight: bold;
+}
