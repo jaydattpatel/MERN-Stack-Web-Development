@@ -1,0 +1,8 @@
+Run below command to create template project:
+
+npx create-react-app [project-name] --template redux
+
+for example: 
+
+npx create-react-app my-app --template redux
+

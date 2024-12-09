@@ -5,7 +5,7 @@ import "./ToDoList.css";
 
 function ToDoList() {
   // using useSelector get store data
-  const todos = useSelector((state) => state.todos);
+  const { todos } = useSelector((state) => state);
   // creating dispatch to perform action
   const dispatch = useDispatch();
 
@@ -13,7 +13,7 @@ function ToDoList() {
     <div className="container">
       <ul>
         {todos.map((todo, index) => (
-          <li key={todo.id}>
+          <li key={index}>
             <span className="content">{todo.text}</span>
             <span className={todo.completed ? "completed" : "pending"}>
               {todo.completed ? "Completed" : "Pending"}

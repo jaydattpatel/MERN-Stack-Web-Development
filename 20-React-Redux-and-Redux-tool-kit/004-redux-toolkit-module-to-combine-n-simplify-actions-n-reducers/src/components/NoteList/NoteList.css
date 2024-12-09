@@ -1,0 +1,12 @@
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-content {
+  width: 60%;
+}
+
+button {
+  height: fit-content;
+}
