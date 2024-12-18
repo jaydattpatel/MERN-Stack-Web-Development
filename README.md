@@ -23,7 +23,7 @@
   <img src="https://api.visitorbadge.io/api/visitors?path=jaydattpatel%2FMERN-Stack&label=Visitors&labelColor=%23720026&countColor=%23ffae00" alt="Visitor badge" width="120" height="28"/>
 </div>
 
-## [Projects Links](https://mern-jp.glitch.me) 
+## [Projects Links](https://mern-jp.glitch.me)
 
 ## Resources Links
 
@@ -38,7 +38,6 @@
 - [MongoDB | MongoDB Community Server](https://www.mongodb.com/try/download/community)
 - [MongoDB Shell](https://www.mongodb.com/try/download/shell)
 - [jQuery](https://jquery.com/)
-- [React](https://react.dev/)
 - [Postman API Platform](https://www.postman.com/)
   </details>
 
@@ -74,7 +73,7 @@
   </details>
 
 <details>
-    <summary>NodeJS</summary>
+    <summary>NodeJS </summary>
 
 - [Node.js v22.3.0 Documentation | Modules: CommonJS modules](https://nodejs.org/api/modules.html)
 - [npm Docs | CLI Commands](https://docs.npmjs.com/cli/v10/commands)
@@ -267,4 +266,3 @@ Graphs plot
 - [D3 by Observable | The JavaScript library for bespoke data visualization](https://d3js.org/)
 
   </details>
-
